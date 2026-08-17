@@ -106,6 +106,44 @@ The application is built strictly according to a normalized relational database 
 
 ---
 
+## 🌐 Deploying to Hostinger (Shared Hosting)
+
+For production deployment on Hostinger or any cPanel/shared hosting provider:
+
+1. **Create Database in hPanel:**
+   - Go to **Hostinger hPanel → Databases → Management**.
+   - Create a new MySQL database and database user (note down the generated database name, username, and password).
+
+2. **Import Schema & Seed Data:**
+   - Open **phpMyAdmin** from hPanel for the newly created database.
+   - Select your database and click **Import**.
+   - Import [`database/schema-hosting.sql`](database/schema-hosting.sql) (contains all 22 tables and 29 foreign keys with `CREATE DATABASE` / `USE` statements removed for shared hosting compatibility).
+   - Then import [`database/seed.sql`](database/seed.sql) to populate initial seed records.
+
+3. **Upload Files:**
+   - Upload the project repository files to your website root directory (e.g. `public_html/` or a subfolder).
+
+4. **Configure Database Credentials:**
+   - In the `api/` directory, copy [`api/config.sample.php`](api/config.sample.php) to `api/config.php`:
+     ```bash
+     cp api/config.sample.php api/config.php
+     ```
+   - Edit `api/config.php` with your Hostinger credentials:
+     ```php
+     return [
+         'host'     => 'localhost',
+         'port'     => 3306, // Standard hosting port
+         'database' => 'u123456789_auratio',
+         'username' => 'u123456789_user',
+         'password' => 'YourHostingPassword',
+     ];
+     ```
+
+5. **Access Application:**
+   - Visit your domain (e.g., `https://yourdomain.com/`). Full live CRUD will run against the Hostinger MySQL database.
+
+---
+
 ## 📑 Feature & Tab Traceability
 
 | Proposal Feature | Implemented UI Tab | Primary Database Tables |

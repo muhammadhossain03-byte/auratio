@@ -18,12 +18,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
+// ── Database Configuration ──────────────────────────────────────────────
+$dbConfig = [
+    'host'     => '127.0.0.1',
+    'port'     => 3307,
+    'database' => 'auratio_db',
+    'username' => 'root',
+    'password' => '',
+];
+
+if (file_exists(__DIR__ . '/config.php')) {
+    $customConfig = require __DIR__ . '/config.php';
+    if (is_array($customConfig)) {
+        $dbConfig = array_merge($dbConfig, $customConfig);
+    }
+}
+
 // ── PDO Connection ──────────────────────────────────────────────────────
 try {
+    $dsn = sprintf(
+        'mysql:host=%s;port=%d;dbname=%s;charset=utf8mb4',
+        $dbConfig['host'],
+        $dbConfig['port'],
+        $dbConfig['database']
+    );
     $pdo = new PDO(
-        'mysql:host=127.0.0.1;port=3307;dbname=auratio_db;charset=utf8mb4',
-        'root',
-        '',
+        $dsn,
+        $dbConfig['username'],
+        $dbConfig['password'],
         [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
