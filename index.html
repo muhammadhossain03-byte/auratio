@@ -341,14 +341,13 @@ tailwind.config={theme:{extend:{colors:{"surface-accent":"#F0F5FF","primary-cont
   </div>
 </div>
 
-<script>
+<script type="module">
+import { DEMO_MODE, API_BASE } from './assets/js/config.js';
+import { api, apiGet, apiPost, apiPut, apiDel } from './assets/js/api.js';
+
 // ═══════════════════════════════════════════════════════════════════════
 // CONFIGURATION & STATE
 // ═══════════════════════════════════════════════════════════════════════
-const IS_PAGES = location.hostname.endsWith('github.io');
-const DEMO_MODE = IS_PAGES;
-const API_BASE = IS_PAGES ? null : './api';
-
 let G = { lookups: null, users: null, curricula: null, submissions: null, events: null, evaluations: null };
 let currentTab = 'dashboard';
 let selectedCurriculumId = null;
@@ -461,22 +460,6 @@ document.getElementById('modal-backdrop').onclick = closeModal;
 document.getElementById('modal-close-btn').onclick = closeModal;
 document.getElementById('modal-cancel').onclick = closeModal;
 document.getElementById('modal-save').onclick = async () => { if (modalSaveCb) await modalSaveCb(); };
-
-// ═══════════════════════════════════════════════════════════════════════
-// API LAYER
-// ═══════════════════════════════════════════════════════════════════════
-async function api(endpoint, opts={}) {
-  if (DEMO_MODE) throw new Error('Write operations are disabled in demo mode.');
-  const url = `${API_BASE}/${endpoint}`;
-  const res = await fetch(url, { headers:{'Content-Type':'application/json'}, ...opts });
-  const json = await res.json();
-  if (!json.ok) throw new Error(json.error?.message || 'Unknown error');
-  return json.data;
-}
-async function apiGet(ep) { return api(ep); }
-async function apiPost(ep, data) { return api(ep, { method:'POST', body:JSON.stringify(data) }); }
-async function apiPut(ep, data) { return api(ep, { method:'PUT', body:JSON.stringify(data) }); }
-async function apiDel(ep) { return api(ep, { method:'DELETE' }); }
 
 function showLoading(el) { el.innerHTML = '<div class="flex items-center justify-center py-12"><div class="loader"></div></div>'; }
 function showError(el, msg) { el.innerHTML = `<div class="flex flex-col items-center justify-center py-12 text-on-surface-variant"><span class="material-symbols-outlined text-[36px] text-status-error mb-2">error</span><p class="font-body-sm">${esc(msg)}</p></div>`; }
@@ -1122,6 +1105,25 @@ document.getElementById('btn-add-registration').onclick = () => {
 // ═══════════════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════════════
+// Expose global handlers for inline HTML event attributes
+Object.assign(window, {
+  closeConfirm,
+  openUserModal,
+  deleteUser,
+  selectCurriculum,
+  showCurriculumDetail,
+  openCurriculumModal,
+  deleteCurriculum,
+  openSubmissionModal,
+  deleteSubmission,
+  openEvalModal,
+  setEvalType,
+  openEventModal,
+  deleteEvent,
+  toggleEventFields,
+  viewRegistrations,
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   if (DEMO_MODE) {
     document.getElementById('demo-banner').classList.remove('hidden');

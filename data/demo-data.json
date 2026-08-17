@@ -1,0 +1,4918 @@
+{
+    "tables": {
+        "user_account": [
+            {
+                "user_id": 1,
+                "full_name": "Muhammad Rafid Hossain",
+                "email": "rafid.hossain@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ012",
+                "bio": "Database architect and evaluator. NSU CSE.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 2,
+                "full_name": "Masuma Khan Trisha",
+                "email": "trisha.khan@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ013",
+                "bio": "Speech evaluator and community organizer from Dhaka.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 3,
+                "full_name": "Ushrika Mostafa Mou",
+                "email": "ushrika.mostafa@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ014",
+                "bio": "Learner and event organizer. Passionate about public speaking.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 4,
+                "full_name": "Ahnaf Akif",
+                "email": "ahnaf.akif@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ015",
+                "bio": "Learner and peer evaluator at NSU.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 5,
+                "full_name": "Md Ahsanuzzaman Khan",
+                "email": "ahsanuzzaman@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ016",
+                "bio": "Dedicated learner focused on persuasive speaking.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 6,
+                "full_name": "Farhan Ahmed",
+                "email": "farhan.ahmed@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ017",
+                "bio": "Completed the beginner curriculum. Aspiring debater.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 7,
+                "full_name": "Nusrat Jahan",
+                "email": "nusrat.jahan@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ018",
+                "bio": "Intermediate learner interested in data-driven presentations.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 8,
+                "full_name": "Tanvir Hasan",
+                "email": "tanvir.hasan@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ019",
+                "bio": "Professional speech evaluator with 5 years of coaching experience.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 9,
+                "full_name": "Sadia Rahman",
+                "email": "sadia.rahman@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ020",
+                "bio": "Learner exploring impromptu and persuasive formats.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 10,
+                "full_name": "Rashed Kabir",
+                "email": "rashed.kabir@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ021",
+                "bio": "Community organizer running the Dhaka Speakers Circle.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 11,
+                "full_name": "Farjana Akter",
+                "email": "farjana.akter@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ022",
+                "bio": "Advanced learner preparing for national speech competitions.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 12,
+                "full_name": "Imran Chowdhury",
+                "email": "imran.chowdhury@auratio.app",
+                "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ023",
+                "bio": "Evaluator specialising in demonstrative and informative speeches.",
+                "account_status": "Active",
+                "created_at": "2026-08-17 22:09:39"
+            }
+        ],
+        "access_role": [
+            {
+                "role_id": 1,
+                "role_name": "Learner",
+                "description": "Enrolls in curricula and submits practice speeches"
+            },
+            {
+                "role_id": 2,
+                "role_name": "Evaluator",
+                "description": "Reviews and scores speech submissions"
+            },
+            {
+                "role_id": 3,
+                "role_name": "Administrator",
+                "description": "Manages users, roles, and platform configuration"
+            },
+            {
+                "role_id": 4,
+                "role_name": "Organizer",
+                "description": "Creates communities and hosts events"
+            }
+        ],
+        "access_permission": [
+            {
+                "permission_id": 1,
+                "permission_code": "curriculum.manage",
+                "description": "Create, update, and delete curricula and modules"
+            },
+            {
+                "permission_id": 2,
+                "permission_code": "submission.create",
+                "description": "Submit speech recordings for evaluation"
+            },
+            {
+                "permission_id": 3,
+                "permission_code": "evaluation.create",
+                "description": "Evaluate speech submissions and assign scores"
+            },
+            {
+                "permission_id": 4,
+                "permission_code": "event.host",
+                "description": "Create and manage community events"
+            },
+            {
+                "permission_id": 5,
+                "permission_code": "user.manage",
+                "description": "Create, update, and deactivate user accounts"
+            },
+            {
+                "permission_id": 6,
+                "permission_code": "community.create",
+                "description": "Create and manage speaking communities"
+            },
+            {
+                "permission_id": 7,
+                "permission_code": "report.view",
+                "description": "View dashboard analytics and progress reports"
+            },
+            {
+                "permission_id": 8,
+                "permission_code": "role.assign",
+                "description": "Assign and revoke roles for users"
+            }
+        ],
+        "role_permission": [
+            {
+                "role_id": 1,
+                "permission_id": 2
+            },
+            {
+                "role_id": 1,
+                "permission_id": 7
+            },
+            {
+                "role_id": 2,
+                "permission_id": 3
+            },
+            {
+                "role_id": 2,
+                "permission_id": 7
+            },
+            {
+                "role_id": 3,
+                "permission_id": 1
+            },
+            {
+                "role_id": 3,
+                "permission_id": 2
+            },
+            {
+                "role_id": 3,
+                "permission_id": 3
+            },
+            {
+                "role_id": 3,
+                "permission_id": 4
+            },
+            {
+                "role_id": 3,
+                "permission_id": 5
+            },
+            {
+                "role_id": 3,
+                "permission_id": 6
+            },
+            {
+                "role_id": 3,
+                "permission_id": 7
+            },
+            {
+                "role_id": 3,
+                "permission_id": 8
+            },
+            {
+                "role_id": 4,
+                "permission_id": 4
+            },
+            {
+                "role_id": 4,
+                "permission_id": 6
+            }
+        ],
+        "user_role_assignment": [
+            {
+                "user_id": 1,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 1,
+                "role_id": 3,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 2,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 2,
+                "role_id": 4,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 3,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 3,
+                "role_id": 4,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 4,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 4,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 5,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 6,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 7,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 8,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 9,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 10,
+                "role_id": 4,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 11,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 12,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            }
+        ],
+        "speech_format": [
+            {
+                "format_id": 1,
+                "format_name": "Persuasive",
+                "description": "Speeches designed to convince the audience to adopt a viewpoint or take action"
+            },
+            {
+                "format_id": 2,
+                "format_name": "Informative",
+                "description": "Speeches that educate the audience on a topic with facts and structure"
+            },
+            {
+                "format_id": 3,
+                "format_name": "Impromptu",
+                "description": "Unrehearsed speeches delivered with minimal preparation time"
+            },
+            {
+                "format_id": 4,
+                "format_name": "Demonstrative",
+                "description": "Speeches that teach the audience how to do something through live demonstration"
+            }
+        ],
+        "speaking_skill": [
+            {
+                "skill_id": 1,
+                "skill_name": "Structure",
+                "description": "Logical organisation of ideas including introduction, body, and conclusion"
+            },
+            {
+                "skill_id": 2,
+                "skill_name": "Delivery",
+                "description": "Vocal variety, pacing, tone, and overall presentation confidence"
+            },
+            {
+                "skill_id": 3,
+                "skill_name": "Clarity",
+                "description": "Clear articulation of ideas, concise language, and audience comprehension"
+            },
+            {
+                "skill_id": 4,
+                "skill_name": "Persuasion",
+                "description": "Ability to influence the audience through evidence, emotion, and reasoning"
+            },
+            {
+                "skill_id": 5,
+                "skill_name": "Body Language",
+                "description": "Effective use of gestures, eye contact, posture, and movement"
+            }
+        ],
+        "rubric_criterion": [
+            {
+                "criterion_id": 1,
+                "format_id": 1,
+                "skill_id": 1,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Clear thesis, logical flow of arguments, strong conclusion"
+            },
+            {
+                "criterion_id": 2,
+                "format_id": 1,
+                "skill_id": 2,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Confident delivery with vocal variety and appropriate pacing"
+            },
+            {
+                "criterion_id": 3,
+                "format_id": 1,
+                "skill_id": 3,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Ideas expressed concisely and understood by the audience"
+            },
+            {
+                "criterion_id": 4,
+                "format_id": 1,
+                "skill_id": 4,
+                "weight_percent": "35.00",
+                "max_score": 100,
+                "guidance_text": "Effective use of evidence, emotional appeal, and call to action"
+            },
+            {
+                "criterion_id": 5,
+                "format_id": 2,
+                "skill_id": 1,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Well-organised sections with clear transitions between topics"
+            },
+            {
+                "criterion_id": 6,
+                "format_id": 2,
+                "skill_id": 2,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Engaging delivery that maintains audience attention"
+            },
+            {
+                "criterion_id": 7,
+                "format_id": 2,
+                "skill_id": 3,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Complex information simplified without losing accuracy"
+            },
+            {
+                "criterion_id": 8,
+                "format_id": 2,
+                "skill_id": 5,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Purposeful gestures and visual aids support the content"
+            },
+            {
+                "criterion_id": 9,
+                "format_id": 3,
+                "skill_id": 2,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Composed delivery despite limited preparation time"
+            },
+            {
+                "criterion_id": 10,
+                "format_id": 3,
+                "skill_id": 3,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Coherent ideas communicated under time pressure"
+            },
+            {
+                "criterion_id": 11,
+                "format_id": 3,
+                "skill_id": 4,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Quick formation of a convincing position on the topic"
+            },
+            {
+                "criterion_id": 12,
+                "format_id": 3,
+                "skill_id": 5,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Confident posture and natural gestures under pressure"
+            },
+            {
+                "criterion_id": 13,
+                "format_id": 4,
+                "skill_id": 1,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Step-by-step organisation that the audience can follow"
+            },
+            {
+                "criterion_id": 14,
+                "format_id": 4,
+                "skill_id": 2,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Enthusiasm and clarity in demonstrating each step"
+            },
+            {
+                "criterion_id": 15,
+                "format_id": 4,
+                "skill_id": 3,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Instructions are precise and easy to replicate"
+            },
+            {
+                "criterion_id": 16,
+                "format_id": 4,
+                "skill_id": 5,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Effective physical demonstration and spatial awareness"
+            }
+        ],
+        "ai_specialist_agent": [
+            {
+                "agent_id": 1,
+                "format_id": 1,
+                "agent_name": "PersuasionPro",
+                "model_version": "v2.1",
+                "is_active": 1
+            },
+            {
+                "agent_id": 2,
+                "format_id": 2,
+                "agent_name": "InformBot",
+                "model_version": "v1.5",
+                "is_active": 1
+            },
+            {
+                "agent_id": 3,
+                "format_id": 3,
+                "agent_name": "ImpromptuCoach",
+                "model_version": "v1.0",
+                "is_active": 1
+            },
+            {
+                "agent_id": 4,
+                "format_id": 4,
+                "agent_name": "DemoAnalyzer",
+                "model_version": "v1.2",
+                "is_active": 1
+            },
+            {
+                "agent_id": 5,
+                "format_id": 1,
+                "agent_name": "PersuasionPro",
+                "model_version": "v1.0",
+                "is_active": 0
+            }
+        ],
+        "curriculum": [
+            {
+                "curriculum_id": 1,
+                "curriculum_code": "CUR-BEG-001",
+                "title": "Foundations of Public Speaking",
+                "description": "A beginner curriculum covering the basics of all four speech formats with guided practice.",
+                "difficulty_level": "Beginner",
+                "is_active": 1,
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "curriculum_id": 2,
+                "curriculum_code": "CUR-INT-001",
+                "title": "Intermediate Presentation Mastery",
+                "description": "Builds on foundational skills with data-driven and persuasive speaking techniques.",
+                "difficulty_level": "Intermediate",
+                "is_active": 1,
+                "created_at": "2026-08-17 22:09:39"
+            },
+            {
+                "curriculum_id": 3,
+                "curriculum_code": "CUR-ADV-001",
+                "title": "Advanced Oratory and Debate",
+                "description": "Intensive modules for competitive speakers refining advanced persuasion and impromptu skills.",
+                "difficulty_level": "Advanced",
+                "is_active": 1,
+                "created_at": "2026-08-17 22:09:39"
+            }
+        ],
+        "curriculum_module": [
+            {
+                "module_id": 1,
+                "curriculum_id": 1,
+                "format_id": 2,
+                "sequence_no": 1,
+                "title": "Introduction to Informative Speaking",
+                "learning_objective": "Deliver a 3-minute informative speech with clear structure",
+                "passing_score": 60
+            },
+            {
+                "module_id": 2,
+                "curriculum_id": 1,
+                "format_id": 4,
+                "sequence_no": 2,
+                "title": "Basic Demonstration Techniques",
+                "learning_objective": "Perform a step-by-step demonstration with audience engagement",
+                "passing_score": 60
+            },
+            {
+                "module_id": 3,
+                "curriculum_id": 1,
+                "format_id": 1,
+                "sequence_no": 3,
+                "title": "Fundamentals of Persuasion",
+                "learning_objective": "Construct a basic persuasive argument with supporting evidence",
+                "passing_score": 60
+            },
+            {
+                "module_id": 4,
+                "curriculum_id": 1,
+                "format_id": 3,
+                "sequence_no": 4,
+                "title": "Impromptu Speaking Basics",
+                "learning_objective": "Deliver a coherent 2-minute impromptu speech on a given topic",
+                "passing_score": 55
+            },
+            {
+                "module_id": 5,
+                "curriculum_id": 2,
+                "format_id": 1,
+                "sequence_no": 1,
+                "title": "Crafting Persuasive Arguments",
+                "learning_objective": "Build multi-layered arguments with emotional and logical appeals",
+                "passing_score": 65
+            },
+            {
+                "module_id": 6,
+                "curriculum_id": 2,
+                "format_id": 2,
+                "sequence_no": 2,
+                "title": "Data-Driven Presentations",
+                "learning_objective": "Present complex data clearly using visual aids and transitions",
+                "passing_score": 65
+            },
+            {
+                "module_id": 7,
+                "curriculum_id": 2,
+                "format_id": 3,
+                "sequence_no": 3,
+                "title": "Quick Thinking and Response",
+                "learning_objective": "Handle unexpected topics with structured impromptu frameworks",
+                "passing_score": 60
+            },
+            {
+                "module_id": 8,
+                "curriculum_id": 2,
+                "format_id": 4,
+                "sequence_no": 4,
+                "title": "Product Demo Excellence",
+                "learning_objective": "Deliver a polished product demonstration with audience Q&A",
+                "passing_score": 65
+            },
+            {
+                "module_id": 9,
+                "curriculum_id": 3,
+                "format_id": 1,
+                "sequence_no": 1,
+                "title": "Advanced Persuasion Strategies",
+                "learning_objective": "Employ advanced rhetorical techniques in competitive settings",
+                "passing_score": 75
+            },
+            {
+                "module_id": 10,
+                "curriculum_id": 3,
+                "format_id": 3,
+                "sequence_no": 2,
+                "title": "Competitive Impromptu Speaking",
+                "learning_objective": "Excel under strict time constraints with minimal preparation",
+                "passing_score": 70
+            },
+            {
+                "module_id": 11,
+                "curriculum_id": 3,
+                "format_id": 2,
+                "sequence_no": 3,
+                "title": "Expert-Level Informative Talks",
+                "learning_objective": "Deliver a TED-style informative talk with narrative structure",
+                "passing_score": 75
+            },
+            {
+                "module_id": 12,
+                "curriculum_id": 3,
+                "format_id": 4,
+                "sequence_no": 4,
+                "title": "Master Class Demonstrations",
+                "learning_objective": "Lead a professional-level demonstration with live troubleshooting",
+                "passing_score": 70
+            }
+        ],
+        "milestone": [
+            {
+                "milestone_id": 1,
+                "curriculum_id": 1,
+                "milestone_code": "MS-BEG-HALF",
+                "title": "Beginner Halfway",
+                "description": "Reached the halfway point of the beginner curriculum",
+                "rule_description": "Complete at least 2 of 4 beginner modules with a passing score"
+            },
+            {
+                "milestone_id": 2,
+                "curriculum_id": 1,
+                "milestone_code": "MS-BEG-DONE",
+                "title": "Beginner Complete",
+                "description": "Completed the entire beginner curriculum",
+                "rule_description": "Complete all 4 beginner modules with a passing score"
+            },
+            {
+                "milestone_id": 3,
+                "curriculum_id": 2,
+                "milestone_code": "MS-INT-HALF",
+                "title": "Intermediate Halfway",
+                "description": "Reached the halfway point of the intermediate curriculum",
+                "rule_description": "Complete at least 2 of 4 intermediate modules with a passing score"
+            },
+            {
+                "milestone_id": 4,
+                "curriculum_id": 2,
+                "milestone_code": "MS-INT-DONE",
+                "title": "Intermediate Complete",
+                "description": "Completed the entire intermediate curriculum",
+                "rule_description": "Complete all 4 intermediate modules with a passing score"
+            },
+            {
+                "milestone_id": 5,
+                "curriculum_id": 3,
+                "milestone_code": "MS-ADV-HALF",
+                "title": "Advanced Halfway",
+                "description": "Reached the halfway point of the advanced curriculum",
+                "rule_description": "Complete at least 2 of 4 advanced modules with a passing score"
+            },
+            {
+                "milestone_id": 6,
+                "curriculum_id": 3,
+                "milestone_code": "MS-ADV-DONE",
+                "title": "Advanced Complete",
+                "description": "Completed the entire advanced curriculum",
+                "rule_description": "Complete all 4 advanced modules with a passing score"
+            }
+        ],
+        "curriculum_enrollment": [
+            {
+                "enrollment_id": 1,
+                "learner_id": 4,
+                "curriculum_id": 1,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-01-15 09:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 2,
+                "learner_id": 5,
+                "curriculum_id": 1,
+                "enrollment_status": "Completed",
+                "enrolled_at": "2026-01-20 10:30:00",
+                "completed_at": "2026-04-15 16:00:00"
+            },
+            {
+                "enrollment_id": 3,
+                "learner_id": 6,
+                "curriculum_id": 1,
+                "enrollment_status": "Completed",
+                "enrolled_at": "2026-02-01 08:00:00",
+                "completed_at": "2026-05-10 14:30:00"
+            },
+            {
+                "enrollment_id": 4,
+                "learner_id": 7,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-03-01 11:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 5,
+                "learner_id": 9,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-03-15 09:30:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 6,
+                "learner_id": 3,
+                "curriculum_id": 1,
+                "enrollment_status": "Withdrawn",
+                "enrolled_at": "2026-01-25 14:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 7,
+                "learner_id": 11,
+                "curriculum_id": 3,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-04-01 10:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 8,
+                "learner_id": 6,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-05-15 08:30:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 9,
+                "learner_id": 4,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-04-10 09:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 10,
+                "learner_id": 5,
+                "curriculum_id": 3,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-05-01 11:00:00",
+                "completed_at": null
+            }
+        ],
+        "module_progress": [
+            {
+                "module_progress_id": 1,
+                "enrollment_id": 1,
+                "module_id": 1,
+                "progress_status": "Completed",
+                "started_at": "2026-01-16 10:00:00",
+                "completed_at": "2026-02-10 15:00:00"
+            },
+            {
+                "module_progress_id": 2,
+                "enrollment_id": 1,
+                "module_id": 2,
+                "progress_status": "Completed",
+                "started_at": "2026-02-12 10:00:00",
+                "completed_at": "2026-03-05 14:00:00"
+            },
+            {
+                "module_progress_id": 3,
+                "enrollment_id": 1,
+                "module_id": 3,
+                "progress_status": "In Progress",
+                "started_at": "2026-03-10 09:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 4,
+                "enrollment_id": 1,
+                "module_id": 4,
+                "progress_status": "Not Started",
+                "started_at": null,
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 5,
+                "enrollment_id": 2,
+                "module_id": 1,
+                "progress_status": "Completed",
+                "started_at": "2026-01-22 10:00:00",
+                "completed_at": "2026-02-15 16:00:00"
+            },
+            {
+                "module_progress_id": 6,
+                "enrollment_id": 2,
+                "module_id": 2,
+                "progress_status": "Completed",
+                "started_at": "2026-02-18 10:00:00",
+                "completed_at": "2026-03-10 15:00:00"
+            },
+            {
+                "module_progress_id": 7,
+                "enrollment_id": 2,
+                "module_id": 3,
+                "progress_status": "Completed",
+                "started_at": "2026-03-12 09:00:00",
+                "completed_at": "2026-04-01 14:00:00"
+            },
+            {
+                "module_progress_id": 8,
+                "enrollment_id": 2,
+                "module_id": 4,
+                "progress_status": "Completed",
+                "started_at": "2026-04-03 10:00:00",
+                "completed_at": "2026-04-15 16:00:00"
+            },
+            {
+                "module_progress_id": 9,
+                "enrollment_id": 3,
+                "module_id": 1,
+                "progress_status": "Completed",
+                "started_at": "2026-02-03 09:00:00",
+                "completed_at": "2026-02-25 15:00:00"
+            },
+            {
+                "module_progress_id": 10,
+                "enrollment_id": 3,
+                "module_id": 2,
+                "progress_status": "Completed",
+                "started_at": "2026-02-27 10:00:00",
+                "completed_at": "2026-03-20 14:00:00"
+            },
+            {
+                "module_progress_id": 11,
+                "enrollment_id": 3,
+                "module_id": 3,
+                "progress_status": "Completed",
+                "started_at": "2026-03-22 09:00:00",
+                "completed_at": "2026-04-15 15:00:00"
+            },
+            {
+                "module_progress_id": 12,
+                "enrollment_id": 3,
+                "module_id": 4,
+                "progress_status": "Completed",
+                "started_at": "2026-04-17 10:00:00",
+                "completed_at": "2026-05-10 14:00:00"
+            },
+            {
+                "module_progress_id": 13,
+                "enrollment_id": 4,
+                "module_id": 5,
+                "progress_status": "Completed",
+                "started_at": "2026-03-05 10:00:00",
+                "completed_at": "2026-04-01 16:00:00"
+            },
+            {
+                "module_progress_id": 14,
+                "enrollment_id": 4,
+                "module_id": 6,
+                "progress_status": "In Progress",
+                "started_at": "2026-04-05 09:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 15,
+                "enrollment_id": 5,
+                "module_id": 5,
+                "progress_status": "In Progress",
+                "started_at": "2026-03-20 10:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 16,
+                "enrollment_id": 9,
+                "module_id": 5,
+                "progress_status": "Completed",
+                "started_at": "2026-04-15 10:00:00",
+                "completed_at": "2026-05-10 15:00:00"
+            },
+            {
+                "module_progress_id": 17,
+                "enrollment_id": 9,
+                "module_id": 6,
+                "progress_status": "In Progress",
+                "started_at": "2026-05-15 09:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 18,
+                "enrollment_id": 10,
+                "module_id": 9,
+                "progress_status": "In Progress",
+                "started_at": "2026-05-05 10:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 19,
+                "enrollment_id": 7,
+                "module_id": 9,
+                "progress_status": "Completed",
+                "started_at": "2026-04-05 10:00:00",
+                "completed_at": "2026-05-01 14:00:00"
+            },
+            {
+                "module_progress_id": 20,
+                "enrollment_id": 7,
+                "module_id": 10,
+                "progress_status": "Not Started",
+                "started_at": null,
+                "completed_at": null
+            }
+        ],
+        "speech_submission": [
+            {
+                "submission_id": 1,
+                "module_progress_id": 1,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/1aB2cD3eF4gH5iJ6kL/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 195,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-02-05 14:00:00"
+            },
+            {
+                "submission_id": 2,
+                "module_progress_id": 2,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/2bC3dE4fG5hI6jK7lM/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 240,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-02-28 11:00:00"
+            },
+            {
+                "submission_id": 3,
+                "module_progress_id": 3,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/3cD4eF5gH6iJ7kL8mN/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 210,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-18 10:00:00"
+            },
+            {
+                "submission_id": 4,
+                "module_progress_id": 5,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/4dE5fG6hI7jK8lM9nO/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 200,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-02-10 15:00:00"
+            },
+            {
+                "submission_id": 5,
+                "module_progress_id": 6,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/5eF6gH7iJ8kL9mN0oP/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 255,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-02 09:30:00"
+            },
+            {
+                "submission_id": 6,
+                "module_progress_id": 7,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/6fG7hI8jK9lM0nO1pQ/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 230,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-25 14:00:00"
+            },
+            {
+                "submission_id": 7,
+                "module_progress_id": 8,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/7gH8iJ9kL0mN1oP2qR/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 180,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-04-10 11:00:00"
+            },
+            {
+                "submission_id": 8,
+                "module_progress_id": 9,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/8hI9jK0lM1nO2pQ3rS/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 205,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-02-18 10:00:00"
+            },
+            {
+                "submission_id": 9,
+                "module_progress_id": 10,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/9iJ0kL1mN2oP3qR4sT/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 260,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-12 15:30:00"
+            },
+            {
+                "submission_id": 10,
+                "module_progress_id": 11,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/0jK1lM2nO3pQ4rS5tU/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 220,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-04-05 09:00:00"
+            },
+            {
+                "submission_id": 11,
+                "module_progress_id": 12,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/1kL2mN3oP4qR5sT6uV/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 185,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-04-28 14:00:00"
+            },
+            {
+                "submission_id": 12,
+                "module_progress_id": 13,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/2lM3nO4pQ5rS6tU7vW/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 245,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-15 10:00:00"
+            },
+            {
+                "submission_id": 13,
+                "module_progress_id": 13,
+                "attempt_no": 2,
+                "video_uri": "https://drive.google.com/file/d/3mN4oP5qR6sT7uV8wX/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 250,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-22 10:00:00"
+            },
+            {
+                "submission_id": 14,
+                "module_progress_id": 13,
+                "attempt_no": 3,
+                "video_uri": "https://drive.google.com/file/d/4nO5pQ6rS7tU8vW9xY/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 238,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-03-29 10:00:00"
+            },
+            {
+                "submission_id": 15,
+                "module_progress_id": 14,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/5oP6qR7sT8uV9wX0yZ/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 215,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-04-12 11:00:00"
+            },
+            {
+                "submission_id": 16,
+                "module_progress_id": 15,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/6pQ7rS8tU9vW0xY1zA/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 225,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Under Review",
+                "submitted_at": "2026-04-01 14:30:00"
+            },
+            {
+                "submission_id": 17,
+                "module_progress_id": 16,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/7qR8sT9uV0wX1yZ2aB/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 235,
+                "requested_evaluator_type": "HUMAN",
+                "submission_status": "Evaluated",
+                "submitted_at": "2026-05-02 09:00:00"
+            },
+            {
+                "submission_id": 18,
+                "module_progress_id": 19,
+                "attempt_no": 1,
+                "video_uri": "https://drive.google.com/file/d/8rS9tU0vW1xY2zA3bC/view",
+                "mime_type": "video/mp4",
+                "duration_seconds": 270,
+                "requested_evaluator_type": "AI",
+                "submission_status": "Submitted",
+                "submitted_at": "2026-04-25 15:00:00"
+            }
+        ],
+        "evaluation": [
+            {
+                "evaluation_id": 1,
+                "submission_id": 1,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 2,
+                "overall_score": "72.50",
+                "summary_feedback": "Solid informative structure with room for deeper analysis.",
+                "evaluated_at": "2026-02-06 10:00:00"
+            },
+            {
+                "evaluation_id": 2,
+                "submission_id": 2,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 1,
+                "agent_id": null,
+                "overall_score": "68.00",
+                "summary_feedback": "Good demonstration technique; needs smoother transitions between steps.",
+                "evaluated_at": "2026-03-01 14:00:00"
+            },
+            {
+                "evaluation_id": 3,
+                "submission_id": 3,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 1,
+                "overall_score": "61.50",
+                "summary_feedback": "Basic persuasive structure present but thesis needs strengthening.",
+                "evaluated_at": "2026-03-19 09:00:00"
+            },
+            {
+                "evaluation_id": 4,
+                "submission_id": 4,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 2,
+                "agent_id": null,
+                "overall_score": "78.00",
+                "summary_feedback": "Clear informative content with effective use of examples.",
+                "evaluated_at": "2026-02-12 11:00:00"
+            },
+            {
+                "evaluation_id": 5,
+                "submission_id": 5,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 4,
+                "overall_score": "75.25",
+                "summary_feedback": "Well-organised demonstration with good audience engagement.",
+                "evaluated_at": "2026-03-03 10:00:00"
+            },
+            {
+                "evaluation_id": 6,
+                "submission_id": 6,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 8,
+                "agent_id": null,
+                "overall_score": "82.00",
+                "summary_feedback": "Strong persuasive delivery with compelling evidence throughout.",
+                "evaluated_at": "2026-03-26 15:00:00"
+            },
+            {
+                "evaluation_id": 7,
+                "submission_id": 7,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 3,
+                "overall_score": "69.00",
+                "summary_feedback": "Acceptable impromptu response; structure could be tighter.",
+                "evaluated_at": "2026-04-11 09:00:00"
+            },
+            {
+                "evaluation_id": 8,
+                "submission_id": 8,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 2,
+                "overall_score": "85.50",
+                "summary_feedback": "Excellent informative speech with strong data presentation.",
+                "evaluated_at": "2026-02-19 10:00:00"
+            },
+            {
+                "evaluation_id": 9,
+                "submission_id": 9,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 12,
+                "agent_id": null,
+                "overall_score": "71.00",
+                "summary_feedback": "Adequate demonstration; pacing was too fast in the middle section.",
+                "evaluated_at": "2026-03-14 11:00:00"
+            },
+            {
+                "evaluation_id": 10,
+                "submission_id": 10,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 1,
+                "overall_score": "88.00",
+                "summary_feedback": "Outstanding persuasive technique with masterful emotional appeal.",
+                "evaluated_at": "2026-04-06 10:00:00"
+            },
+            {
+                "evaluation_id": 11,
+                "submission_id": 11,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 1,
+                "agent_id": null,
+                "overall_score": "77.50",
+                "summary_feedback": "Good impromptu delivery; conclusion could be more impactful.",
+                "evaluated_at": "2026-04-29 14:00:00"
+            },
+            {
+                "evaluation_id": 12,
+                "submission_id": 12,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 1,
+                "overall_score": "62.00",
+                "summary_feedback": "First attempt shows potential; argument needs more supporting evidence.",
+                "evaluated_at": "2026-03-16 10:00:00"
+            },
+            {
+                "evaluation_id": 13,
+                "submission_id": 12,
+                "evaluation_no": 2,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 2,
+                "agent_id": null,
+                "overall_score": "65.00",
+                "summary_feedback": "Agrees with AI assessment; recommends focusing on call-to-action clarity.",
+                "evaluated_at": "2026-03-17 14:00:00"
+            },
+            {
+                "evaluation_id": 14,
+                "submission_id": 13,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 1,
+                "overall_score": "74.50",
+                "summary_feedback": "Marked improvement in argument structure over previous attempt.",
+                "evaluated_at": "2026-03-23 10:00:00"
+            },
+            {
+                "evaluation_id": 15,
+                "submission_id": 14,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 1,
+                "overall_score": "88.00",
+                "summary_feedback": "Excellent final attempt; persuasive technique now well above passing threshold.",
+                "evaluated_at": "2026-03-30 10:00:00"
+            },
+            {
+                "evaluation_id": 16,
+                "submission_id": 15,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 8,
+                "agent_id": null,
+                "overall_score": "70.00",
+                "summary_feedback": "Informative content is solid; needs better transitions.",
+                "evaluated_at": "2026-04-13 15:00:00"
+            },
+            {
+                "evaluation_id": 17,
+                "submission_id": 17,
+                "evaluation_no": 1,
+                "evaluator_type": "HUMAN",
+                "human_evaluator_id": 4,
+                "agent_id": null,
+                "overall_score": "79.00",
+                "summary_feedback": "Strong persuasive delivery with clear thesis and supporting points.",
+                "evaluated_at": "2026-05-03 11:00:00"
+            },
+            {
+                "evaluation_id": 18,
+                "submission_id": 16,
+                "evaluation_no": 1,
+                "evaluator_type": "AI",
+                "human_evaluator_id": null,
+                "agent_id": 1,
+                "overall_score": "66.50",
+                "summary_feedback": "Persuasive structure present but evidence is generic. Cite specific sources.",
+                "evaluated_at": "2026-04-02 10:00:00"
+            }
+        ],
+        "evaluation_skill_score": [
+            {
+                "evaluation_id": 1,
+                "criterion_id": 5,
+                "score": "75.00",
+                "feedback": "Good topic organisation with clear sections"
+            },
+            {
+                "evaluation_id": 1,
+                "criterion_id": 6,
+                "score": "70.00",
+                "feedback": "Adequate delivery; could use more vocal variety"
+            },
+            {
+                "evaluation_id": 1,
+                "criterion_id": 7,
+                "score": "74.00",
+                "feedback": "Information was mostly clear and accessible"
+            },
+            {
+                "evaluation_id": 1,
+                "criterion_id": 8,
+                "score": "68.00",
+                "feedback": "Minimal gestures; consider using visual aids"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 13,
+                "score": "70.00",
+                "feedback": "Steps were in logical order"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 14,
+                "score": "65.00",
+                "feedback": "Enthusiasm dipped during the middle steps"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 15,
+                "score": "72.00",
+                "feedback": "Instructions were understandable"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 16,
+                "score": "62.00",
+                "feedback": "Physical demonstration was hesitant at times"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 1,
+                "score": "60.00",
+                "feedback": "Thesis was stated but not clearly positioned"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 2,
+                "score": "63.00",
+                "feedback": "Delivery was steady but lacked conviction"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 3,
+                "score": "65.00",
+                "feedback": "Language was clear but arguments were surface-level"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 4,
+                "score": "58.00",
+                "feedback": "Persuasive appeal was weak; needs stronger evidence"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 5,
+                "score": "80.00",
+                "feedback": "Well-structured with smooth transitions"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 6,
+                "score": "76.00",
+                "feedback": "Engaging tone that held audience attention"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 7,
+                "score": "79.00",
+                "feedback": "Complex ideas explained effectively"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 8,
+                "score": "75.00",
+                "feedback": "Good posture and purposeful hand movements"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 13,
+                "score": "78.00",
+                "feedback": "Clear step-by-step progression"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 14,
+                "score": "74.00",
+                "feedback": "Good energy throughout the demonstration"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 15,
+                "score": "76.00",
+                "feedback": "Audience could follow and replicate the process"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 16,
+                "score": "72.00",
+                "feedback": "Spatial awareness was adequate"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 1,
+                "score": "80.00",
+                "feedback": "Strong introduction and well-organised arguments"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 2,
+                "score": "84.00",
+                "feedback": "Excellent vocal variety and confident delivery"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 3,
+                "score": "81.00",
+                "feedback": "Ideas expressed with precision"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 4,
+                "score": "83.00",
+                "feedback": "Compelling emotional and logical appeals"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 9,
+                "score": "72.00",
+                "feedback": "Maintained composure despite limited prep time"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 10,
+                "score": "68.00",
+                "feedback": "Some ideas lacked coherence"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 11,
+                "score": "66.00",
+                "feedback": "Position was stated but not strongly defended"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 12,
+                "score": "70.00",
+                "feedback": "Body language was natural and relaxed"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 5,
+                "score": "88.00",
+                "feedback": "Excellent structure with compelling narrative arc"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 6,
+                "score": "84.00",
+                "feedback": "Dynamic delivery with effective pauses"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 7,
+                "score": "86.00",
+                "feedback": "Data presented with exceptional clarity"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 8,
+                "score": "82.00",
+                "feedback": "Good use of gestures to emphasise key points"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 13,
+                "score": "73.00",
+                "feedback": "Logical order but some steps were rushed"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 14,
+                "score": "69.00",
+                "feedback": "Pacing was too fast in the middle section"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 15,
+                "score": "74.00",
+                "feedback": "Mostly clear instructions with minor ambiguity"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 16,
+                "score": "66.00",
+                "feedback": "Limited movement; stayed behind the podium"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 1,
+                "score": "86.00",
+                "feedback": "Masterful organisation with a powerful conclusion"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 2,
+                "score": "90.00",
+                "feedback": "Outstanding delivery with commanding presence"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 3,
+                "score": "87.00",
+                "feedback": "Every point was crystal clear"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 4,
+                "score": "89.00",
+                "feedback": "Persuasive technique was highly effective"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 9,
+                "score": "79.00",
+                "feedback": "Confident and composed under time pressure"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 10,
+                "score": "78.00",
+                "feedback": "Ideas were well-articulated and coherent"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 11,
+                "score": "74.00",
+                "feedback": "Good but could strengthen the closing argument"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 12,
+                "score": "76.00",
+                "feedback": "Natural gestures and good eye contact"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 1,
+                "score": "63.00",
+                "feedback": "Basic structure present but needs clearer thesis"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 2,
+                "score": "60.00",
+                "feedback": "Delivery lacked confidence and vocal variety"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 3,
+                "score": "64.00",
+                "feedback": "Ideas were understandable but not compelling"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 4,
+                "score": "58.00",
+                "feedback": "Call to action was vague and unconvincing"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 1,
+                "score": "66.00",
+                "feedback": "Agrees thesis needs more precision"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 2,
+                "score": "63.00",
+                "feedback": "Delivery was earnest but still tentative"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 3,
+                "score": "67.00",
+                "feedback": "Clarity improved over AI assessment reading"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 4,
+                "score": "62.00",
+                "feedback": "Evidence is there but not woven into narrative"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 1,
+                "score": "75.00",
+                "feedback": "Structure has improved significantly"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 2,
+                "score": "73.00",
+                "feedback": "More confident delivery with better pacing"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 3,
+                "score": "76.00",
+                "feedback": "Arguments are clearer and better supported"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 4,
+                "score": "72.00",
+                "feedback": "Persuasive appeal is stronger; keep refining"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 1,
+                "score": "87.00",
+                "feedback": "Excellent structure with a powerful opening"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 2,
+                "score": "89.00",
+                "feedback": "Confident, dynamic delivery throughout"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 3,
+                "score": "88.00",
+                "feedback": "Every argument was precise and well-supported"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 4,
+                "score": "90.00",
+                "feedback": "Masterful persuasion; outstanding improvement"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 5,
+                "score": "72.00",
+                "feedback": "Adequate structure with minor gaps"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 6,
+                "score": "68.00",
+                "feedback": "Delivery could be more engaging"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 7,
+                "score": "71.00",
+                "feedback": "Information was clear but lacked depth"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 8,
+                "score": "67.00",
+                "feedback": "Minimal body language variation"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 1,
+                "score": "78.00",
+                "feedback": "Clear thesis with well-organised arguments"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 2,
+                "score": "80.00",
+                "feedback": "Confident delivery with good vocal range"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 3,
+                "score": "79.00",
+                "feedback": "Ideas communicated effectively"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 4,
+                "score": "77.00",
+                "feedback": "Good persuasive technique with room to grow"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 1,
+                "score": "68.00",
+                "feedback": "Structure is acceptable but predictable"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 2,
+                "score": "65.00",
+                "feedback": "Delivery was flat; needs more energy"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 3,
+                "score": "67.00",
+                "feedback": "Arguments were clear but lacked specificity"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 4,
+                "score": "64.00",
+                "feedback": "Persuasive elements were generic"
+            }
+        ],
+        "user_milestone": [
+            {
+                "user_id": 4,
+                "milestone_id": 1,
+                "achieved_at": "2026-03-05 15:00:00"
+            },
+            {
+                "user_id": 4,
+                "milestone_id": 3,
+                "achieved_at": "2026-05-10 15:00:00"
+            },
+            {
+                "user_id": 5,
+                "milestone_id": 1,
+                "achieved_at": "2026-03-10 14:00:00"
+            },
+            {
+                "user_id": 5,
+                "milestone_id": 2,
+                "achieved_at": "2026-04-15 16:00:00"
+            },
+            {
+                "user_id": 6,
+                "milestone_id": 1,
+                "achieved_at": "2026-03-20 14:00:00"
+            },
+            {
+                "user_id": 6,
+                "milestone_id": 2,
+                "achieved_at": "2026-05-10 14:30:00"
+            },
+            {
+                "user_id": 7,
+                "milestone_id": 3,
+                "achieved_at": "2026-04-01 16:00:00"
+            },
+            {
+                "user_id": 11,
+                "milestone_id": 5,
+                "achieved_at": "2026-05-01 14:00:00"
+            }
+        ],
+        "community": [
+            {
+                "community_id": 1,
+                "created_by_user_id": 10,
+                "name": "Dhaka Speakers Circle",
+                "description": "A community of public speaking enthusiasts in Dhaka practising weekly.",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "community_id": 2,
+                "created_by_user_id": 3,
+                "name": "NSU Communication Society",
+                "description": "North South University student group focused on communication skills.",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "community_id": 3,
+                "created_by_user_id": 2,
+                "name": "Corporate Presenters BD",
+                "description": "Professionals improving business presentation and pitching skills.",
+                "created_at": "2026-08-17 22:09:40"
+            }
+        ],
+        "community_membership": [
+            {
+                "community_id": 1,
+                "user_id": 1,
+                "membership_status": "Active",
+                "joined_at": "2026-01-10 09:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 2,
+                "membership_status": "Active",
+                "joined_at": "2026-01-12 10:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 3,
+                "membership_status": "Active",
+                "joined_at": "2026-01-15 11:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 4,
+                "membership_status": "Active",
+                "joined_at": "2026-01-18 14:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 5,
+                "membership_status": "Active",
+                "joined_at": "2026-02-01 09:30:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 6,
+                "membership_status": "Pending",
+                "joined_at": "2026-03-05 10:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 10,
+                "membership_status": "Active",
+                "joined_at": "2026-01-05 08:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 3,
+                "membership_status": "Active",
+                "joined_at": "2026-02-01 10:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 4,
+                "membership_status": "Active",
+                "joined_at": "2026-02-05 11:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 5,
+                "membership_status": "Active",
+                "joined_at": "2026-02-10 09:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 7,
+                "membership_status": "Active",
+                "joined_at": "2026-02-15 14:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 9,
+                "membership_status": "Pending",
+                "joined_at": "2026-03-20 10:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 11,
+                "membership_status": "Active",
+                "joined_at": "2026-02-20 11:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 1,
+                "membership_status": "Active",
+                "joined_at": "2026-03-01 09:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 2,
+                "membership_status": "Active",
+                "joined_at": "2026-03-01 09:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 8,
+                "membership_status": "Active",
+                "joined_at": "2026-03-10 10:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 10,
+                "membership_status": "Pending",
+                "joined_at": "2026-04-01 14:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 12,
+                "membership_status": "Active",
+                "joined_at": "2026-03-15 11:00:00"
+            }
+        ],
+        "community_event": [
+            {
+                "event_id": 1,
+                "community_id": 1,
+                "organizer_user_id": 10,
+                "title": "Annual Speech Competition 2026",
+                "description": "The flagship annual competition featuring all four speech formats.",
+                "event_mode": "In-Person",
+                "start_at": "2026-09-15 09:00:00",
+                "end_at": "2026-09-15 17:00:00",
+                "venue": "Dhaka University TSC Auditorium, Dhaka",
+                "meeting_url": null,
+                "capacity": 100,
+                "event_status": "Scheduled",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "event_id": 2,
+                "community_id": 1,
+                "organizer_user_id": 10,
+                "title": "Monthly Practice Meetup ??? September",
+                "description": "Informal practice session for members to rehearse upcoming speeches.",
+                "event_mode": "Hybrid",
+                "start_at": "2026-09-05 18:00:00",
+                "end_at": "2026-09-05 20:00:00",
+                "venue": "Dhanmondi Community Center, Dhaka",
+                "meeting_url": "https://meet.google.com/abc-defg-hij",
+                "capacity": 30,
+                "event_status": "Scheduled",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "event_id": 3,
+                "community_id": 2,
+                "organizer_user_id": 3,
+                "title": "Debate Workshop for Beginners",
+                "description": "Hands-on workshop covering basic debate formats and argumentation.",
+                "event_mode": "Online",
+                "start_at": "2026-06-10 15:00:00",
+                "end_at": "2026-06-10 17:30:00",
+                "venue": null,
+                "meeting_url": "https://zoom.us/j/9876543210",
+                "capacity": 50,
+                "event_status": "Completed",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "event_id": 4,
+                "community_id": 2,
+                "organizer_user_id": 3,
+                "title": "Impromptu Speaking Challenge",
+                "description": "Timed impromptu rounds with peer feedback and scoring.",
+                "event_mode": "In-Person",
+                "start_at": "2026-07-20 14:00:00",
+                "end_at": "2026-07-20 16:00:00",
+                "venue": "NSU Auditorium, Bashundhara, Dhaka",
+                "meeting_url": null,
+                "capacity": 40,
+                "event_status": "Cancelled",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "event_id": 5,
+                "community_id": 3,
+                "organizer_user_id": 2,
+                "title": "Corporate Pitch Night",
+                "description": "Members pitch business ideas in 5-minute presentations to a panel.",
+                "event_mode": "In-Person",
+                "start_at": "2026-10-01 18:30:00",
+                "end_at": "2026-10-01 21:00:00",
+                "venue": "Radisson Blu Water Garden, Dhaka",
+                "meeting_url": null,
+                "capacity": 60,
+                "event_status": "Scheduled",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "event_id": 6,
+                "community_id": 3,
+                "organizer_user_id": 2,
+                "title": "Virtual Storytelling Workshop",
+                "description": "Learn the art of storytelling for corporate presentations.",
+                "event_mode": "Online",
+                "start_at": "2026-08-25 19:00:00",
+                "end_at": "2026-08-25 21:00:00",
+                "venue": null,
+                "meeting_url": "https://meet.google.com/xyz-abcd-efg",
+                "capacity": 25,
+                "event_status": "Scheduled",
+                "created_at": "2026-08-17 22:09:40"
+            }
+        ],
+        "event_registration": [
+            {
+                "event_id": 1,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-20 09:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 2,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-20 10:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 3,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-21 11:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 4,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-22 09:30:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 5,
+                "registration_status": "Waitlisted",
+                "registered_at": "2026-08-25 14:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 6,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-23 10:00:00"
+            },
+            {
+                "event_id": 2,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-28 09:00:00"
+            },
+            {
+                "event_id": 2,
+                "user_id": 3,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-28 11:00:00"
+            },
+            {
+                "event_id": 2,
+                "user_id": 10,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-27 08:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 4,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-01 10:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 5,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-02 09:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 7,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-03 14:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 9,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-05 11:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 11,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-04 10:00:00"
+            },
+            {
+                "event_id": 4,
+                "user_id": 3,
+                "registration_status": "Cancelled",
+                "registered_at": "2026-07-10 09:00:00"
+            },
+            {
+                "event_id": 4,
+                "user_id": 7,
+                "registration_status": "Cancelled",
+                "registered_at": "2026-07-12 14:00:00"
+            },
+            {
+                "event_id": 5,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-09-15 09:00:00"
+            },
+            {
+                "event_id": 5,
+                "user_id": 2,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-09-15 10:00:00"
+            },
+            {
+                "event_id": 5,
+                "user_id": 8,
+                "registration_status": "Waitlisted",
+                "registered_at": "2026-09-18 11:00:00"
+            },
+            {
+                "event_id": 6,
+                "user_id": 10,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-18 14:00:00"
+            }
+        ]
+    },
+    "lookups": {
+        "access_role": [
+            {
+                "role_id": 1,
+                "role_name": "Learner",
+                "description": "Enrolls in curricula and submits practice speeches"
+            },
+            {
+                "role_id": 2,
+                "role_name": "Evaluator",
+                "description": "Reviews and scores speech submissions"
+            },
+            {
+                "role_id": 3,
+                "role_name": "Administrator",
+                "description": "Manages users, roles, and platform configuration"
+            },
+            {
+                "role_id": 4,
+                "role_name": "Organizer",
+                "description": "Creates communities and hosts events"
+            }
+        ],
+        "access_permission": [
+            {
+                "permission_id": 1,
+                "permission_code": "curriculum.manage",
+                "description": "Create, update, and delete curricula and modules"
+            },
+            {
+                "permission_id": 2,
+                "permission_code": "submission.create",
+                "description": "Submit speech recordings for evaluation"
+            },
+            {
+                "permission_id": 3,
+                "permission_code": "evaluation.create",
+                "description": "Evaluate speech submissions and assign scores"
+            },
+            {
+                "permission_id": 4,
+                "permission_code": "event.host",
+                "description": "Create and manage community events"
+            },
+            {
+                "permission_id": 5,
+                "permission_code": "user.manage",
+                "description": "Create, update, and deactivate user accounts"
+            },
+            {
+                "permission_id": 6,
+                "permission_code": "community.create",
+                "description": "Create and manage speaking communities"
+            },
+            {
+                "permission_id": 7,
+                "permission_code": "report.view",
+                "description": "View dashboard analytics and progress reports"
+            },
+            {
+                "permission_id": 8,
+                "permission_code": "role.assign",
+                "description": "Assign and revoke roles for users"
+            }
+        ],
+        "role_permission": [
+            {
+                "role_id": 1,
+                "permission_id": 2
+            },
+            {
+                "role_id": 1,
+                "permission_id": 7
+            },
+            {
+                "role_id": 2,
+                "permission_id": 3
+            },
+            {
+                "role_id": 2,
+                "permission_id": 7
+            },
+            {
+                "role_id": 3,
+                "permission_id": 1
+            },
+            {
+                "role_id": 3,
+                "permission_id": 2
+            },
+            {
+                "role_id": 3,
+                "permission_id": 3
+            },
+            {
+                "role_id": 3,
+                "permission_id": 4
+            },
+            {
+                "role_id": 3,
+                "permission_id": 5
+            },
+            {
+                "role_id": 3,
+                "permission_id": 6
+            },
+            {
+                "role_id": 3,
+                "permission_id": 7
+            },
+            {
+                "role_id": 3,
+                "permission_id": 8
+            },
+            {
+                "role_id": 4,
+                "permission_id": 4
+            },
+            {
+                "role_id": 4,
+                "permission_id": 6
+            }
+        ],
+        "user_role_assignment": [
+            {
+                "user_id": 1,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 1,
+                "role_id": 3,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 2,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 2,
+                "role_id": 4,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 3,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 3,
+                "role_id": 4,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 4,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 4,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 5,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 6,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 7,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 8,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 9,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 10,
+                "role_id": 4,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 11,
+                "role_id": 1,
+                "assigned_at": "2026-08-17 22:09:39"
+            },
+            {
+                "user_id": 12,
+                "role_id": 2,
+                "assigned_at": "2026-08-17 22:09:39"
+            }
+        ],
+        "speech_format": [
+            {
+                "format_id": 1,
+                "format_name": "Persuasive",
+                "description": "Speeches designed to convince the audience to adopt a viewpoint or take action"
+            },
+            {
+                "format_id": 2,
+                "format_name": "Informative",
+                "description": "Speeches that educate the audience on a topic with facts and structure"
+            },
+            {
+                "format_id": 3,
+                "format_name": "Impromptu",
+                "description": "Unrehearsed speeches delivered with minimal preparation time"
+            },
+            {
+                "format_id": 4,
+                "format_name": "Demonstrative",
+                "description": "Speeches that teach the audience how to do something through live demonstration"
+            }
+        ],
+        "speaking_skill": [
+            {
+                "skill_id": 1,
+                "skill_name": "Structure",
+                "description": "Logical organisation of ideas including introduction, body, and conclusion"
+            },
+            {
+                "skill_id": 2,
+                "skill_name": "Delivery",
+                "description": "Vocal variety, pacing, tone, and overall presentation confidence"
+            },
+            {
+                "skill_id": 3,
+                "skill_name": "Clarity",
+                "description": "Clear articulation of ideas, concise language, and audience comprehension"
+            },
+            {
+                "skill_id": 4,
+                "skill_name": "Persuasion",
+                "description": "Ability to influence the audience through evidence, emotion, and reasoning"
+            },
+            {
+                "skill_id": 5,
+                "skill_name": "Body Language",
+                "description": "Effective use of gestures, eye contact, posture, and movement"
+            }
+        ],
+        "rubric_criterion": [
+            {
+                "criterion_id": 1,
+                "format_id": 1,
+                "skill_id": 1,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Clear thesis, logical flow of arguments, strong conclusion"
+            },
+            {
+                "criterion_id": 2,
+                "format_id": 1,
+                "skill_id": 2,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Confident delivery with vocal variety and appropriate pacing"
+            },
+            {
+                "criterion_id": 3,
+                "format_id": 1,
+                "skill_id": 3,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Ideas expressed concisely and understood by the audience"
+            },
+            {
+                "criterion_id": 4,
+                "format_id": 1,
+                "skill_id": 4,
+                "weight_percent": "35.00",
+                "max_score": 100,
+                "guidance_text": "Effective use of evidence, emotional appeal, and call to action"
+            },
+            {
+                "criterion_id": 5,
+                "format_id": 2,
+                "skill_id": 1,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Well-organised sections with clear transitions between topics"
+            },
+            {
+                "criterion_id": 6,
+                "format_id": 2,
+                "skill_id": 2,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Engaging delivery that maintains audience attention"
+            },
+            {
+                "criterion_id": 7,
+                "format_id": 2,
+                "skill_id": 3,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Complex information simplified without losing accuracy"
+            },
+            {
+                "criterion_id": 8,
+                "format_id": 2,
+                "skill_id": 5,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Purposeful gestures and visual aids support the content"
+            },
+            {
+                "criterion_id": 9,
+                "format_id": 3,
+                "skill_id": 2,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Composed delivery despite limited preparation time"
+            },
+            {
+                "criterion_id": 10,
+                "format_id": 3,
+                "skill_id": 3,
+                "weight_percent": "30.00",
+                "max_score": 100,
+                "guidance_text": "Coherent ideas communicated under time pressure"
+            },
+            {
+                "criterion_id": 11,
+                "format_id": 3,
+                "skill_id": 4,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Quick formation of a convincing position on the topic"
+            },
+            {
+                "criterion_id": 12,
+                "format_id": 3,
+                "skill_id": 5,
+                "weight_percent": "20.00",
+                "max_score": 100,
+                "guidance_text": "Confident posture and natural gestures under pressure"
+            },
+            {
+                "criterion_id": 13,
+                "format_id": 4,
+                "skill_id": 1,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Step-by-step organisation that the audience can follow"
+            },
+            {
+                "criterion_id": 14,
+                "format_id": 4,
+                "skill_id": 2,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Enthusiasm and clarity in demonstrating each step"
+            },
+            {
+                "criterion_id": 15,
+                "format_id": 4,
+                "skill_id": 3,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Instructions are precise and easy to replicate"
+            },
+            {
+                "criterion_id": 16,
+                "format_id": 4,
+                "skill_id": 5,
+                "weight_percent": "25.00",
+                "max_score": 100,
+                "guidance_text": "Effective physical demonstration and spatial awareness"
+            }
+        ],
+        "ai_specialist_agent": [
+            {
+                "agent_id": 1,
+                "format_id": 1,
+                "agent_name": "PersuasionPro",
+                "model_version": "v2.1",
+                "is_active": 1
+            },
+            {
+                "agent_id": 2,
+                "format_id": 2,
+                "agent_name": "InformBot",
+                "model_version": "v1.5",
+                "is_active": 1
+            },
+            {
+                "agent_id": 3,
+                "format_id": 3,
+                "agent_name": "ImpromptuCoach",
+                "model_version": "v1.0",
+                "is_active": 1
+            },
+            {
+                "agent_id": 4,
+                "format_id": 4,
+                "agent_name": "DemoAnalyzer",
+                "model_version": "v1.2",
+                "is_active": 1
+            },
+            {
+                "agent_id": 5,
+                "format_id": 1,
+                "agent_name": "PersuasionPro",
+                "model_version": "v1.0",
+                "is_active": 0
+            }
+        ],
+        "curriculum_module": [
+            {
+                "module_id": 1,
+                "curriculum_id": 1,
+                "format_id": 2,
+                "sequence_no": 1,
+                "title": "Introduction to Informative Speaking",
+                "learning_objective": "Deliver a 3-minute informative speech with clear structure",
+                "passing_score": 60
+            },
+            {
+                "module_id": 2,
+                "curriculum_id": 1,
+                "format_id": 4,
+                "sequence_no": 2,
+                "title": "Basic Demonstration Techniques",
+                "learning_objective": "Perform a step-by-step demonstration with audience engagement",
+                "passing_score": 60
+            },
+            {
+                "module_id": 3,
+                "curriculum_id": 1,
+                "format_id": 1,
+                "sequence_no": 3,
+                "title": "Fundamentals of Persuasion",
+                "learning_objective": "Construct a basic persuasive argument with supporting evidence",
+                "passing_score": 60
+            },
+            {
+                "module_id": 4,
+                "curriculum_id": 1,
+                "format_id": 3,
+                "sequence_no": 4,
+                "title": "Impromptu Speaking Basics",
+                "learning_objective": "Deliver a coherent 2-minute impromptu speech on a given topic",
+                "passing_score": 55
+            },
+            {
+                "module_id": 5,
+                "curriculum_id": 2,
+                "format_id": 1,
+                "sequence_no": 1,
+                "title": "Crafting Persuasive Arguments",
+                "learning_objective": "Build multi-layered arguments with emotional and logical appeals",
+                "passing_score": 65
+            },
+            {
+                "module_id": 6,
+                "curriculum_id": 2,
+                "format_id": 2,
+                "sequence_no": 2,
+                "title": "Data-Driven Presentations",
+                "learning_objective": "Present complex data clearly using visual aids and transitions",
+                "passing_score": 65
+            },
+            {
+                "module_id": 7,
+                "curriculum_id": 2,
+                "format_id": 3,
+                "sequence_no": 3,
+                "title": "Quick Thinking and Response",
+                "learning_objective": "Handle unexpected topics with structured impromptu frameworks",
+                "passing_score": 60
+            },
+            {
+                "module_id": 8,
+                "curriculum_id": 2,
+                "format_id": 4,
+                "sequence_no": 4,
+                "title": "Product Demo Excellence",
+                "learning_objective": "Deliver a polished product demonstration with audience Q&A",
+                "passing_score": 65
+            },
+            {
+                "module_id": 9,
+                "curriculum_id": 3,
+                "format_id": 1,
+                "sequence_no": 1,
+                "title": "Advanced Persuasion Strategies",
+                "learning_objective": "Employ advanced rhetorical techniques in competitive settings",
+                "passing_score": 75
+            },
+            {
+                "module_id": 10,
+                "curriculum_id": 3,
+                "format_id": 3,
+                "sequence_no": 2,
+                "title": "Competitive Impromptu Speaking",
+                "learning_objective": "Excel under strict time constraints with minimal preparation",
+                "passing_score": 70
+            },
+            {
+                "module_id": 11,
+                "curriculum_id": 3,
+                "format_id": 2,
+                "sequence_no": 3,
+                "title": "Expert-Level Informative Talks",
+                "learning_objective": "Deliver a TED-style informative talk with narrative structure",
+                "passing_score": 75
+            },
+            {
+                "module_id": 12,
+                "curriculum_id": 3,
+                "format_id": 4,
+                "sequence_no": 4,
+                "title": "Master Class Demonstrations",
+                "learning_objective": "Lead a professional-level demonstration with live troubleshooting",
+                "passing_score": 70
+            }
+        ],
+        "milestone": [
+            {
+                "milestone_id": 1,
+                "curriculum_id": 1,
+                "milestone_code": "MS-BEG-HALF",
+                "title": "Beginner Halfway",
+                "description": "Reached the halfway point of the beginner curriculum",
+                "rule_description": "Complete at least 2 of 4 beginner modules with a passing score"
+            },
+            {
+                "milestone_id": 2,
+                "curriculum_id": 1,
+                "milestone_code": "MS-BEG-DONE",
+                "title": "Beginner Complete",
+                "description": "Completed the entire beginner curriculum",
+                "rule_description": "Complete all 4 beginner modules with a passing score"
+            },
+            {
+                "milestone_id": 3,
+                "curriculum_id": 2,
+                "milestone_code": "MS-INT-HALF",
+                "title": "Intermediate Halfway",
+                "description": "Reached the halfway point of the intermediate curriculum",
+                "rule_description": "Complete at least 2 of 4 intermediate modules with a passing score"
+            },
+            {
+                "milestone_id": 4,
+                "curriculum_id": 2,
+                "milestone_code": "MS-INT-DONE",
+                "title": "Intermediate Complete",
+                "description": "Completed the entire intermediate curriculum",
+                "rule_description": "Complete all 4 intermediate modules with a passing score"
+            },
+            {
+                "milestone_id": 5,
+                "curriculum_id": 3,
+                "milestone_code": "MS-ADV-HALF",
+                "title": "Advanced Halfway",
+                "description": "Reached the halfway point of the advanced curriculum",
+                "rule_description": "Complete at least 2 of 4 advanced modules with a passing score"
+            },
+            {
+                "milestone_id": 6,
+                "curriculum_id": 3,
+                "milestone_code": "MS-ADV-DONE",
+                "title": "Advanced Complete",
+                "description": "Completed the entire advanced curriculum",
+                "rule_description": "Complete all 4 advanced modules with a passing score"
+            }
+        ],
+        "curriculum_enrollment": [
+            {
+                "enrollment_id": 1,
+                "learner_id": 4,
+                "curriculum_id": 1,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-01-15 09:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 2,
+                "learner_id": 5,
+                "curriculum_id": 1,
+                "enrollment_status": "Completed",
+                "enrolled_at": "2026-01-20 10:30:00",
+                "completed_at": "2026-04-15 16:00:00"
+            },
+            {
+                "enrollment_id": 3,
+                "learner_id": 6,
+                "curriculum_id": 1,
+                "enrollment_status": "Completed",
+                "enrolled_at": "2026-02-01 08:00:00",
+                "completed_at": "2026-05-10 14:30:00"
+            },
+            {
+                "enrollment_id": 4,
+                "learner_id": 7,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-03-01 11:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 5,
+                "learner_id": 9,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-03-15 09:30:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 6,
+                "learner_id": 3,
+                "curriculum_id": 1,
+                "enrollment_status": "Withdrawn",
+                "enrolled_at": "2026-01-25 14:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 7,
+                "learner_id": 11,
+                "curriculum_id": 3,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-04-01 10:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 8,
+                "learner_id": 6,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-05-15 08:30:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 9,
+                "learner_id": 4,
+                "curriculum_id": 2,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-04-10 09:00:00",
+                "completed_at": null
+            },
+            {
+                "enrollment_id": 10,
+                "learner_id": 5,
+                "curriculum_id": 3,
+                "enrollment_status": "Active",
+                "enrolled_at": "2026-05-01 11:00:00",
+                "completed_at": null
+            }
+        ],
+        "module_progress": [
+            {
+                "module_progress_id": 1,
+                "enrollment_id": 1,
+                "module_id": 1,
+                "progress_status": "Completed",
+                "started_at": "2026-01-16 10:00:00",
+                "completed_at": "2026-02-10 15:00:00"
+            },
+            {
+                "module_progress_id": 2,
+                "enrollment_id": 1,
+                "module_id": 2,
+                "progress_status": "Completed",
+                "started_at": "2026-02-12 10:00:00",
+                "completed_at": "2026-03-05 14:00:00"
+            },
+            {
+                "module_progress_id": 3,
+                "enrollment_id": 1,
+                "module_id": 3,
+                "progress_status": "In Progress",
+                "started_at": "2026-03-10 09:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 4,
+                "enrollment_id": 1,
+                "module_id": 4,
+                "progress_status": "Not Started",
+                "started_at": null,
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 5,
+                "enrollment_id": 2,
+                "module_id": 1,
+                "progress_status": "Completed",
+                "started_at": "2026-01-22 10:00:00",
+                "completed_at": "2026-02-15 16:00:00"
+            },
+            {
+                "module_progress_id": 6,
+                "enrollment_id": 2,
+                "module_id": 2,
+                "progress_status": "Completed",
+                "started_at": "2026-02-18 10:00:00",
+                "completed_at": "2026-03-10 15:00:00"
+            },
+            {
+                "module_progress_id": 7,
+                "enrollment_id": 2,
+                "module_id": 3,
+                "progress_status": "Completed",
+                "started_at": "2026-03-12 09:00:00",
+                "completed_at": "2026-04-01 14:00:00"
+            },
+            {
+                "module_progress_id": 8,
+                "enrollment_id": 2,
+                "module_id": 4,
+                "progress_status": "Completed",
+                "started_at": "2026-04-03 10:00:00",
+                "completed_at": "2026-04-15 16:00:00"
+            },
+            {
+                "module_progress_id": 9,
+                "enrollment_id": 3,
+                "module_id": 1,
+                "progress_status": "Completed",
+                "started_at": "2026-02-03 09:00:00",
+                "completed_at": "2026-02-25 15:00:00"
+            },
+            {
+                "module_progress_id": 10,
+                "enrollment_id": 3,
+                "module_id": 2,
+                "progress_status": "Completed",
+                "started_at": "2026-02-27 10:00:00",
+                "completed_at": "2026-03-20 14:00:00"
+            },
+            {
+                "module_progress_id": 11,
+                "enrollment_id": 3,
+                "module_id": 3,
+                "progress_status": "Completed",
+                "started_at": "2026-03-22 09:00:00",
+                "completed_at": "2026-04-15 15:00:00"
+            },
+            {
+                "module_progress_id": 12,
+                "enrollment_id": 3,
+                "module_id": 4,
+                "progress_status": "Completed",
+                "started_at": "2026-04-17 10:00:00",
+                "completed_at": "2026-05-10 14:00:00"
+            },
+            {
+                "module_progress_id": 13,
+                "enrollment_id": 4,
+                "module_id": 5,
+                "progress_status": "Completed",
+                "started_at": "2026-03-05 10:00:00",
+                "completed_at": "2026-04-01 16:00:00"
+            },
+            {
+                "module_progress_id": 14,
+                "enrollment_id": 4,
+                "module_id": 6,
+                "progress_status": "In Progress",
+                "started_at": "2026-04-05 09:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 15,
+                "enrollment_id": 5,
+                "module_id": 5,
+                "progress_status": "In Progress",
+                "started_at": "2026-03-20 10:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 16,
+                "enrollment_id": 9,
+                "module_id": 5,
+                "progress_status": "Completed",
+                "started_at": "2026-04-15 10:00:00",
+                "completed_at": "2026-05-10 15:00:00"
+            },
+            {
+                "module_progress_id": 17,
+                "enrollment_id": 9,
+                "module_id": 6,
+                "progress_status": "In Progress",
+                "started_at": "2026-05-15 09:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 18,
+                "enrollment_id": 10,
+                "module_id": 9,
+                "progress_status": "In Progress",
+                "started_at": "2026-05-05 10:00:00",
+                "completed_at": null
+            },
+            {
+                "module_progress_id": 19,
+                "enrollment_id": 7,
+                "module_id": 9,
+                "progress_status": "Completed",
+                "started_at": "2026-04-05 10:00:00",
+                "completed_at": "2026-05-01 14:00:00"
+            },
+            {
+                "module_progress_id": 20,
+                "enrollment_id": 7,
+                "module_id": 10,
+                "progress_status": "Not Started",
+                "started_at": null,
+                "completed_at": null
+            }
+        ],
+        "evaluation_skill_score": [
+            {
+                "evaluation_id": 1,
+                "criterion_id": 5,
+                "score": "75.00",
+                "feedback": "Good topic organisation with clear sections"
+            },
+            {
+                "evaluation_id": 1,
+                "criterion_id": 6,
+                "score": "70.00",
+                "feedback": "Adequate delivery; could use more vocal variety"
+            },
+            {
+                "evaluation_id": 1,
+                "criterion_id": 7,
+                "score": "74.00",
+                "feedback": "Information was mostly clear and accessible"
+            },
+            {
+                "evaluation_id": 1,
+                "criterion_id": 8,
+                "score": "68.00",
+                "feedback": "Minimal gestures; consider using visual aids"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 13,
+                "score": "70.00",
+                "feedback": "Steps were in logical order"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 14,
+                "score": "65.00",
+                "feedback": "Enthusiasm dipped during the middle steps"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 15,
+                "score": "72.00",
+                "feedback": "Instructions were understandable"
+            },
+            {
+                "evaluation_id": 2,
+                "criterion_id": 16,
+                "score": "62.00",
+                "feedback": "Physical demonstration was hesitant at times"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 1,
+                "score": "60.00",
+                "feedback": "Thesis was stated but not clearly positioned"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 2,
+                "score": "63.00",
+                "feedback": "Delivery was steady but lacked conviction"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 3,
+                "score": "65.00",
+                "feedback": "Language was clear but arguments were surface-level"
+            },
+            {
+                "evaluation_id": 3,
+                "criterion_id": 4,
+                "score": "58.00",
+                "feedback": "Persuasive appeal was weak; needs stronger evidence"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 5,
+                "score": "80.00",
+                "feedback": "Well-structured with smooth transitions"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 6,
+                "score": "76.00",
+                "feedback": "Engaging tone that held audience attention"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 7,
+                "score": "79.00",
+                "feedback": "Complex ideas explained effectively"
+            },
+            {
+                "evaluation_id": 4,
+                "criterion_id": 8,
+                "score": "75.00",
+                "feedback": "Good posture and purposeful hand movements"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 13,
+                "score": "78.00",
+                "feedback": "Clear step-by-step progression"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 14,
+                "score": "74.00",
+                "feedback": "Good energy throughout the demonstration"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 15,
+                "score": "76.00",
+                "feedback": "Audience could follow and replicate the process"
+            },
+            {
+                "evaluation_id": 5,
+                "criterion_id": 16,
+                "score": "72.00",
+                "feedback": "Spatial awareness was adequate"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 1,
+                "score": "80.00",
+                "feedback": "Strong introduction and well-organised arguments"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 2,
+                "score": "84.00",
+                "feedback": "Excellent vocal variety and confident delivery"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 3,
+                "score": "81.00",
+                "feedback": "Ideas expressed with precision"
+            },
+            {
+                "evaluation_id": 6,
+                "criterion_id": 4,
+                "score": "83.00",
+                "feedback": "Compelling emotional and logical appeals"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 9,
+                "score": "72.00",
+                "feedback": "Maintained composure despite limited prep time"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 10,
+                "score": "68.00",
+                "feedback": "Some ideas lacked coherence"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 11,
+                "score": "66.00",
+                "feedback": "Position was stated but not strongly defended"
+            },
+            {
+                "evaluation_id": 7,
+                "criterion_id": 12,
+                "score": "70.00",
+                "feedback": "Body language was natural and relaxed"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 5,
+                "score": "88.00",
+                "feedback": "Excellent structure with compelling narrative arc"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 6,
+                "score": "84.00",
+                "feedback": "Dynamic delivery with effective pauses"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 7,
+                "score": "86.00",
+                "feedback": "Data presented with exceptional clarity"
+            },
+            {
+                "evaluation_id": 8,
+                "criterion_id": 8,
+                "score": "82.00",
+                "feedback": "Good use of gestures to emphasise key points"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 13,
+                "score": "73.00",
+                "feedback": "Logical order but some steps were rushed"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 14,
+                "score": "69.00",
+                "feedback": "Pacing was too fast in the middle section"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 15,
+                "score": "74.00",
+                "feedback": "Mostly clear instructions with minor ambiguity"
+            },
+            {
+                "evaluation_id": 9,
+                "criterion_id": 16,
+                "score": "66.00",
+                "feedback": "Limited movement; stayed behind the podium"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 1,
+                "score": "86.00",
+                "feedback": "Masterful organisation with a powerful conclusion"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 2,
+                "score": "90.00",
+                "feedback": "Outstanding delivery with commanding presence"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 3,
+                "score": "87.00",
+                "feedback": "Every point was crystal clear"
+            },
+            {
+                "evaluation_id": 10,
+                "criterion_id": 4,
+                "score": "89.00",
+                "feedback": "Persuasive technique was highly effective"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 9,
+                "score": "79.00",
+                "feedback": "Confident and composed under time pressure"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 10,
+                "score": "78.00",
+                "feedback": "Ideas were well-articulated and coherent"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 11,
+                "score": "74.00",
+                "feedback": "Good but could strengthen the closing argument"
+            },
+            {
+                "evaluation_id": 11,
+                "criterion_id": 12,
+                "score": "76.00",
+                "feedback": "Natural gestures and good eye contact"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 1,
+                "score": "63.00",
+                "feedback": "Basic structure present but needs clearer thesis"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 2,
+                "score": "60.00",
+                "feedback": "Delivery lacked confidence and vocal variety"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 3,
+                "score": "64.00",
+                "feedback": "Ideas were understandable but not compelling"
+            },
+            {
+                "evaluation_id": 12,
+                "criterion_id": 4,
+                "score": "58.00",
+                "feedback": "Call to action was vague and unconvincing"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 1,
+                "score": "66.00",
+                "feedback": "Agrees thesis needs more precision"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 2,
+                "score": "63.00",
+                "feedback": "Delivery was earnest but still tentative"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 3,
+                "score": "67.00",
+                "feedback": "Clarity improved over AI assessment reading"
+            },
+            {
+                "evaluation_id": 13,
+                "criterion_id": 4,
+                "score": "62.00",
+                "feedback": "Evidence is there but not woven into narrative"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 1,
+                "score": "75.00",
+                "feedback": "Structure has improved significantly"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 2,
+                "score": "73.00",
+                "feedback": "More confident delivery with better pacing"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 3,
+                "score": "76.00",
+                "feedback": "Arguments are clearer and better supported"
+            },
+            {
+                "evaluation_id": 14,
+                "criterion_id": 4,
+                "score": "72.00",
+                "feedback": "Persuasive appeal is stronger; keep refining"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 1,
+                "score": "87.00",
+                "feedback": "Excellent structure with a powerful opening"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 2,
+                "score": "89.00",
+                "feedback": "Confident, dynamic delivery throughout"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 3,
+                "score": "88.00",
+                "feedback": "Every argument was precise and well-supported"
+            },
+            {
+                "evaluation_id": 15,
+                "criterion_id": 4,
+                "score": "90.00",
+                "feedback": "Masterful persuasion; outstanding improvement"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 5,
+                "score": "72.00",
+                "feedback": "Adequate structure with minor gaps"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 6,
+                "score": "68.00",
+                "feedback": "Delivery could be more engaging"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 7,
+                "score": "71.00",
+                "feedback": "Information was clear but lacked depth"
+            },
+            {
+                "evaluation_id": 16,
+                "criterion_id": 8,
+                "score": "67.00",
+                "feedback": "Minimal body language variation"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 1,
+                "score": "78.00",
+                "feedback": "Clear thesis with well-organised arguments"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 2,
+                "score": "80.00",
+                "feedback": "Confident delivery with good vocal range"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 3,
+                "score": "79.00",
+                "feedback": "Ideas communicated effectively"
+            },
+            {
+                "evaluation_id": 17,
+                "criterion_id": 4,
+                "score": "77.00",
+                "feedback": "Good persuasive technique with room to grow"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 1,
+                "score": "68.00",
+                "feedback": "Structure is acceptable but predictable"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 2,
+                "score": "65.00",
+                "feedback": "Delivery was flat; needs more energy"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 3,
+                "score": "67.00",
+                "feedback": "Arguments were clear but lacked specificity"
+            },
+            {
+                "evaluation_id": 18,
+                "criterion_id": 4,
+                "score": "64.00",
+                "feedback": "Persuasive elements were generic"
+            }
+        ],
+        "user_milestone": [
+            {
+                "user_id": 4,
+                "milestone_id": 1,
+                "achieved_at": "2026-03-05 15:00:00"
+            },
+            {
+                "user_id": 4,
+                "milestone_id": 3,
+                "achieved_at": "2026-05-10 15:00:00"
+            },
+            {
+                "user_id": 5,
+                "milestone_id": 1,
+                "achieved_at": "2026-03-10 14:00:00"
+            },
+            {
+                "user_id": 5,
+                "milestone_id": 2,
+                "achieved_at": "2026-04-15 16:00:00"
+            },
+            {
+                "user_id": 6,
+                "milestone_id": 1,
+                "achieved_at": "2026-03-20 14:00:00"
+            },
+            {
+                "user_id": 6,
+                "milestone_id": 2,
+                "achieved_at": "2026-05-10 14:30:00"
+            },
+            {
+                "user_id": 7,
+                "milestone_id": 3,
+                "achieved_at": "2026-04-01 16:00:00"
+            },
+            {
+                "user_id": 11,
+                "milestone_id": 5,
+                "achieved_at": "2026-05-01 14:00:00"
+            }
+        ],
+        "community": [
+            {
+                "community_id": 1,
+                "created_by_user_id": 10,
+                "name": "Dhaka Speakers Circle",
+                "description": "A community of public speaking enthusiasts in Dhaka practising weekly.",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "community_id": 2,
+                "created_by_user_id": 3,
+                "name": "NSU Communication Society",
+                "description": "North South University student group focused on communication skills.",
+                "created_at": "2026-08-17 22:09:40"
+            },
+            {
+                "community_id": 3,
+                "created_by_user_id": 2,
+                "name": "Corporate Presenters BD",
+                "description": "Professionals improving business presentation and pitching skills.",
+                "created_at": "2026-08-17 22:09:40"
+            }
+        ],
+        "community_membership": [
+            {
+                "community_id": 1,
+                "user_id": 1,
+                "membership_status": "Active",
+                "joined_at": "2026-01-10 09:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 2,
+                "membership_status": "Active",
+                "joined_at": "2026-01-12 10:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 3,
+                "membership_status": "Active",
+                "joined_at": "2026-01-15 11:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 4,
+                "membership_status": "Active",
+                "joined_at": "2026-01-18 14:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 5,
+                "membership_status": "Active",
+                "joined_at": "2026-02-01 09:30:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 6,
+                "membership_status": "Pending",
+                "joined_at": "2026-03-05 10:00:00"
+            },
+            {
+                "community_id": 1,
+                "user_id": 10,
+                "membership_status": "Active",
+                "joined_at": "2026-01-05 08:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 3,
+                "membership_status": "Active",
+                "joined_at": "2026-02-01 10:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 4,
+                "membership_status": "Active",
+                "joined_at": "2026-02-05 11:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 5,
+                "membership_status": "Active",
+                "joined_at": "2026-02-10 09:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 7,
+                "membership_status": "Active",
+                "joined_at": "2026-02-15 14:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 9,
+                "membership_status": "Pending",
+                "joined_at": "2026-03-20 10:00:00"
+            },
+            {
+                "community_id": 2,
+                "user_id": 11,
+                "membership_status": "Active",
+                "joined_at": "2026-02-20 11:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 1,
+                "membership_status": "Active",
+                "joined_at": "2026-03-01 09:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 2,
+                "membership_status": "Active",
+                "joined_at": "2026-03-01 09:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 8,
+                "membership_status": "Active",
+                "joined_at": "2026-03-10 10:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 10,
+                "membership_status": "Pending",
+                "joined_at": "2026-04-01 14:00:00"
+            },
+            {
+                "community_id": 3,
+                "user_id": 12,
+                "membership_status": "Active",
+                "joined_at": "2026-03-15 11:00:00"
+            }
+        ],
+        "event_registration": [
+            {
+                "event_id": 1,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-20 09:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 2,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-20 10:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 3,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-21 11:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 4,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-22 09:30:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 5,
+                "registration_status": "Waitlisted",
+                "registered_at": "2026-08-25 14:00:00"
+            },
+            {
+                "event_id": 1,
+                "user_id": 6,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-23 10:00:00"
+            },
+            {
+                "event_id": 2,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-28 09:00:00"
+            },
+            {
+                "event_id": 2,
+                "user_id": 3,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-28 11:00:00"
+            },
+            {
+                "event_id": 2,
+                "user_id": 10,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-27 08:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 4,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-01 10:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 5,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-02 09:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 7,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-03 14:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 9,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-05 11:00:00"
+            },
+            {
+                "event_id": 3,
+                "user_id": 11,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-04 10:00:00"
+            },
+            {
+                "event_id": 4,
+                "user_id": 3,
+                "registration_status": "Cancelled",
+                "registered_at": "2026-07-10 09:00:00"
+            },
+            {
+                "event_id": 4,
+                "user_id": 7,
+                "registration_status": "Cancelled",
+                "registered_at": "2026-07-12 14:00:00"
+            },
+            {
+                "event_id": 5,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-09-15 09:00:00"
+            },
+            {
+                "event_id": 5,
+                "user_id": 2,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-09-15 10:00:00"
+            },
+            {
+                "event_id": 5,
+                "user_id": 8,
+                "registration_status": "Waitlisted",
+                "registered_at": "2026-09-18 11:00:00"
+            },
+            {
+                "event_id": 6,
+                "user_id": 10,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-18 14:00:00"
+            }
+        ],
+        "dashboard_stats": {
+            "total_users": 12,
+            "total_curricula": 3,
+            "total_submissions": 18,
+            "total_evaluations": 18,
+            "total_events": 6,
+            "total_communities": 3,
+            "completion_rate_per_curriculum": [
+                {
+                    "curriculum_id": 1,
+                    "curriculum_code": "CUR-BEG-001",
+                    "title": "Foundations of Public Speaking",
+                    "total_enrollments": 4,
+                    "completed_enrollments": "2",
+                    "completion_rate": "50.00"
+                },
+                {
+                    "curriculum_id": 2,
+                    "curriculum_code": "CUR-INT-001",
+                    "title": "Intermediate Presentation Mastery",
+                    "total_enrollments": 4,
+                    "completed_enrollments": "0",
+                    "completion_rate": "0.00"
+                },
+                {
+                    "curriculum_id": 3,
+                    "curriculum_code": "CUR-ADV-001",
+                    "title": "Advanced Oratory and Debate",
+                    "total_enrollments": 2,
+                    "completed_enrollments": "0",
+                    "completion_rate": "0.00"
+                }
+            ],
+            "avg_score_per_skill": [
+                {
+                    "skill_id": 1,
+                    "skill_name": "Structure",
+                    "avg_score": "74.94",
+                    "score_count": 16
+                },
+                {
+                    "skill_id": 2,
+                    "skill_name": "Delivery",
+                    "avg_score": "73.56",
+                    "score_count": 18
+                },
+                {
+                    "skill_id": 3,
+                    "skill_name": "Clarity",
+                    "avg_score": "75.11",
+                    "score_count": 18
+                },
+                {
+                    "skill_id": 4,
+                    "skill_name": "Persuasion",
+                    "avg_score": "72.09",
+                    "score_count": 11
+                },
+                {
+                    "skill_id": 5,
+                    "skill_name": "Body Language",
+                    "avg_score": "70.89",
+                    "score_count": 9
+                }
+            ]
+        }
+    },
+    "users": [
+        {
+            "user_id": 1,
+            "full_name": "Muhammad Rafid Hossain",
+            "email": "rafid.hossain@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ012",
+            "bio": "Database architect and evaluator. NSU CSE.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Evaluator, Administrator"
+        },
+        {
+            "user_id": 2,
+            "full_name": "Masuma Khan Trisha",
+            "email": "trisha.khan@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ013",
+            "bio": "Speech evaluator and community organizer from Dhaka.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Evaluator, Organizer"
+        },
+        {
+            "user_id": 3,
+            "full_name": "Ushrika Mostafa Mou",
+            "email": "ushrika.mostafa@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ014",
+            "bio": "Learner and event organizer. Passionate about public speaking.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner, Organizer"
+        },
+        {
+            "user_id": 4,
+            "full_name": "Ahnaf Akif",
+            "email": "ahnaf.akif@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ015",
+            "bio": "Learner and peer evaluator at NSU.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner, Evaluator"
+        },
+        {
+            "user_id": 5,
+            "full_name": "Md Ahsanuzzaman Khan",
+            "email": "ahsanuzzaman@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ016",
+            "bio": "Dedicated learner focused on persuasive speaking.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner"
+        },
+        {
+            "user_id": 6,
+            "full_name": "Farhan Ahmed",
+            "email": "farhan.ahmed@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ017",
+            "bio": "Completed the beginner curriculum. Aspiring debater.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner"
+        },
+        {
+            "user_id": 7,
+            "full_name": "Nusrat Jahan",
+            "email": "nusrat.jahan@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ018",
+            "bio": "Intermediate learner interested in data-driven presentations.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner"
+        },
+        {
+            "user_id": 8,
+            "full_name": "Tanvir Hasan",
+            "email": "tanvir.hasan@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ019",
+            "bio": "Professional speech evaluator with 5 years of coaching experience.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Evaluator"
+        },
+        {
+            "user_id": 9,
+            "full_name": "Sadia Rahman",
+            "email": "sadia.rahman@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ020",
+            "bio": "Learner exploring impromptu and persuasive formats.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner"
+        },
+        {
+            "user_id": 10,
+            "full_name": "Rashed Kabir",
+            "email": "rashed.kabir@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ021",
+            "bio": "Community organizer running the Dhaka Speakers Circle.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Organizer"
+        },
+        {
+            "user_id": 11,
+            "full_name": "Farjana Akter",
+            "email": "farjana.akter@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ022",
+            "bio": "Advanced learner preparing for national speech competitions.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Learner"
+        },
+        {
+            "user_id": 12,
+            "full_name": "Imran Chowdhury",
+            "email": "imran.chowdhury@auratio.app",
+            "password_hash": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ023",
+            "bio": "Evaluator specialising in demonstrative and informative speeches.",
+            "account_status": "Active",
+            "created_at": "2026-08-17 22:09:39",
+            "roles": "Evaluator"
+        }
+    ],
+    "curricula": [
+        {
+            "curriculum_id": 1,
+            "curriculum_code": "CUR-BEG-001",
+            "title": "Foundations of Public Speaking",
+            "description": "A beginner curriculum covering the basics of all four speech formats with guided practice.",
+            "difficulty_level": "Beginner",
+            "is_active": 1,
+            "created_at": "2026-08-17 22:09:39",
+            "modules": [
+                {
+                    "module_id": 1,
+                    "curriculum_id": 1,
+                    "format_id": 2,
+                    "sequence_no": 1,
+                    "title": "Introduction to Informative Speaking",
+                    "learning_objective": "Deliver a 3-minute informative speech with clear structure",
+                    "passing_score": 60,
+                    "format_name": "Informative"
+                },
+                {
+                    "module_id": 2,
+                    "curriculum_id": 1,
+                    "format_id": 4,
+                    "sequence_no": 2,
+                    "title": "Basic Demonstration Techniques",
+                    "learning_objective": "Perform a step-by-step demonstration with audience engagement",
+                    "passing_score": 60,
+                    "format_name": "Demonstrative"
+                },
+                {
+                    "module_id": 3,
+                    "curriculum_id": 1,
+                    "format_id": 1,
+                    "sequence_no": 3,
+                    "title": "Fundamentals of Persuasion",
+                    "learning_objective": "Construct a basic persuasive argument with supporting evidence",
+                    "passing_score": 60,
+                    "format_name": "Persuasive"
+                },
+                {
+                    "module_id": 4,
+                    "curriculum_id": 1,
+                    "format_id": 3,
+                    "sequence_no": 4,
+                    "title": "Impromptu Speaking Basics",
+                    "learning_objective": "Deliver a coherent 2-minute impromptu speech on a given topic",
+                    "passing_score": 55,
+                    "format_name": "Impromptu"
+                }
+            ]
+        },
+        {
+            "curriculum_id": 2,
+            "curriculum_code": "CUR-INT-001",
+            "title": "Intermediate Presentation Mastery",
+            "description": "Builds on foundational skills with data-driven and persuasive speaking techniques.",
+            "difficulty_level": "Intermediate",
+            "is_active": 1,
+            "created_at": "2026-08-17 22:09:39",
+            "modules": [
+                {
+                    "module_id": 5,
+                    "curriculum_id": 2,
+                    "format_id": 1,
+                    "sequence_no": 1,
+                    "title": "Crafting Persuasive Arguments",
+                    "learning_objective": "Build multi-layered arguments with emotional and logical appeals",
+                    "passing_score": 65,
+                    "format_name": "Persuasive"
+                },
+                {
+                    "module_id": 6,
+                    "curriculum_id": 2,
+                    "format_id": 2,
+                    "sequence_no": 2,
+                    "title": "Data-Driven Presentations",
+                    "learning_objective": "Present complex data clearly using visual aids and transitions",
+                    "passing_score": 65,
+                    "format_name": "Informative"
+                },
+                {
+                    "module_id": 7,
+                    "curriculum_id": 2,
+                    "format_id": 3,
+                    "sequence_no": 3,
+                    "title": "Quick Thinking and Response",
+                    "learning_objective": "Handle unexpected topics with structured impromptu frameworks",
+                    "passing_score": 60,
+                    "format_name": "Impromptu"
+                },
+                {
+                    "module_id": 8,
+                    "curriculum_id": 2,
+                    "format_id": 4,
+                    "sequence_no": 4,
+                    "title": "Product Demo Excellence",
+                    "learning_objective": "Deliver a polished product demonstration with audience Q&A",
+                    "passing_score": 65,
+                    "format_name": "Demonstrative"
+                }
+            ]
+        },
+        {
+            "curriculum_id": 3,
+            "curriculum_code": "CUR-ADV-001",
+            "title": "Advanced Oratory and Debate",
+            "description": "Intensive modules for competitive speakers refining advanced persuasion and impromptu skills.",
+            "difficulty_level": "Advanced",
+            "is_active": 1,
+            "created_at": "2026-08-17 22:09:39",
+            "modules": [
+                {
+                    "module_id": 9,
+                    "curriculum_id": 3,
+                    "format_id": 1,
+                    "sequence_no": 1,
+                    "title": "Advanced Persuasion Strategies",
+                    "learning_objective": "Employ advanced rhetorical techniques in competitive settings",
+                    "passing_score": 75,
+                    "format_name": "Persuasive"
+                },
+                {
+                    "module_id": 10,
+                    "curriculum_id": 3,
+                    "format_id": 3,
+                    "sequence_no": 2,
+                    "title": "Competitive Impromptu Speaking",
+                    "learning_objective": "Excel under strict time constraints with minimal preparation",
+                    "passing_score": 70,
+                    "format_name": "Impromptu"
+                },
+                {
+                    "module_id": 11,
+                    "curriculum_id": 3,
+                    "format_id": 2,
+                    "sequence_no": 3,
+                    "title": "Expert-Level Informative Talks",
+                    "learning_objective": "Deliver a TED-style informative talk with narrative structure",
+                    "passing_score": 75,
+                    "format_name": "Informative"
+                },
+                {
+                    "module_id": 12,
+                    "curriculum_id": 3,
+                    "format_id": 4,
+                    "sequence_no": 4,
+                    "title": "Master Class Demonstrations",
+                    "learning_objective": "Lead a professional-level demonstration with live troubleshooting",
+                    "passing_score": 70,
+                    "format_name": "Demonstrative"
+                }
+            ]
+        }
+    ],
+    "submissions": [
+        {
+            "submission_id": 17,
+            "module_progress_id": 16,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/7qR8sT9uV0wX1yZ2aB/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 235,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-05-02 09:00:00",
+            "module_title": "Crafting Persuasive Arguments",
+            "curriculum_title": "Intermediate Presentation Mastery",
+            "curriculum_id": 2,
+            "learner_name": "Ahnaf Akif",
+            "learner_id": 4,
+            "module_id": 5,
+            "enrollment_id": 9
+        },
+        {
+            "submission_id": 11,
+            "module_progress_id": 12,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/1kL2mN3oP4qR5sT6uV/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 185,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-04-28 14:00:00",
+            "module_title": "Impromptu Speaking Basics",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Farhan Ahmed",
+            "learner_id": 6,
+            "module_id": 4,
+            "enrollment_id": 3
+        },
+        {
+            "submission_id": 18,
+            "module_progress_id": 19,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/8rS9tU0vW1xY2zA3bC/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 270,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Submitted",
+            "submitted_at": "2026-04-25 15:00:00",
+            "module_title": "Advanced Persuasion Strategies",
+            "curriculum_title": "Advanced Oratory and Debate",
+            "curriculum_id": 3,
+            "learner_name": "Farjana Akter",
+            "learner_id": 11,
+            "module_id": 9,
+            "enrollment_id": 7
+        },
+        {
+            "submission_id": 15,
+            "module_progress_id": 14,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/5oP6qR7sT8uV9wX0yZ/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 215,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-04-12 11:00:00",
+            "module_title": "Data-Driven Presentations",
+            "curriculum_title": "Intermediate Presentation Mastery",
+            "curriculum_id": 2,
+            "learner_name": "Nusrat Jahan",
+            "learner_id": 7,
+            "module_id": 6,
+            "enrollment_id": 4
+        },
+        {
+            "submission_id": 7,
+            "module_progress_id": 8,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/7gH8iJ9kL0mN1oP2qR/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 180,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-04-10 11:00:00",
+            "module_title": "Impromptu Speaking Basics",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Md Ahsanuzzaman Khan",
+            "learner_id": 5,
+            "module_id": 4,
+            "enrollment_id": 2
+        },
+        {
+            "submission_id": 10,
+            "module_progress_id": 11,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/0jK1lM2nO3pQ4rS5tU/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 220,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-04-05 09:00:00",
+            "module_title": "Fundamentals of Persuasion",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Farhan Ahmed",
+            "learner_id": 6,
+            "module_id": 3,
+            "enrollment_id": 3
+        },
+        {
+            "submission_id": 16,
+            "module_progress_id": 15,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/6pQ7rS8tU9vW0xY1zA/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 225,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Under Review",
+            "submitted_at": "2026-04-01 14:30:00",
+            "module_title": "Crafting Persuasive Arguments",
+            "curriculum_title": "Intermediate Presentation Mastery",
+            "curriculum_id": 2,
+            "learner_name": "Sadia Rahman",
+            "learner_id": 9,
+            "module_id": 5,
+            "enrollment_id": 5
+        },
+        {
+            "submission_id": 14,
+            "module_progress_id": 13,
+            "attempt_no": 3,
+            "video_uri": "https://drive.google.com/file/d/4nO5pQ6rS7tU8vW9xY/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 238,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-29 10:00:00",
+            "module_title": "Crafting Persuasive Arguments",
+            "curriculum_title": "Intermediate Presentation Mastery",
+            "curriculum_id": 2,
+            "learner_name": "Nusrat Jahan",
+            "learner_id": 7,
+            "module_id": 5,
+            "enrollment_id": 4
+        },
+        {
+            "submission_id": 6,
+            "module_progress_id": 7,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/6fG7hI8jK9lM0nO1pQ/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 230,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-25 14:00:00",
+            "module_title": "Fundamentals of Persuasion",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Md Ahsanuzzaman Khan",
+            "learner_id": 5,
+            "module_id": 3,
+            "enrollment_id": 2
+        },
+        {
+            "submission_id": 13,
+            "module_progress_id": 13,
+            "attempt_no": 2,
+            "video_uri": "https://drive.google.com/file/d/3mN4oP5qR6sT7uV8wX/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 250,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-22 10:00:00",
+            "module_title": "Crafting Persuasive Arguments",
+            "curriculum_title": "Intermediate Presentation Mastery",
+            "curriculum_id": 2,
+            "learner_name": "Nusrat Jahan",
+            "learner_id": 7,
+            "module_id": 5,
+            "enrollment_id": 4
+        },
+        {
+            "submission_id": 3,
+            "module_progress_id": 3,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/3cD4eF5gH6iJ7kL8mN/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 210,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-18 10:00:00",
+            "module_title": "Fundamentals of Persuasion",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Ahnaf Akif",
+            "learner_id": 4,
+            "module_id": 3,
+            "enrollment_id": 1
+        },
+        {
+            "submission_id": 12,
+            "module_progress_id": 13,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/2lM3nO4pQ5rS6tU7vW/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 245,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-15 10:00:00",
+            "module_title": "Crafting Persuasive Arguments",
+            "curriculum_title": "Intermediate Presentation Mastery",
+            "curriculum_id": 2,
+            "learner_name": "Nusrat Jahan",
+            "learner_id": 7,
+            "module_id": 5,
+            "enrollment_id": 4
+        },
+        {
+            "submission_id": 9,
+            "module_progress_id": 10,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/9iJ0kL1mN2oP3qR4sT/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 260,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-12 15:30:00",
+            "module_title": "Basic Demonstration Techniques",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Farhan Ahmed",
+            "learner_id": 6,
+            "module_id": 2,
+            "enrollment_id": 3
+        },
+        {
+            "submission_id": 5,
+            "module_progress_id": 6,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/5eF6gH7iJ8kL9mN0oP/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 255,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-03-02 09:30:00",
+            "module_title": "Basic Demonstration Techniques",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Md Ahsanuzzaman Khan",
+            "learner_id": 5,
+            "module_id": 2,
+            "enrollment_id": 2
+        },
+        {
+            "submission_id": 2,
+            "module_progress_id": 2,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/2bC3dE4fG5hI6jK7lM/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 240,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-02-28 11:00:00",
+            "module_title": "Basic Demonstration Techniques",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Ahnaf Akif",
+            "learner_id": 4,
+            "module_id": 2,
+            "enrollment_id": 1
+        },
+        {
+            "submission_id": 8,
+            "module_progress_id": 9,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/8hI9jK0lM1nO2pQ3rS/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 205,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-02-18 10:00:00",
+            "module_title": "Introduction to Informative Speaking",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Farhan Ahmed",
+            "learner_id": 6,
+            "module_id": 1,
+            "enrollment_id": 3
+        },
+        {
+            "submission_id": 4,
+            "module_progress_id": 5,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/4dE5fG6hI7jK8lM9nO/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 200,
+            "requested_evaluator_type": "HUMAN",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-02-10 15:00:00",
+            "module_title": "Introduction to Informative Speaking",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Md Ahsanuzzaman Khan",
+            "learner_id": 5,
+            "module_id": 1,
+            "enrollment_id": 2
+        },
+        {
+            "submission_id": 1,
+            "module_progress_id": 1,
+            "attempt_no": 1,
+            "video_uri": "https://drive.google.com/file/d/1aB2cD3eF4gH5iJ6kL/view",
+            "mime_type": "video/mp4",
+            "duration_seconds": 195,
+            "requested_evaluator_type": "AI",
+            "submission_status": "Evaluated",
+            "submitted_at": "2026-02-05 14:00:00",
+            "module_title": "Introduction to Informative Speaking",
+            "curriculum_title": "Foundations of Public Speaking",
+            "curriculum_id": 1,
+            "learner_name": "Ahnaf Akif",
+            "learner_id": 4,
+            "module_id": 1,
+            "enrollment_id": 1
+        }
+    ],
+    "evaluations": [
+        {
+            "evaluation_id": 17,
+            "submission_id": 17,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 4,
+            "agent_id": null,
+            "overall_score": "79.00",
+            "summary_feedback": "Strong persuasive delivery with clear thesis and supporting points.",
+            "evaluated_at": "2026-05-03 11:00:00",
+            "evaluator_name": "Ahnaf Akif"
+        },
+        {
+            "evaluation_id": 11,
+            "submission_id": 11,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 1,
+            "agent_id": null,
+            "overall_score": "77.50",
+            "summary_feedback": "Good impromptu delivery; conclusion could be more impactful.",
+            "evaluated_at": "2026-04-29 14:00:00",
+            "evaluator_name": "Muhammad Rafid Hossain"
+        },
+        {
+            "evaluation_id": 16,
+            "submission_id": 15,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 8,
+            "agent_id": null,
+            "overall_score": "70.00",
+            "summary_feedback": "Informative content is solid; needs better transitions.",
+            "evaluated_at": "2026-04-13 15:00:00",
+            "evaluator_name": "Tanvir Hasan"
+        },
+        {
+            "evaluation_id": 7,
+            "submission_id": 7,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 3,
+            "overall_score": "69.00",
+            "summary_feedback": "Acceptable impromptu response; structure could be tighter.",
+            "evaluated_at": "2026-04-11 09:00:00",
+            "evaluator_name": "ImpromptuCoach"
+        },
+        {
+            "evaluation_id": 10,
+            "submission_id": 10,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 1,
+            "overall_score": "88.00",
+            "summary_feedback": "Outstanding persuasive technique with masterful emotional appeal.",
+            "evaluated_at": "2026-04-06 10:00:00",
+            "evaluator_name": "PersuasionPro"
+        },
+        {
+            "evaluation_id": 18,
+            "submission_id": 16,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 1,
+            "overall_score": "66.50",
+            "summary_feedback": "Persuasive structure present but evidence is generic. Cite specific sources.",
+            "evaluated_at": "2026-04-02 10:00:00",
+            "evaluator_name": "PersuasionPro"
+        },
+        {
+            "evaluation_id": 15,
+            "submission_id": 14,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 1,
+            "overall_score": "88.00",
+            "summary_feedback": "Excellent final attempt; persuasive technique now well above passing threshold.",
+            "evaluated_at": "2026-03-30 10:00:00",
+            "evaluator_name": "PersuasionPro"
+        },
+        {
+            "evaluation_id": 6,
+            "submission_id": 6,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 8,
+            "agent_id": null,
+            "overall_score": "82.00",
+            "summary_feedback": "Strong persuasive delivery with compelling evidence throughout.",
+            "evaluated_at": "2026-03-26 15:00:00",
+            "evaluator_name": "Tanvir Hasan"
+        },
+        {
+            "evaluation_id": 14,
+            "submission_id": 13,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 1,
+            "overall_score": "74.50",
+            "summary_feedback": "Marked improvement in argument structure over previous attempt.",
+            "evaluated_at": "2026-03-23 10:00:00",
+            "evaluator_name": "PersuasionPro"
+        },
+        {
+            "evaluation_id": 3,
+            "submission_id": 3,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 1,
+            "overall_score": "61.50",
+            "summary_feedback": "Basic persuasive structure present but thesis needs strengthening.",
+            "evaluated_at": "2026-03-19 09:00:00",
+            "evaluator_name": "PersuasionPro"
+        },
+        {
+            "evaluation_id": 13,
+            "submission_id": 12,
+            "evaluation_no": 2,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 2,
+            "agent_id": null,
+            "overall_score": "65.00",
+            "summary_feedback": "Agrees with AI assessment; recommends focusing on call-to-action clarity.",
+            "evaluated_at": "2026-03-17 14:00:00",
+            "evaluator_name": "Masuma Khan Trisha"
+        },
+        {
+            "evaluation_id": 12,
+            "submission_id": 12,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 1,
+            "overall_score": "62.00",
+            "summary_feedback": "First attempt shows potential; argument needs more supporting evidence.",
+            "evaluated_at": "2026-03-16 10:00:00",
+            "evaluator_name": "PersuasionPro"
+        },
+        {
+            "evaluation_id": 9,
+            "submission_id": 9,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 12,
+            "agent_id": null,
+            "overall_score": "71.00",
+            "summary_feedback": "Adequate demonstration; pacing was too fast in the middle section.",
+            "evaluated_at": "2026-03-14 11:00:00",
+            "evaluator_name": "Imran Chowdhury"
+        },
+        {
+            "evaluation_id": 5,
+            "submission_id": 5,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 4,
+            "overall_score": "75.25",
+            "summary_feedback": "Well-organised demonstration with good audience engagement.",
+            "evaluated_at": "2026-03-03 10:00:00",
+            "evaluator_name": "DemoAnalyzer"
+        },
+        {
+            "evaluation_id": 2,
+            "submission_id": 2,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 1,
+            "agent_id": null,
+            "overall_score": "68.00",
+            "summary_feedback": "Good demonstration technique; needs smoother transitions between steps.",
+            "evaluated_at": "2026-03-01 14:00:00",
+            "evaluator_name": "Muhammad Rafid Hossain"
+        },
+        {
+            "evaluation_id": 8,
+            "submission_id": 8,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 2,
+            "overall_score": "85.50",
+            "summary_feedback": "Excellent informative speech with strong data presentation.",
+            "evaluated_at": "2026-02-19 10:00:00",
+            "evaluator_name": "InformBot"
+        },
+        {
+            "evaluation_id": 4,
+            "submission_id": 4,
+            "evaluation_no": 1,
+            "evaluator_type": "HUMAN",
+            "human_evaluator_id": 2,
+            "agent_id": null,
+            "overall_score": "78.00",
+            "summary_feedback": "Clear informative content with effective use of examples.",
+            "evaluated_at": "2026-02-12 11:00:00",
+            "evaluator_name": "Masuma Khan Trisha"
+        },
+        {
+            "evaluation_id": 1,
+            "submission_id": 1,
+            "evaluation_no": 1,
+            "evaluator_type": "AI",
+            "human_evaluator_id": null,
+            "agent_id": 2,
+            "overall_score": "72.50",
+            "summary_feedback": "Solid informative structure with room for deeper analysis.",
+            "evaluated_at": "2026-02-06 10:00:00",
+            "evaluator_name": "InformBot"
+        }
+    ],
+    "events": [
+        {
+            "event_id": 3,
+            "community_id": 2,
+            "organizer_user_id": 3,
+            "title": "Debate Workshop for Beginners",
+            "description": "Hands-on workshop covering basic debate formats and argumentation.",
+            "event_mode": "Online",
+            "start_at": "2026-06-10 15:00:00",
+            "end_at": "2026-06-10 17:30:00",
+            "venue": null,
+            "meeting_url": "https://zoom.us/j/9876543210",
+            "capacity": 50,
+            "event_status": "Completed",
+            "created_at": "2026-08-17 22:09:40",
+            "community_name": "NSU Communication Society",
+            "organizer_name": "Ushrika Mostafa Mou",
+            "confirmed_count": 0
+        },
+        {
+            "event_id": 4,
+            "community_id": 2,
+            "organizer_user_id": 3,
+            "title": "Impromptu Speaking Challenge",
+            "description": "Timed impromptu rounds with peer feedback and scoring.",
+            "event_mode": "In-Person",
+            "start_at": "2026-07-20 14:00:00",
+            "end_at": "2026-07-20 16:00:00",
+            "venue": "NSU Auditorium, Bashundhara, Dhaka",
+            "meeting_url": null,
+            "capacity": 40,
+            "event_status": "Cancelled",
+            "created_at": "2026-08-17 22:09:40",
+            "community_name": "NSU Communication Society",
+            "organizer_name": "Ushrika Mostafa Mou",
+            "confirmed_count": 0
+        },
+        {
+            "event_id": 6,
+            "community_id": 3,
+            "organizer_user_id": 2,
+            "title": "Virtual Storytelling Workshop",
+            "description": "Learn the art of storytelling for corporate presentations.",
+            "event_mode": "Online",
+            "start_at": "2026-08-25 19:00:00",
+            "end_at": "2026-08-25 21:00:00",
+            "venue": null,
+            "meeting_url": "https://meet.google.com/xyz-abcd-efg",
+            "capacity": 25,
+            "event_status": "Scheduled",
+            "created_at": "2026-08-17 22:09:40",
+            "community_name": "Corporate Presenters BD",
+            "organizer_name": "Masuma Khan Trisha",
+            "confirmed_count": 1
+        },
+        {
+            "event_id": 2,
+            "community_id": 1,
+            "organizer_user_id": 10,
+            "title": "Monthly Practice Meetup ??? September",
+            "description": "Informal practice session for members to rehearse upcoming speeches.",
+            "event_mode": "Hybrid",
+            "start_at": "2026-09-05 18:00:00",
+            "end_at": "2026-09-05 20:00:00",
+            "venue": "Dhanmondi Community Center, Dhaka",
+            "meeting_url": "https://meet.google.com/abc-defg-hij",
+            "capacity": 30,
+            "event_status": "Scheduled",
+            "created_at": "2026-08-17 22:09:40",
+            "community_name": "Dhaka Speakers Circle",
+            "organizer_name": "Rashed Kabir",
+            "confirmed_count": 3
+        },
+        {
+            "event_id": 1,
+            "community_id": 1,
+            "organizer_user_id": 10,
+            "title": "Annual Speech Competition 2026",
+            "description": "The flagship annual competition featuring all four speech formats.",
+            "event_mode": "In-Person",
+            "start_at": "2026-09-15 09:00:00",
+            "end_at": "2026-09-15 17:00:00",
+            "venue": "Dhaka University TSC Auditorium, Dhaka",
+            "meeting_url": null,
+            "capacity": 100,
+            "event_status": "Scheduled",
+            "created_at": "2026-08-17 22:09:40",
+            "community_name": "Dhaka Speakers Circle",
+            "organizer_name": "Rashed Kabir",
+            "confirmed_count": 5
+        },
+        {
+            "event_id": 5,
+            "community_id": 3,
+            "organizer_user_id": 2,
+            "title": "Corporate Pitch Night",
+            "description": "Members pitch business ideas in 5-minute presentations to a panel.",
+            "event_mode": "In-Person",
+            "start_at": "2026-10-01 18:30:00",
+            "end_at": "2026-10-01 21:00:00",
+            "venue": "Radisson Blu Water Garden, Dhaka",
+            "meeting_url": null,
+            "capacity": 60,
+            "event_status": "Scheduled",
+            "created_at": "2026-08-17 22:09:40",
+            "community_name": "Corporate Presenters BD",
+            "organizer_name": "Masuma Khan Trisha",
+            "confirmed_count": 2
+        }
+    ],
+    "registrations": {
+        "3": [
+            {
+                "event_id": 3,
+                "user_id": 4,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-01 10:00:00",
+                "full_name": "Ahnaf Akif",
+                "email": "ahnaf.akif@auratio.app"
+            },
+            {
+                "event_id": 3,
+                "user_id": 5,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-02 09:00:00",
+                "full_name": "Md Ahsanuzzaman Khan",
+                "email": "ahsanuzzaman@auratio.app"
+            },
+            {
+                "event_id": 3,
+                "user_id": 7,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-03 14:00:00",
+                "full_name": "Nusrat Jahan",
+                "email": "nusrat.jahan@auratio.app"
+            },
+            {
+                "event_id": 3,
+                "user_id": 11,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-04 10:00:00",
+                "full_name": "Farjana Akter",
+                "email": "farjana.akter@auratio.app"
+            },
+            {
+                "event_id": 3,
+                "user_id": 9,
+                "registration_status": "Attended",
+                "registered_at": "2026-06-05 11:00:00",
+                "full_name": "Sadia Rahman",
+                "email": "sadia.rahman@auratio.app"
+            }
+        ],
+        "4": [
+            {
+                "event_id": 4,
+                "user_id": 3,
+                "registration_status": "Cancelled",
+                "registered_at": "2026-07-10 09:00:00",
+                "full_name": "Ushrika Mostafa Mou",
+                "email": "ushrika.mostafa@auratio.app"
+            },
+            {
+                "event_id": 4,
+                "user_id": 7,
+                "registration_status": "Cancelled",
+                "registered_at": "2026-07-12 14:00:00",
+                "full_name": "Nusrat Jahan",
+                "email": "nusrat.jahan@auratio.app"
+            }
+        ],
+        "6": [
+            {
+                "event_id": 6,
+                "user_id": 10,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-18 14:00:00",
+                "full_name": "Rashed Kabir",
+                "email": "rashed.kabir@auratio.app"
+            }
+        ],
+        "2": [
+            {
+                "event_id": 2,
+                "user_id": 10,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-27 08:00:00",
+                "full_name": "Rashed Kabir",
+                "email": "rashed.kabir@auratio.app"
+            },
+            {
+                "event_id": 2,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-28 09:00:00",
+                "full_name": "Muhammad Rafid Hossain",
+                "email": "rafid.hossain@auratio.app"
+            },
+            {
+                "event_id": 2,
+                "user_id": 3,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-28 11:00:00",
+                "full_name": "Ushrika Mostafa Mou",
+                "email": "ushrika.mostafa@auratio.app"
+            }
+        ],
+        "1": [
+            {
+                "event_id": 1,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-20 09:00:00",
+                "full_name": "Muhammad Rafid Hossain",
+                "email": "rafid.hossain@auratio.app"
+            },
+            {
+                "event_id": 1,
+                "user_id": 2,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-20 10:00:00",
+                "full_name": "Masuma Khan Trisha",
+                "email": "trisha.khan@auratio.app"
+            },
+            {
+                "event_id": 1,
+                "user_id": 3,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-21 11:00:00",
+                "full_name": "Ushrika Mostafa Mou",
+                "email": "ushrika.mostafa@auratio.app"
+            },
+            {
+                "event_id": 1,
+                "user_id": 4,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-22 09:30:00",
+                "full_name": "Ahnaf Akif",
+                "email": "ahnaf.akif@auratio.app"
+            },
+            {
+                "event_id": 1,
+                "user_id": 6,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-08-23 10:00:00",
+                "full_name": "Farhan Ahmed",
+                "email": "farhan.ahmed@auratio.app"
+            },
+            {
+                "event_id": 1,
+                "user_id": 5,
+                "registration_status": "Waitlisted",
+                "registered_at": "2026-08-25 14:00:00",
+                "full_name": "Md Ahsanuzzaman Khan",
+                "email": "ahsanuzzaman@auratio.app"
+            }
+        ],
+        "5": [
+            {
+                "event_id": 5,
+                "user_id": 1,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-09-15 09:00:00",
+                "full_name": "Muhammad Rafid Hossain",
+                "email": "rafid.hossain@auratio.app"
+            },
+            {
+                "event_id": 5,
+                "user_id": 2,
+                "registration_status": "Confirmed",
+                "registered_at": "2026-09-15 10:00:00",
+                "full_name": "Masuma Khan Trisha",
+                "email": "trisha.khan@auratio.app"
+            },
+            {
+                "event_id": 5,
+                "user_id": 8,
+                "registration_status": "Waitlisted",
+                "registered_at": "2026-09-18 11:00:00",
+                "full_name": "Tanvir Hasan",
+                "email": "tanvir.hasan@auratio.app"
+            }
+        ]
+    }
+}
