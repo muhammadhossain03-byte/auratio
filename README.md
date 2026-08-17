@@ -2,7 +2,8 @@
 
 > **Course:** CSE311L Database Systems Lab · Section 3 · Group 9  
 > **Institution:** North South University (NSU)  
-> **Live Demo:** [https://muhammadhossain03-byte.github.io/auratio/](https://muhammadhossain03-byte.github.io/auratio/)
+> **Live Production (Full Live CRUD):** [https://auratio.space](https://auratio.space)  
+> **Static Demo (GitHub Pages):** [https://muhammadhossain03-byte.github.io/auratio/](https://muhammadhossain03-byte.github.io/auratio/)
 
 ---
 
@@ -27,7 +28,7 @@ The application is built strictly according to a normalized relational database 
 
 ## 🛠️ Technology Stack
 
-- **Database:** MySQL 8.0+ / MariaDB via XAMPP (InnoDB storage engine, strict FK and CHECK constraints)
+- **Database:** MySQL 8.0+ / MariaDB via XAMPP & Hostinger (InnoDB storage engine, strict FK and relational constraints)
 - **Backend API:** PHP 8 with PDO (PHP Data Objects), prepared statements, standardized JSON response helpers
 - **Frontend:** Single-page architecture (`index.html`) using Vanilla ES Modules, HTML5, Google Fonts (*Hanken Grotesk* & *Inter*), Material Symbols Outlined
 - **Styling:** Vanilla CSS & Tailwind CSS CDN configured with the *Academic Precision* design system tokens
@@ -35,22 +36,25 @@ The application is built strictly according to a normalized relational database 
 
 ---
 
-## 🚀 Two Run Modes
+## 🚀 Live Links & Run Modes
 
 ```
 +-----------------------------------------------------------------------------------+
-| 🌐 GitHub Pages Mode (Demo):                                                      |
-|    - Reads data/demo-data.json                                                    |
-|    - Read-only demonstration with visible amber banner                            |
+| 🚀 Live Production (Hostinger) — https://auratio.space                            |
+|    - Runs full live CRUD against real MySQL database via PHP backend              |
+|    - Real-time Create, Read, Update, and Delete operations with constraint checks |
 +-----------------------------------------------------------------------------------+
-| 💻 Local XAMPP Mode (Full Live CRUD):                                             |
-|    - Communicates with live PHP backend & MySQL database                          |
-|    - Real-time Create, Read, Update, and Delete operations                        |
+| 🌐 GitHub Pages Demo — https://muhammadhossain03-byte.github.io/auratio/          |
+|    - Static client-side demonstration reading data/demo-data.json                 |
+|    - Read-only interface with visible amber demo banner                           |
++-----------------------------------------------------------------------------------+
+| 💻 Local XAMPP Mode                                                               |
+|    - Runs locally with Apache + MySQL on port 3307/3306                           |
 +-----------------------------------------------------------------------------------+
 ```
 
-> [!IMPORTANT]
-> **Live CRUD Operations:** GitHub Pages is a static hosting environment and cannot execute PHP or connect to MySQL. Live CRUD operations (creating, updating, deleting records, constraint enforcement, and delete blocking) require running locally with XAMPP Apache and MySQL.
+> [!NOTE]
+> **Live Production vs Static Demo:** [https://auratio.space](https://auratio.space) runs against a live MySQL database and PHP backend supporting all real-time Create, Read, Update, and Delete operations. The GitHub Pages link is a static demo environment that serves pre-generated seed data from `data/demo-data.json` with write operations disabled.
 
 ---
 
