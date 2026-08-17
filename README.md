@@ -18,10 +18,10 @@ The application is built strictly according to a normalized relational database 
 
 | Name | Student ID | Role |
 |---|---|---|
-| **Muhammad Rafid Hossain** | `2231895642` | Database Architect & Backend Lead |
-| **Masuma Khan Trisha** | `2121336642` | Speech Evaluator & Community Lead |
-| **Ushrika Mostafa Mou** | `2222587042` | Frontend UI & Design Lead |
-| **Ahnaf Akif** | `2122286042` | Submissions & Assessment Flow Lead |
+| **Muhammad Rafid Hossain** | `2231895642` | Project Lead / Database Architect |
+| **Masuma Khan Trisha** | `2121336642` | Backend Developer |
+| **Ushrika Mostafa Mou** | `2222587042` | Frontend Developer |
+| **Ahnaf Akif** | `2122286042` | Quality Assurance & Documentation |
 
 ---
 
