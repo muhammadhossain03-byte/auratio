@@ -1,7 +1,8 @@
 -- database/schema-hosting.sql
 -- Auratio Database DDL for Shared Hosting (Hostinger / cPanel).
 -- Note: Run this inside your pre-created hosting database (via phpMyAdmin or SQL console).
--- Does not contain DROP DATABASE, CREATE DATABASE, or USE statements.
+-- Contains no DROP DATABASE, CREATE DATABASE, USE statements, or CHECK constraints (for hosting MySQL compatibility).
+-- Retains all 22 tables, 22 primary keys, 29 foreign keys, and 9 unique constraints.
 
 -- ─── 1. IDENTITY AND ACCESS CONTROL ────────────────────────────────────
 
@@ -81,9 +82,7 @@ CREATE TABLE rubric_criterion (
   CONSTRAINT fk_rc_format FOREIGN KEY (format_id) REFERENCES speech_format(format_id)
       ON DELETE CASCADE  ON UPDATE CASCADE,
   CONSTRAINT fk_rc_skill  FOREIGN KEY (skill_id)  REFERENCES speaking_skill(skill_id)
-      ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT chk_rc_weight CHECK (weight_percent > 0 AND weight_percent <= 100),
-  CONSTRAINT chk_rc_max    CHECK (max_score > 0)
+      ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [9] AISpecialistAgent
@@ -124,9 +123,7 @@ CREATE TABLE curriculum_module (
   CONSTRAINT fk_cm_curriculum FOREIGN KEY (curriculum_id) REFERENCES curriculum(curriculum_id)
       ON DELETE CASCADE  ON UPDATE CASCADE,
   CONSTRAINT fk_cm_format     FOREIGN KEY (format_id)     REFERENCES speech_format(format_id)
-      ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT chk_cm_seq  CHECK (sequence_no > 0),
-  CONSTRAINT chk_cm_pass CHECK (passing_score BETWEEN 0 AND 100)
+      ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [12] Milestone
@@ -153,8 +150,7 @@ CREATE TABLE curriculum_enrollment (
   CONSTRAINT fk_ce_learner    FOREIGN KEY (learner_id)    REFERENCES user_account(user_id)
       ON DELETE CASCADE  ON UPDATE CASCADE,
   CONSTRAINT fk_ce_curriculum FOREIGN KEY (curriculum_id) REFERENCES curriculum(curriculum_id)
-      ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT chk_ce_completed CHECK (enrollment_status <> 'Completed' OR completed_at IS NOT NULL)
+      ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [14] ModuleProgress
@@ -169,8 +165,7 @@ CREATE TABLE module_progress (
   CONSTRAINT fk_mp_enrollment FOREIGN KEY (enrollment_id) REFERENCES curriculum_enrollment(enrollment_id)
       ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_mp_module     FOREIGN KEY (module_id)     REFERENCES curriculum_module(module_id)
-      ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT chk_mp_completed CHECK (progress_status <> 'Completed' OR completed_at IS NOT NULL)
+      ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [15] SpeechSubmission
@@ -186,15 +181,12 @@ CREATE TABLE speech_submission (
   submitted_at             DATETIME NOT NULL,
   UNIQUE KEY uq_attempt (module_progress_id, attempt_no),
   CONSTRAINT fk_ss_progress FOREIGN KEY (module_progress_id) REFERENCES module_progress(module_progress_id)
-      ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT chk_ss_attempt  CHECK (attempt_no > 0),
-  CONSTRAINT chk_ss_duration CHECK (duration_seconds IS NULL OR duration_seconds > 0),
-  CONSTRAINT chk_ss_mime     CHECK (mime_type = 'video/mp4')
+      ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- ─── 4. EVALUATION ─────────────────────────────────────────────────────
 
--- [16] Evaluation  ── note the XOR source constraint
+-- [16] Evaluation
 CREATE TABLE evaluation (
   evaluation_id      INT AUTO_INCREMENT PRIMARY KEY,
   submission_id      INT NOT NULL,
@@ -211,12 +203,7 @@ CREATE TABLE evaluation (
   CONSTRAINT fk_ev_human      FOREIGN KEY (human_evaluator_id) REFERENCES user_account(user_id)
       ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_ev_agent      FOREIGN KEY (agent_id)           REFERENCES ai_specialist_agent(agent_id)
-      ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT chk_ev_score  CHECK (overall_score BETWEEN 0 AND 100),
-  CONSTRAINT chk_ev_no     CHECK (evaluation_no > 0),
-  CONSTRAINT chk_ev_source CHECK (
-      (evaluator_type = 'AI'    AND agent_id IS NOT NULL AND human_evaluator_id IS NULL) OR
-      (evaluator_type = 'HUMAN' AND human_evaluator_id IS NOT NULL AND agent_id IS NULL))
+      ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [17] EvaluationSkillScore
@@ -229,8 +216,7 @@ CREATE TABLE evaluation_skill_score (
   CONSTRAINT fk_ess_eval      FOREIGN KEY (evaluation_id) REFERENCES evaluation(evaluation_id)
       ON DELETE CASCADE  ON UPDATE CASCADE,
   CONSTRAINT fk_ess_criterion FOREIGN KEY (criterion_id)  REFERENCES rubric_criterion(criterion_id)
-      ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT chk_ess_score CHECK (score >= 0)
+      ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [18] UserMilestone  (bridge)
@@ -289,9 +275,7 @@ CREATE TABLE community_event (
   CONSTRAINT fk_cev_community FOREIGN KEY (community_id)      REFERENCES community(community_id)
       ON DELETE CASCADE  ON UPDATE CASCADE,
   CONSTRAINT fk_cev_organizer FOREIGN KEY (organizer_user_id) REFERENCES user_account(user_id)
-      ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT chk_cev_dates    CHECK (start_at < end_at),
-  CONSTRAINT chk_cev_capacity CHECK (capacity IS NULL OR capacity > 0)
+      ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- [22] EventRegistration  (bridge)
