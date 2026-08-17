@@ -1,0 +1,7 @@
+# Database credentials
+api/config.php
+
+# Environment & OS files
+.DS_Store
+Thumbs.db
+*.log
