@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"primary-fixed":"#e2dfff","error":"#ba1a1a","tertiary-fixed":"#ffdbcc","surface-container-high":"#e7e8e9","inverse-primary":"#c3c0ff","on-tertiary-container":"#fe9562","outline":"#777584","surface-container":"#edeeef","secondary":"#4648d4","primary-fixed-dim":"#c3c0ff","on-error-container":"#93000a","on-error":"#ffffff","background":"#f8f9fa","on-primary":"#ffffff","surface-container-low":"#f3f4f5","on-primary-fixed-variant":"#3b35a7","on-surface":"#191c1d","error-container":"#ffdad6","primary-container":"#3730a3","inverse-on-surface":"#f0f1f2","tertiary":"#511c00","inverse-surface":"#2e3132","surface-dim":"#d9dadb","surface":"#f8f9fa","tertiary-container":"#752c00","secondary-fixed-dim":"#c0c1ff","surface-variant":"#e1e3e4","on-secondary-fixed-variant":"#2f2ebe","surface-container-lowest":"#ffffff","on-primary-fixed":"#0f0069","on-secondary-fixed":"#07006c","surface-container-highest":"#e1e3e4","on-tertiary":"#ffffff","surface-bright":"#f8f9fa","primary":"#1f108e","secondary-fixed":"#e1e0ff","secondary-container":"#6063ee","on-secondary-container":"#fffbff","on-tertiary-fixed":"#351000","on-primary-container":"#a9a7ff","tertiary-fixed-dim":"#ffb694","surface-tint":"#544fc0","on-surface-variant":"#464553","outline-variant":"#c8c4d5","on-background":"#191c1d","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#7a3003"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1rem","stack-md":"1rem","stack-lg":"2rem","gutter":"1.5rem","stack-sm":"0.5rem","modal-width-fixed":"560px","sidebar-width":"240px","margin-desktop":"2rem"},"fontFamily":{"display-lg":["Inter"],"headline-lg-mobile":["Inter"],"label-caps":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"title-sm":["Inter"],"headline-md":["Inter"]},"fontSize":{"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"title-sm":["18px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col"><div class="h-16 flex items-center px-gutter mb-stack-lg"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaTQyOERNRI1jReUhRD_NcP5mokKNR8m_ggWVK1k5RVOrFzVm3FY9ZmrNAjDtYHBTasLShro9XkyEdOnqHu82JAy9fC9k1ICngM4gqAYYSCebgbB-PcsdGLIc0Dty-tbmN6Uva5bV1mWRf6_l25ZvNVrpwA2FshGF9wqAH24C8f8LgHJkRWxHM1A8AHxpPTHhJJ9kYS_uGxPo1bKU3B8ni8LYzA1lW4KUs5KO0ZQZTwe-eXpR6Jbhbd1eFlLeQsFQ2GA" alt="Auratio Logo" class="w-10 h-10 object-contain"><span class="ml-3 font-title-sm text-primary tracking-tight">Auratio</span></div><nav class="flex-1 px-3 space-y-1" data-active-classes="bg-primary text-on-primary shadow-sm"><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all group bg-primary text-on-primary shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span><span class="font-label-caps">Dashboard</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="users" href="#"><span class="material-symbols-outlined mr-3">group</span><span class="font-label-caps">Users</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="curricula" href="#"><span class="material-symbols-outlined mr-3">menu_book</span><span class="font-label-caps">Curricula</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="submissions" href="#"><span class="material-symbols-outlined mr-3">assignment_turned_in</span><span class="font-label-caps">Submissions</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="community" href="#"><span class="material-symbols-outlined mr-3">forum</span><span class="font-label-caps">Community</span></a></nav></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant z-40 flex items-center justify-between px-gutter"><div class="flex items-center bg-surface-container w-96 px-4 py-2 rounded-full border border-outline-variant"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span><input class="bg-transparent border-none outline-none text-body-sm w-full text-on-surface placeholder-on-surface-variant/50" placeholder="Search platform..." type="text"></div><div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-background p-gutter"><div class="flex flex-col w-full h-full pb-stack-lg relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+<!-- Header Section -->
+<div class="flex items-center justify-between mb-stack-lg">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-xs tracking-tight">Users</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Manage platform access, roles, and account statuses across the academic network.
+            </p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm hover:shadow-md flex items-center" onclick="document.getElementById('addUserModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px] mr-2">person_add</span>
+                Add User
+            </button>
+</div>
+</div>
+<!-- Filters Section -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-stack-md">
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-highest rounded-full font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-shadow" placeholder="Search by name or email..." type="text">
+</div>
+<div class="relative group min-w-[160px]">
+<button class="w-full flex items-center justify-between px-5 py-3 bg-surface-container-highest rounded-full font-label-caps text-label-caps text-on-surface hover:bg-surface-variant transition-colors">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[18px] mr-2 text-on-surface-variant">filter_list</span>
+                        All Statuses
+                    </div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
+<span class="">Showing <span class="text-on-surface font-semibold">124</span> total</span>
+</div>
+</div>
+<!-- Users Table Canvas -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-border-subtle overflow-hidden flex-1 flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-accent border-b border-border-subtle">
+<th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/4">Full Name</th>
+<th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/4">Email</th>
+<th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/6">Status</th>
+<th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/6">Roles</th>
+<th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Created At</th>
+<th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container/30 transition-colors relative">
+<td class="py-4 px-6 relative">
+<!-- Selected Accent Bar (Hidden normally, shown on hover for demo) -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r-full"></div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center font-title-sm text-title-sm text-on-primary-fixed-variant mr-4 shrink-0">
+                                    EC
+                                </div>
+<span class="font-title-sm text-title-sm text-on-surface truncate group-hover:text-primary transition-colors">Dr. Elena Rostova</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block max-w-[200px]">e.rostova@university.edu</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-status-success/10 text-status-success font-label-caps text-label-caps">
+                                Active
+                            </span>
+</td>
+<td class="py-4 px-6">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] tracking-wider">Evaluator</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] tracking-wider">Administrator</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oct 12, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container/30 transition-colors relative">
+<td class="py-4 px-6 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r-full"></div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed-dim flex items-center justify-center font-title-sm text-title-sm text-on-tertiary-fixed-variant mr-4 shrink-0">
+                                    JM
+                                </div>
+<span class="font-title-sm text-title-sm text-on-surface truncate group-hover:text-primary transition-colors">Julian Mercer</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block max-w-[200px]">j.mercer@student.edu</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-status-success/10 text-status-success font-label-caps text-label-caps">
+                                Active
+                            </span>
+</td>
+<td class="py-4 px-6">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] tracking-wider">Learner</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 05, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container/30 transition-colors relative">
+<td class="py-4 px-6 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r-full"></div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim flex items-center justify-center font-title-sm text-title-sm text-on-secondary-fixed-variant mr-4 shrink-0">
+                                    ST
+                                </div>
+<span class="font-title-sm text-title-sm text-on-surface truncate group-hover:text-primary transition-colors">Sarah Thorne</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block max-w-[200px]">s.thorne@institute.org</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-status-warning/10 text-status-warning font-label-caps text-label-caps">
+                                Suspended
+                            </span>
+</td>
+<td class="py-4 px-6">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] tracking-wider">Organizer</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dec 01, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-container/30 transition-colors relative">
+<td class="py-4 px-6 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r-full"></div>
+<div class="flex items-center opacity-50">
+<div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center font-title-sm text-title-sm text-on-surface-variant mr-4 shrink-0">
+                                    AK
+                                </div>
+<span class="font-title-sm text-title-sm text-on-surface truncate">Arthur Kensington</span>
+</div>
+</td>
+<td class="py-4 px-6 opacity-50">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block max-w-[200px]">a.kensington@legacy.edu</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-on-surface-variant/10 text-on-surface-variant font-label-caps text-label-caps">
+                                Deactivated
+                            </span>
+</td>
+<td class="py-4 px-6 opacity-50">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] tracking-wider">Evaluator</span>
+</div>
+</td>
+<td class="py-4 px-6 opacity-50">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jan 15, 2022</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="mt-auto px-6 py-4 bg-surface-container-lowest border-t border-border-subtle flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 1 to 4 of 124 results</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full flex items-center justify-center border border-border-subtle text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex gap-1">
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-on-primary font-body-sm text-body-sm">1</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm">2</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm">3</button>
+<span class="w-8 h-8 flex items-center justify-center text-on-surface-variant">...</span>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center border border-border-subtle text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Overlay (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center px-4 bg-on-surface/20 backdrop-blur-sm" id="addUserModal">
+<!-- Modal Backdrop Click Area -->
+<div class="absolute inset-0" onclick="document.getElementById('addUserModal').classList.add('hidden')"></div>
+<!-- Modal Content -->
+<div class="relative w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden animate-[slideUp_0.3s_ease-out]">
+<!-- Modal Header -->
+<div class="px-8 py-6 border-b border-border-subtle flex justify-between items-center bg-surface-accent">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Add New User</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Create an account and assign roles.</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors" onclick="document.getElementById('addUserModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="px-8 py-6 max-h-[70vh] overflow-y-auto">
+<form class="space-y-stack-md">
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Full Name</label>
+<input class="w-full px-4 py-3 bg-surface border border-border-subtle rounded-xl font-body-md text-body-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="e.g., Dr. Jane Smith" type="text">
+</div>
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface border border-border-subtle rounded-xl font-body-md text-body-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="jane.smith@institution.edu" type="email">
+</div>
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Temporary Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 pr-12 bg-surface border border-border-subtle rounded-xl font-body-md text-body-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="••••••••" type="password">
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Account Status</label>
+<div class="relative">
+<select class="w-full px-4 py-3 appearance-none bg-surface border border-border-subtle rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+<option value="active">Active</option>
+<option value="suspended">Suspended</option>
+<option value="deactivated">Deactivated</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Biography / Notes</label>
+<textarea class="w-full px-4 py-3 bg-surface border border-border-subtle rounded-xl font-body-md text-body-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" placeholder="Academic background or institutional notes..." rows="3"></textarea>
+</div>
+</form>
+</div>
+<!-- Modal Footer -->
+<div class="px-8 py-6 border-t border-border-subtle bg-surface flex justify-end gap-3">
+<button class="px-6 py-2.5 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="document.getElementById('addUserModal').classList.add('hidden')">
+                    Cancel
+                </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm hover:shadow-md">
+                    Create User
+                </button>
+</div>
+</div>
+</div>
+<!-- Inline CSS for micro-animations since style blocks are forbidden, using Tailwind arbitrary values above -->
+</div></main></div>
+
+</body></html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-accent": "#F0F5FF",
+                "primary-container": "#0056d2",
+                "surface-container-high": "#e7e7f2",
+                "on-surface": "#191b23",
+                "outline": "#737785",
+                "background": "#faf8ff",
+                "on-background": "#191b23",
+                "tertiary-fixed-dim": "#ffb59b",
+                "secondary": "#4a5e88",
+                "secondary-fixed-dim": "#b2c6f7",
+                "on-secondary-container": "#435881",
+                "outline-variant": "#c3c6d6",
+                "primary-fixed": "#dae2ff",
+                "error-container": "#ffdad6",
+                "surface-tint": "#0056d2",
+                "tertiary": "#822800",
+                "on-tertiary": "#ffffff",
+                "surface-dim": "#d9d9e4",
+                "surface": "#faf8ff",
+                "surface-container": "#ededf8",
+                "inverse-surface": "#2e3038",
+                "on-primary-container": "#ccd8ff",
+                "inverse-on-surface": "#f0f0fb",
+                "on-error": "#ffffff",
+                "tertiary-container": "#a93802",
+                "status-warning": "#F59E0B",
+                "secondary-fixed": "#d8e2ff",
+                "status-error": "#EF4444",
+                "surface-container-low": "#f2f3fe",
+                "on-secondary-fixed": "#001a41",
+                "on-secondary-fixed-variant": "#32466f",
+                "status-success": "#10B981",
+                "surface-container-highest": "#e1e2ec",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#812800",
+                "surface-variant": "#e1e2ec",
+                "on-tertiary-fixed": "#380d00",
+                "border-subtle": "#E2E8F0",
+                "primary": "#0040a1",
+                "on-tertiary-container": "#ffcebd",
+                "primary-fixed-dim": "#b2c5ff",
+                "inverse-primary": "#b2c5ff",
+                "on-primary-fixed-variant": "#0040a1",
+                "on-surface-variant": "#424654",
+                "secondary-container": "#bacfff",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#faf8ff",
+                "on-secondary": "#ffffff",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#ffdbcf",
+                "on-primary-fixed": "#001847"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "gutter": "1.5rem",
+                "stack-md": "1.5rem",
+                "stack-xs": "0.25rem",
+                "margin-desktop": "2.5rem",
+                "stack-lg": "3rem",
+                "container-max": "1280px",
+                "margin-mobile": "1rem",
+                "stack-sm": "0.75rem",
+                "sidebar-width": "260px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Inter"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Hanken Grotesk"
+                ],
+                "display-lg": [
+                        "Hanken Grotesk"
+                ],
+                "title-sm": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Hanken Grotesk"
+                ],
+                "label-caps": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "title-sm": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.06em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col"><div class="h-16 flex items-center px-gutter mb-stack-lg"><div class="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtuMusQmGMMOBwpuOs9RMCwIewbaa0eXjNyQOtmvSIIzk52RBw0Z1LGH1F8A7Jh2CZmRLYRJo9_YCGalyfzjRFW3k_pxWjDTAsV4mSwtFo0duBWVoryRPT_HTREVW6uV2N5UqV80npNkjNRCevDw3OJd5Dceh-3Ma4URFU5bs0PUvUxufLWbCy80wpEjEBvLpdWJTiTXu1S4ZoN-s5nj5TGFXjSN-7q9vcietY9I_7AGEouOCfZNpRRhyUTDRaL18o4A" alt="Auratio Brand Logo" class="w-full h-full object-contain"></div><span class="ml-3 font-title-sm text-primary tracking-tight">Auratio</span></div><nav class="flex-1 px-3 space-y-1" data-active-classes="bg-primary text-on-primary shadow-sm"><a aria-current="page" class="flex items-center px-4 py-3 rounded-xl transition-all group bg-primary text-on-primary shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span><span class="font-label-caps">Dashboard</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="users" href="#"><span class="material-symbols-outlined mr-3">group</span><span class="font-label-caps">Users</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="curricula" href="#"><span class="material-symbols-outlined mr-3">menu_book</span><span class="font-label-caps">Curricula</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="submissions" href="#"><span class="material-symbols-outlined mr-3">assignment_turned_in</span><span class="font-label-caps">Submissions</span></a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="community" href="#"><span class="material-symbols-outlined mr-3">forum</span><span class="font-label-caps">Community</span></a></nav></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant z-40 flex items-center justify-between px-gutter"><div class="flex items-center bg-surface-container w-96 px-4 py-2 rounded-full border border-outline-variant"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span><input class="bg-transparent border-none outline-none text-body-sm w-full text-on-surface placeholder-on-surface-variant/50" placeholder="Search platform..." type="text"></div><div class="flex items-center gap-4"><button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 min-h-screen bg-background p-gutter"><div class="flex flex-col w-full gap-stack-lg animate-fade-in pb-12 gap-8">
+<div class="flex items-center justify-between mt-stack-md">
+<div>
+<h1 class="font-headline-md text-on-surface">Platform Overview</h1>
+<p class="font-body-sm text-on-surface-variant mt-1">Real-time metrics for Auratio learning modules.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container border border-outline-variant px-4 py-2 rounded-xl font-label-caps text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+        Last 30 Days
+      </button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-xl font-label-caps hover:bg-primary-container transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Report
+      </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-gutter gap-6">
+<div class="bg-surface rounded-2xl border border-outline-variant p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group gap-4"><div class="flex justify-between items-start mb-2"><div class="font-label-caps text-on-surface-variant uppercase tracking-wider">Active Learners</div><span class="material-symbols-outlined text-[32px] text-primary opacity-20 group-hover:opacity-40 transition-opacity">groups</span></div><div class="font-display-lg text-primary">1,240</div><div class="flex items-center gap-1 mt-3 text-secondary-container font-label-caps bg-secondary-fixed/50 w-fit px-2 py-1 rounded-full"><span class="material-symbols-outlined text-[14px]">trending_up</span>+12% this week</div></div>
+<div class="bg-surface rounded-2xl border border-outline-variant p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group gap-4"><div class="flex justify-between items-start mb-2"><div class="font-label-caps text-on-surface-variant uppercase tracking-wider">Enrollments</div><span class="material-symbols-outlined text-[32px] text-primary opacity-20 group-hover:opacity-40 transition-opacity">person_add</span></div><div class="font-display-lg text-on-surface">856</div></div>
+<div class="bg-surface rounded-2xl border border-outline-variant p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group gap-4"><div class="flex justify-between items-start mb-2"><div class="font-label-caps text-on-surface-variant uppercase tracking-wider">Submissions</div><span class="material-symbols-outlined text-[32px] text-primary opacity-20 group-hover:opacity-40 transition-opacity">upload_file</span></div><div class="font-display-lg text-on-surface">3,420</div></div>
+<div class="bg-surface rounded-2xl border border-outline-variant p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group gap-4"><div class="flex justify-between items-start mb-2"><div class="font-label-caps text-on-surface-variant uppercase tracking-wider">Evaluations</div><span class="material-symbols-outlined text-[32px] text-primary opacity-20 group-hover:opacity-40 transition-opacity">fact_check</span></div><div class="font-display-lg text-on-surface">2,890</div></div>
+<div class="bg-surface rounded-2xl border border-outline-variant p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group gap-4"><div class="flex justify-between items-start mb-2"><div class="font-label-caps text-on-surface-variant uppercase tracking-wider">Upcoming Events</div><span class="material-symbols-outlined text-[32px] text-primary opacity-20 group-hover:opacity-40 transition-opacity">event</span></div><div class="font-display-lg text-on-surface">14</div></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="bg-surface rounded-2xl border border-outline-variant p-6 shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-6 h-8">
+<h2 class="font-title-sm text-on-surface">Completion by Curriculum</h2>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+<div class="space-y-5 flex-1 flex flex-col justify-center">
+<div>
+<div class="flex justify-between font-label-caps text-on-surface mb-2">
+<span class="">Intro to Debating</span>
+<span class="text-primary font-bold">85%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-caps text-on-surface mb-2">
+<span class="">Persuasive Pitching</span>
+<span class="text-primary font-bold">62%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 62%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-caps text-on-surface mb-2">
+<span class="">Public Speaking 101</span>
+<span class="text-primary font-bold">94%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 94%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-caps text-on-surface mb-2">
+<span class="">Academic Presentation</span>
+<span class="text-primary font-bold">45%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-2xl border border-outline-variant p-6 shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-6 h-8">
+<h2 class="font-title-sm text-on-surface">Average Score by Skill</h2>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+<div class="space-y-4 flex-1 flex flex-col justify-center">
+<div class="flex items-center gap-4">
+<div class="w-32 font-label-caps text-on-surface-variant text-right">Structure</div>
+<div class="flex-1 h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary transition-all duration-1000 ease-out" style="width: 78%"></div>
+</div>
+<div class="w-8 font-label-caps text-on-surface font-bold">78</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 font-label-caps text-on-surface-variant text-right">Delivery</div>
+<div class="flex-1 h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary transition-all duration-1000 ease-out" style="width: 82%"></div>
+</div>
+<div class="w-8 font-label-caps text-on-surface font-bold">82</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 font-label-caps text-on-surface-variant text-right">Clarity</div>
+<div class="flex-1 h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary transition-all duration-1000 ease-out" style="width: 88%"></div>
+</div>
+<div class="w-8 font-label-caps text-on-surface font-bold">88</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 font-label-caps text-on-surface-variant text-right">Persuasion</div>
+<div class="flex-1 h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary transition-all duration-1000 ease-out" style="width: 74%"></div>
+</div>
+<div class="w-8 font-label-caps text-on-surface font-bold">74</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 font-label-caps text-on-surface-variant text-right">Body Language</div>
+<div class="flex-1 h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary transition-all duration-1000 ease-out" style="width: 80%"></div>
+</div>
+<div class="w-8 font-label-caps text-on-surface font-bold">80</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+<div class="px-6 py-5 border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+<h2 class="font-title-sm text-on-surface">Recent Evaluations</h2>
+<a class="font-label-caps text-primary hover:text-primary-container transition-colors flex items-center gap-1" href="#">
+        View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-caps text-on-surface-variant">
+<th class="px-6 py-4 font-semibold w-1/4">Learner</th>
+<th class="px-6 py-4 font-semibold w-1/4">Module</th>
+<th class="px-6 py-4 font-semibold w-1/6">Evaluator</th>
+<th class="px-6 py-4 font-semibold w-1/6">Score</th>
+<th class="px-6 py-4 font-semibold w-1/6">Date</th>
+<th class="px-6 py-4 font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-on-surface divide-y divide-outline-variant/50">
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 flex items-center gap-3 align-middle">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-xs uppercase">TR</div>
+<span class="font-medium text-on-surface">Tanvir Rahman</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant align-middle">Intro to Debating</td>
+<td class="px-6 py-4 align-middle">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[12px] mr-1">smart_toy</span> AI
+              </span>
+</td>
+<td class="px-6 py-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">88</span>
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary" style="width: 88%"></div></div>
+</div>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-xs align-middle">Oct 24, 2023</td>
+<td class="px-6 py-4 text-right align-middle">
+<button class="text-primary font-label-caps hover:bg-primary-fixed/20 px-3 py-1.5 rounded-lg transition-colors opacity-0 group-hover:opacity-100">View</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 flex items-center gap-3 align-middle">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-bold text-xs uppercase">AI</div>
+<span class="font-medium text-on-surface">Anika Islam</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant align-middle">Public Speaking 101</td>
+<td class="px-6 py-4 align-middle">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[12px] mr-1">person</span> Human
+              </span>
+</td>
+<td class="px-6 py-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">92</span>
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary" style="width: 92%"></div></div>
+</div>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-xs align-middle">Oct 23, 2023</td>
+<td class="px-6 py-4 text-right align-middle">
+<button class="text-primary font-label-caps hover:bg-primary-fixed/20 px-3 py-1.5 rounded-lg transition-colors opacity-0 group-hover:opacity-100">View</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 flex items-center gap-3 align-middle">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs uppercase">NA</div>
+<span class="font-medium text-on-surface">Nafis Ahmed</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant align-middle">Persuasive Pitching</td>
+<td class="px-6 py-4 align-middle">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[12px] mr-1">smart_toy</span> AI
+              </span>
+</td>
+<td class="px-6 py-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">75</span>
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary" style="width: 75%"></div></div>
+</div>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-xs align-middle">Oct 23, 2023</td>
+<td class="px-6 py-4 text-right align-middle">
+<button class="text-primary font-label-caps hover:bg-primary-fixed/20 px-3 py-1.5 rounded-lg transition-colors opacity-0 group-hover:opacity-100">View</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 flex items-center gap-3 align-middle">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-xs uppercase">SH</div>
+<span class="font-medium text-on-surface">Sumaiya Haque</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant align-middle">Academic Presentation</td>
+<td class="px-6 py-4 align-middle">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[12px] mr-1">person</span> Human
+              </span>
+</td>
+<td class="px-6 py-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">84</span>
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary" style="width: 84%"></div></div>
+</div>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-xs align-middle">Oct 22, 2023</td>
+<td class="px-6 py-4 text-right align-middle">
+<button class="text-primary font-label-caps hover:bg-primary-fixed/20 px-3 py-1.5 rounded-lg transition-colors opacity-0 group-hover:opacity-100">View</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 flex items-center gap-3 align-middle">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-bold text-xs uppercase">RC</div>
+<span class="font-medium text-on-surface">Rahul Chowdhury</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant align-middle">Intro to Debating</td>
+<td class="px-6 py-4 align-middle">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[12px] mr-1">smart_toy</span> AI
+              </span>
+</td>
+<td class="px-6 py-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">68</span>
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-tertiary" style="width: 68%"></div></div>
+</div>
+</td>
+<td class="px-6 py-4 text-on-surface-variant text-xs align-middle">Oct 21, 2023</td>
+<td class="px-6 py-4 text-right align-middle">
+<button class="text-primary font-label-caps hover:bg-primary-fixed/20 px-3 py-1.5 rounded-lg transition-colors opacity-0 group-hover:opacity-100">View</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></main></div>
+
+
+
+
+
+
+
+</body></html>
