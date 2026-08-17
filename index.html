@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auratio — Public Speaking &amp; Presentation Skill Development</title>
+<meta name="description" content="A database-driven platform for public speaking and presentation skill development. Manage curricula, track submissions, and evaluate performance.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{"surface-accent":"#F0F5FF","primary-container":"#0056d2","surface-container-high":"#e7e7f2","on-surface":"#191b23","outline":"#737785","background":"#faf8ff","on-background":"#191b23","tertiary-fixed-dim":"#ffb59b","secondary":"#4a5e88","secondary-fixed-dim":"#b2c6f7","on-secondary-container":"#435881","outline-variant":"#c3c6d6","primary-fixed":"#dae2ff","error-container":"#ffdad6","surface-tint":"#0056d2","tertiary":"#822800","on-tertiary":"#ffffff","surface-dim":"#d9d9e4","surface":"#faf8ff","surface-container":"#ededf8","inverse-surface":"#2e3038","on-primary-container":"#ccd8ff","inverse-on-surface":"#f0f0fb","on-error":"#ffffff","tertiary-container":"#a93802","status-warning":"#F59E0B","secondary-fixed":"#d8e2ff","status-error":"#EF4444","surface-container-low":"#f2f3fe","on-secondary-fixed":"#001a41","on-secondary-fixed-variant":"#32466f","status-success":"#10B981","surface-container-highest":"#e1e2ec","on-error-container":"#93000a","on-tertiary-fixed-variant":"#812800","surface-variant":"#e1e2ec","on-tertiary-fixed":"#380d00","border-subtle":"#E2E8F0","primary":"#0040a1","on-tertiary-container":"#ffcebd","primary-fixed-dim":"#b2c5ff","inverse-primary":"#b2c5ff","on-primary-fixed-variant":"#0040a1","on-surface-variant":"#424654","secondary-container":"#bacfff","on-primary":"#ffffff","surface-container-lowest":"#ffffff","surface-bright":"#faf8ff","on-secondary":"#ffffff","error":"#ba1a1a","tertiary-fixed":"#ffdbcf","on-primary-fixed":"#001847"},borderRadius:{DEFAULT:"0.25rem",md:"0.375rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.5rem","stack-xs":"0.25rem","stack-sm":"0.75rem","stack-md":"1.5rem","stack-lg":"3rem","sidebar-width":"260px","container-max":"1280px","margin-mobile":"1rem","margin-desktop":"2.5rem"},fontFamily:{"body-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Hanken Grotesk"],"display-lg":["Hanken Grotesk"],"title-sm":["Inter"],"headline-lg-mobile":["Hanken Grotesk"],"label-caps":["Inter"],"headline-md":["Hanken Grotesk"]},fontSize:{"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"800"}],"title-sm":["18px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"600"}]}}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+@layer base{html,body{margin:0;padding:0}body{overscroll-behavior:none}}
+@keyframes slideUp{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.animate-slide-up{animation:slideUp .3s ease-out}
+.animate-fade-in{animation:fadeIn .3s ease-out}
+.loader{width:24px;height:24px;border:3px solid #e1e2ec;border-top-color:#0040a1;border-radius:50%;animation:spin .6s linear infinite}
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+</style>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface">
+
+<!-- ── Demo Mode Banner ──────────────────────────────────────────────── -->
+<div id="demo-banner" class="hidden fixed top-0 left-0 right-0 z-[200] bg-status-warning text-white text-center py-2 font-label-caps text-label-caps tracking-wider">
+  Demo data — run locally with XAMPP for live database operations.
+</div>
+
+<!-- ── Toast ─────────────────────────────────────────────────────────── -->
+<div id="toast" class="fixed top-4 right-4 z-[100] pointer-events-none transition-all duration-300 translate-x-[120%]">
+  <div class="bg-surface-container-lowest rounded-xl shadow-xl border border-border-subtle p-4 flex items-center gap-3 min-w-[320px] pointer-events-auto">
+    <span id="toast-icon" class="material-symbols-outlined text-[20px]"></span>
+    <span id="toast-msg" class="font-body-sm text-body-sm flex-1"></span>
+  </div>
+</div>
+
+<!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+<aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col">
+  <div class="h-16 flex items-center px-gutter mt-2 mb-stack-lg">
+    <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-sm">
+      <span class="material-symbols-outlined text-on-primary text-[22px]">record_voice_over</span>
+    </div>
+    <span class="ml-3 font-title-sm text-title-sm text-primary tracking-tight">Auratio</span>
+  </div>
+  <nav id="sidebar-nav" class="flex-1 px-3 space-y-1">
+    <a href="#" data-path="dashboard" class="flex items-center px-4 py-3 rounded-xl transition-all group bg-primary text-on-primary shadow-sm" aria-current="page">
+      <span class="material-symbols-outlined mr-3">dashboard</span><span class="font-label-caps text-label-caps">Dashboard</span>
+    </a>
+    <a href="#" data-path="users" class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group">
+      <span class="material-symbols-outlined mr-3">group</span><span class="font-label-caps text-label-caps">Users</span>
+    </a>
+    <a href="#" data-path="curricula" class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group">
+      <span class="material-symbols-outlined mr-3">menu_book</span><span class="font-label-caps text-label-caps">Curricula</span>
+    </a>
+    <a href="#" data-path="submissions" class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group">
+      <span class="material-symbols-outlined mr-3">assignment_turned_in</span><span class="font-label-caps text-label-caps">Submissions</span>
+    </a>
+    <a href="#" data-path="community" class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group">
+      <span class="material-symbols-outlined mr-3">forum</span><span class="font-label-caps text-label-caps">Community</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- ── Main Content Wrapper ───────────────────────────────────────────── -->
+<div class="pl-[260px]">
+  <header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant z-40 flex items-center justify-between px-gutter">
+    <div class="flex items-center bg-surface-container w-96 px-4 py-2 rounded-full border border-outline-variant">
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span>
+      <input id="global-search" class="bg-transparent border-none outline-none text-body-sm w-full text-on-surface placeholder-on-surface-variant/50" placeholder="Search platform..." type="text">
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative pt-16 min-h-screen bg-background p-gutter">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- DASHBOARD TAB                                                   -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div id="panel-dashboard" class="tab-panel">
+      <div class="flex flex-col w-full gap-8 animate-fade-in pb-12">
+        <div class="flex items-center justify-between mt-stack-md">
+          <div>
+            <h1 class="font-headline-md text-headline-md text-on-surface">Platform Overview</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Real-time metrics for Auratio learning modules.</p>
+          </div>
+        </div>
+        <!-- KPI Cards -->
+        <div id="dashboard-kpis" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="flex items-center justify-center py-12"><div class="loader"></div></div>
+        </div>
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+          <!-- Completion by Curriculum -->
+          <div class="bg-surface rounded-2xl border border-outline-variant p-6 shadow-sm flex flex-col h-full">
+            <div class="flex items-center justify-between mb-6 h-8">
+              <h2 class="font-title-sm text-title-sm text-on-surface">Completion by Curriculum</h2>
+            </div>
+            <div id="dashboard-completion" class="space-y-5 flex-1 flex flex-col justify-center">
+              <div class="flex items-center justify-center py-8"><div class="loader"></div></div>
+            </div>
+          </div>
+          <!-- Average Score by Skill -->
+          <div class="bg-surface rounded-2xl border border-outline-variant p-6 shadow-sm flex flex-col h-full">
+            <div class="flex items-center justify-between mb-6 h-8">
+              <h2 class="font-title-sm text-title-sm text-on-surface">Average Score by Skill</h2>
+            </div>
+            <div id="dashboard-skills" class="space-y-4 flex-1 flex flex-col justify-center">
+              <div class="flex items-center justify-center py-8"><div class="loader"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Recent Evaluations -->
+        <div class="bg-surface rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+          <div class="px-6 py-5 border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+            <h2 class="font-title-sm text-title-sm text-on-surface">Recent Evaluations</h2>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-surface-container-low font-label-caps text-label-caps text-on-surface-variant">
+                  <th class="px-6 py-4 font-semibold w-1/4">Learner</th>
+                  <th class="px-6 py-4 font-semibold w-1/4">Module</th>
+                  <th class="px-6 py-4 font-semibold w-1/6">Evaluator</th>
+                  <th class="px-6 py-4 font-semibold w-1/6">Score</th>
+                  <th class="px-6 py-4 font-semibold w-1/6">Date</th>
+                </tr>
+              </thead>
+              <tbody id="dashboard-evals" class="font-body-sm text-body-sm text-on-surface divide-y divide-outline-variant/50">
+                <tr><td colspan="5" class="px-6 py-8 text-center"><div class="loader mx-auto"></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- USERS TAB                                                       -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div id="panel-users" class="tab-panel hidden">
+      <div class="flex flex-col w-full h-full pb-stack-lg relative overflow-hidden animate-fade-in">
+        <div class="flex items-center justify-between mb-stack-lg">
+          <div>
+            <h1 class="font-display-lg text-display-lg text-on-surface mb-stack-xs tracking-tight">Users</h1>
+            <p class="font-body-md text-on-surface-variant max-w-2xl">Manage platform access, roles, and account statuses.</p>
+          </div>
+          <button id="btn-add-user" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm hover:shadow-md flex items-center">
+            <span class="material-symbols-outlined text-[18px] mr-2">person_add</span>Add User
+          </button>
+        </div>
+        <!-- Filters -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-stack-md">
+          <div class="flex items-center gap-4 flex-1 max-w-xl">
+            <div class="relative flex-1">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+              <input id="users-search" class="w-full pl-12 pr-4 py-3 bg-surface-container-highest rounded-full font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-shadow" placeholder="Search by name or email..." type="text">
+            </div>
+          </div>
+          <div class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
+            Showing <span id="users-count" class="text-on-surface font-semibold mx-1">0</span> total
+          </div>
+        </div>
+        <!-- Table -->
+        <div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-border-subtle overflow-hidden flex-1 flex flex-col">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-surface-accent border-b border-border-subtle">
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/4">Full Name</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/4">Email</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/6">Status</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant w-1/6">Roles</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Created At</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="users-tbody" class="divide-y divide-border-subtle">
+                <tr><td colspan="6" class="px-6 py-12 text-center"><div class="loader mx-auto"></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- CURRICULA TAB                                                   -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div id="panel-curricula" class="tab-panel hidden">
+      <div class="flex flex-col w-full min-h-full animate-fade-in">
+        <div class="flex flex-1 gap-gutter">
+          <!-- Left Pane: Curriculum List -->
+          <div class="w-1/3 flex flex-col gap-stack-sm h-[calc(100vh-112px)] overflow-y-auto pr-2 pb-stack-lg">
+            <div class="flex items-center justify-between mb-stack-xs sticky top-0 bg-background/90 backdrop-blur-md z-10 py-2">
+              <h2 class="font-headline-md text-headline-md text-on-background">Curricula</h2>
+              <button id="btn-add-curriculum" class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+            <div id="curricula-list" class="flex flex-col gap-stack-sm">
+              <div class="flex items-center justify-center py-12"><div class="loader"></div></div>
+            </div>
+          </div>
+          <!-- Right Pane: Curriculum Detail -->
+          <div id="curriculum-detail" class="w-2/3 bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col h-[calc(100vh-112px)] overflow-hidden">
+            <div class="flex-1 flex items-center justify-center text-on-surface-variant font-body-md">
+              <div class="text-center">
+                <span class="material-symbols-outlined text-[48px] text-outline-variant mb-2 block">menu_book</span>
+                Select a curriculum to view details
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SUBMISSIONS TAB                                                 -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div id="panel-submissions" class="tab-panel hidden">
+      <div class="flex flex-col w-full h-full pb-stack-lg relative overflow-hidden animate-fade-in">
+        <div class="flex items-center justify-between mb-stack-lg">
+          <div>
+            <h1 class="font-display-lg text-display-lg text-on-surface mb-stack-xs tracking-tight">Submissions</h1>
+            <p class="font-body-md text-on-surface-variant max-w-2xl">Practice submissions with evaluations and scoring.</p>
+          </div>
+          <button id="btn-add-submission" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm hover:shadow-md flex items-center">
+            <span class="material-symbols-outlined text-[18px] mr-2">upload_file</span>Add Submission
+          </button>
+        </div>
+        <!-- Table -->
+        <div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-border-subtle overflow-hidden flex-1 flex flex-col">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-surface-accent border-b border-border-subtle">
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Learner</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Module</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Attempt</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Status</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Evaluator</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant">Date</th>
+                  <th class="py-4 px-6 font-label-caps text-label-caps text-on-surface-variant text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="submissions-tbody" class="divide-y divide-border-subtle">
+                <tr><td colspan="7" class="px-6 py-12 text-center"><div class="loader mx-auto"></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- COMMUNITY TAB                                                   -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div id="panel-community" class="tab-panel hidden">
+      <div class="flex flex-col w-full gap-stack-lg pb-stack-lg animate-fade-in">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md mt-stack-md">
+          <div class="flex flex-col gap-1">
+            <h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Community</h1>
+            <p class="font-body-md text-on-surface-variant max-w-2xl">Manage events, track registrations, and oversee community engagement.</p>
+          </div>
+          <button id="btn-add-event" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm hover:shadow-md flex items-center self-start">
+            <span class="material-symbols-outlined text-[18px] mr-2">add</span>Add Event
+          </button>
+        </div>
+        <!-- Event Cards -->
+        <div>
+          <h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-3 mb-stack-md">
+            <span class="material-symbols-outlined text-primary">event_note</span> Platform Events
+          </h2>
+          <div id="events-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+            <div class="flex items-center justify-center py-12"><div class="loader"></div></div>
+          </div>
+        </div>
+        <!-- Registrations -->
+        <div id="registrations-section" class="hidden">
+          <div class="flex items-center justify-between mb-stack-md">
+            <h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary">how_to_reg</span> Registrations for: <span id="reg-event-title" class="text-primary"></span>
+            </h2>
+            <button id="btn-add-registration" class="bg-primary text-on-primary px-5 py-2 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm flex items-center">
+              <span class="material-symbols-outlined text-[16px] mr-1">person_add</span>Register
+            </button>
+          </div>
+          <div id="registrations-list" class="flex flex-col gap-2 bg-surface-container p-2 rounded-2xl shadow-inner"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ── Generic Modal ─────────────────────────────────────────────────── -->
+<div id="modal-overlay" class="hidden fixed inset-0 z-[60] flex items-center justify-center px-4 bg-on-surface/20 backdrop-blur-sm">
+  <div class="absolute inset-0" id="modal-backdrop"></div>
+  <div class="relative w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden animate-slide-up max-h-[90vh] flex flex-col" id="modal-container">
+    <div class="px-8 py-6 border-b border-border-subtle flex justify-between items-center bg-surface-accent shrink-0">
+      <div>
+        <h2 id="modal-title" class="font-headline-md text-headline-md text-on-surface tracking-tight"></h2>
+        <p id="modal-subtitle" class="font-body-sm text-body-sm text-on-surface-variant mt-1"></p>
+      </div>
+      <button id="modal-close-btn" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <div id="modal-body" class="px-8 py-6 overflow-y-auto flex-1"></div>
+    <div class="px-8 py-5 border-t border-border-subtle bg-surface flex justify-end gap-3 shrink-0">
+      <button id="modal-cancel" class="px-6 py-2.5 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-high transition-colors">Cancel</button>
+      <button id="modal-save" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm hover:shadow-md">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Delete Confirmation ───────────────────────────────────────────── -->
+<div id="confirm-modal" class="hidden fixed inset-0 z-[70] flex items-center justify-center px-4 bg-on-surface/30 backdrop-blur-sm">
+  <div class="absolute inset-0" onclick="closeConfirm()"></div>
+  <div class="relative bg-surface-container-lowest rounded-2xl shadow-xl w-full max-w-sm overflow-hidden animate-slide-up">
+    <div class="px-6 py-5 flex items-start gap-4">
+      <div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center shrink-0 mt-0.5">
+        <span class="material-symbols-outlined text-error">warning</span>
+      </div>
+      <div>
+        <h3 class="font-title-sm text-title-sm text-on-surface">Confirm Delete</h3>
+        <p id="confirm-msg" class="font-body-sm text-body-sm text-on-surface-variant mt-1"></p>
+      </div>
+    </div>
+    <div class="px-6 py-4 border-t border-border-subtle flex justify-end gap-3">
+      <button onclick="closeConfirm()" class="px-5 py-2 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-high transition-colors">Cancel</button>
+      <button id="confirm-btn" class="bg-error text-on-error px-5 py-2 rounded-full font-label-caps text-label-caps hover:bg-error/90 shadow-sm transition-colors">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// CONFIGURATION & STATE
+// ═══════════════════════════════════════════════════════════════════════
+const IS_PAGES = location.hostname.endsWith('github.io');
+const DEMO_MODE = IS_PAGES;
+const API_BASE = IS_PAGES ? null : './api';
+
+let G = { lookups: null, users: null, curricula: null, submissions: null, events: null, evaluations: null };
+let currentTab = 'dashboard';
+let selectedCurriculumId = null;
+let selectedEventId = null;
+
+const AVATAR_BG = [
+  'bg-primary-fixed text-on-primary-fixed',
+  'bg-tertiary-fixed text-on-tertiary-fixed',
+  'bg-error-container text-on-error-container',
+  'bg-secondary-fixed text-on-secondary-fixed',
+  'bg-primary-fixed-dim text-on-primary-fixed-variant',
+  'bg-secondary-container text-on-secondary-container',
+];
+const STATUS_CLS = {
+  Active: 'bg-status-success/10 text-status-success',
+  Suspended: 'bg-status-warning/10 text-status-warning',
+  Deactivated: 'bg-on-surface-variant/10 text-on-surface-variant',
+  Scheduled: 'bg-primary/10 text-primary',
+  Ongoing: 'bg-status-warning/10 text-status-warning',
+  Completed: 'bg-status-success/10 text-status-success',
+  Cancelled: 'bg-on-surface-variant/10 text-on-surface-variant',
+  Submitted: 'bg-primary/10 text-primary',
+  'Under Review': 'bg-status-warning/10 text-status-warning',
+  Evaluated: 'bg-status-success/10 text-status-success',
+  Confirmed: 'bg-status-success/10 text-status-success',
+  Waitlisted: 'bg-status-warning/10 text-status-warning',
+  Attended: 'bg-primary/10 text-primary',
+};
+const DIFF_CLS = { Beginner:'bg-status-success/10 text-status-success', Intermediate:'bg-status-warning/10 text-status-warning', Advanced:'bg-status-error/10 text-status-error' };
+
+// ═══════════════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════════════
+function initials(name) {
+  if (!name) return '?';
+  const p = name.trim().split(/\s+/);
+  return p.length >= 2 ? (p[0][0] + p[p.length-1][0]).toUpperCase() : name.substring(0,2).toUpperCase();
+}
+function avatarCls(name) {
+  let h = 0; for (let i = 0; i < (name||'').length; i++) h = (name||'').charCodeAt(i) + ((h << 5) - h);
+  return AVATAR_BG[Math.abs(h) % AVATAR_BG.length];
+}
+function fmtDate(d) {
+  if (!d) return '—';
+  return new Date(d).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+}
+function fmtDateTime(d) {
+  if (!d) return '—';
+  const dt = new Date(d);
+  return dt.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) + ', ' + dt.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+}
+function toMySQL(dtLocal) { return dtLocal ? dtLocal.replace('T',' ') + ':00' : null; }
+function toLocalInput(mysqlDt) {
+  if (!mysqlDt) return '';
+  return mysqlDt.replace(' ','T').substring(0,16);
+}
+function esc(s) {
+  const d = document.createElement('div'); d.textContent = s||''; return d.innerHTML;
+}
+function statusBadge(s) {
+  return `<span class="inline-flex items-center px-2.5 py-1 rounded-full font-label-caps text-label-caps ${STATUS_CLS[s]||'bg-surface-container text-on-surface-variant'}">${esc(s)}</span>`;
+}
+function avatar(name, size='w-10 h-10') {
+  return `<div class="${size} rounded-full ${avatarCls(name)} flex items-center justify-center font-bold text-xs uppercase shrink-0">${esc(initials(name))}</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════════════════════════════
+let toastTimer = null;
+function toast(msg, type='success') {
+  const el = document.getElementById('toast');
+  const icon = document.getElementById('toast-icon');
+  const txt = document.getElementById('toast-msg');
+  icon.textContent = type === 'success' ? 'check_circle' : type === 'error' ? 'error' : 'info';
+  icon.className = `material-symbols-outlined text-[20px] ${type==='success'?'text-status-success':type==='error'?'text-status-error':'text-primary'}`;
+  txt.textContent = msg;
+  el.classList.remove('translate-x-[120%]');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.add('translate-x-[120%]'), 4000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CONFIRM DELETE
+// ═══════════════════════════════════════════════════════════════════════
+let confirmCb = null;
+function confirmDelete(label, cb) {
+  document.getElementById('confirm-msg').textContent = `Are you sure you want to delete "${label}"? This action cannot be undone.`;
+  confirmCb = cb;
+  document.getElementById('confirm-btn').onclick = async () => { closeConfirm(); await cb(); };
+  document.getElementById('confirm-modal').classList.remove('hidden');
+}
+function closeConfirm() { document.getElementById('confirm-modal').classList.add('hidden'); confirmCb = null; }
+
+// ═══════════════════════════════════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════════════════════════════════
+let modalSaveCb = null;
+function openModal(title, subtitle, bodyHTML, saveCb, saveLabel='Save', wide=false) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-subtitle').textContent = subtitle;
+  document.getElementById('modal-body').innerHTML = bodyHTML;
+  document.getElementById('modal-save').textContent = saveLabel;
+  document.getElementById('modal-container').className = `relative w-full ${wide?'max-w-2xl':'max-w-lg'} bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden animate-slide-up max-h-[90vh] flex flex-col`;
+  modalSaveCb = saveCb;
+  document.getElementById('modal-overlay').classList.remove('hidden');
+}
+function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); modalSaveCb = null; }
+document.getElementById('modal-backdrop').onclick = closeModal;
+document.getElementById('modal-close-btn').onclick = closeModal;
+document.getElementById('modal-cancel').onclick = closeModal;
+document.getElementById('modal-save').onclick = async () => { if (modalSaveCb) await modalSaveCb(); };
+
+// ═══════════════════════════════════════════════════════════════════════
+// API LAYER
+// ═══════════════════════════════════════════════════════════════════════
+async function api(endpoint, opts={}) {
+  if (DEMO_MODE) throw new Error('Write operations are disabled in demo mode.');
+  const url = `${API_BASE}/${endpoint}`;
+  const res = await fetch(url, { headers:{'Content-Type':'application/json'}, ...opts });
+  const json = await res.json();
+  if (!json.ok) throw new Error(json.error?.message || 'Unknown error');
+  return json.data;
+}
+async function apiGet(ep) { return api(ep); }
+async function apiPost(ep, data) { return api(ep, { method:'POST', body:JSON.stringify(data) }); }
+async function apiPut(ep, data) { return api(ep, { method:'PUT', body:JSON.stringify(data) }); }
+async function apiDel(ep) { return api(ep, { method:'DELETE' }); }
+
+function showLoading(el) { el.innerHTML = '<div class="flex items-center justify-center py-12"><div class="loader"></div></div>'; }
+function showError(el, msg) { el.innerHTML = `<div class="flex flex-col items-center justify-center py-12 text-on-surface-variant"><span class="material-symbols-outlined text-[36px] text-status-error mb-2">error</span><p class="font-body-sm">${esc(msg)}</p></div>`; }
+function showEmpty(el, msg, icon='inbox') { el.innerHTML = `<div class="flex flex-col items-center justify-center py-12 text-on-surface-variant"><span class="material-symbols-outlined text-[48px] text-outline-variant mb-2">${icon}</span><p class="font-body-sm">${esc(msg)}</p></div>`; }
+
+function fieldHTML(label, name, type='text', value='', extra='') {
+  const id = 'f-' + name;
+  if (type === 'textarea') return `<div class="space-y-2"><label for="${id}" class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">${label}</label><textarea id="${id}" name="${name}" rows="3" class="w-full px-4 py-3 bg-surface border border-border-subtle rounded-xl font-body-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" ${extra}>${esc(value)}</textarea></div>`;
+  if (type === 'select') return `<div class="space-y-2"><label for="${id}" class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">${label}</label><div class="relative"><select id="${id}" name="${name}" class="w-full appearance-none px-4 py-3 bg-surface border border-border-subtle rounded-xl font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" ${extra}>${value}</select><span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span></div></div>`;
+  return `<div class="space-y-2"><label for="${id}" class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">${label}</label><input id="${id}" name="${name}" type="${type}" value="${esc(value)}" class="w-full px-4 py-3 bg-surface border border-border-subtle rounded-xl font-body-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" ${extra}></div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════════════════════════
+function switchTab(tab) {
+  currentTab = tab;
+  if (location.hash.replace('#', '') !== tab) {
+    history.replaceState(null, '', '#' + tab);
+  }
+  document.querySelectorAll('#sidebar-nav a').forEach(a => {
+    const active = a.dataset.path === tab;
+    a.className = active
+      ? 'flex items-center px-4 py-3 rounded-xl transition-all group bg-primary text-on-primary shadow-sm'
+      : 'flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group';
+    if (active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('hidden', p.id !== 'panel-' + tab));
+  loadTab(tab);
+}
+async function loadTab(tab) {
+  try {
+    if (!G.lookups) G.lookups = await apiGet('lookups.php');
+    switch(tab) {
+      case 'dashboard': await loadDashboard(); break;
+      case 'users': await loadUsers(); break;
+      case 'curricula': await loadCurricula(); break;
+      case 'submissions': await loadSubmissions(); break;
+      case 'community': await loadEvents(); break;
+    }
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+document.querySelectorAll('#sidebar-nav a').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); switchTab(a.dataset.path); });
+});
+
+// ═══════════════════════════════════════════════════════════════════════
+// DASHBOARD
+// ═══════════════════════════════════════════════════════════════════════
+async function loadDashboard() {
+  const s = G.lookups.dashboard_stats;
+  const icons = ['groups','school','upload_file','fact_check','event'];
+  const labels = ['Total Users','Total Curricula','Submissions','Evaluations','Events'];
+  const vals = [s.total_users, s.total_curricula, s.total_submissions, s.total_evaluations, s.total_events];
+  document.getElementById('dashboard-kpis').innerHTML = vals.map((v,i) => `
+    <div class="bg-surface rounded-2xl border border-outline-variant p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+      <div class="flex justify-between items-start mb-2">
+        <div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">${labels[i]}</div>
+        <span class="material-symbols-outlined text-[32px] text-primary opacity-20 group-hover:opacity-40 transition-opacity">${icons[i]}</span>
+      </div>
+      <div class="font-display-lg text-display-lg ${i===0?'text-primary':'text-on-surface'}">${Number(v).toLocaleString()}</div>
+    </div>`).join('');
+
+  // Completion bars
+  const comp = s.completion_rate_per_curriculum || [];
+  document.getElementById('dashboard-completion').innerHTML = comp.length ? comp.map(c => `
+    <div>
+      <div class="flex justify-between font-label-caps text-label-caps text-on-surface mb-2">
+        <span>${esc(c.title)}</span><span class="text-primary font-bold">${c.completion_rate}%</span>
+      </div>
+      <div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+        <div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" style="width:${c.completion_rate}%"></div>
+      </div>
+    </div>`).join('') : '<p class="text-on-surface-variant font-body-sm text-center py-4">No enrollment data yet.</p>';
+
+  // Skill bars
+  const sk = s.avg_score_per_skill || [];
+  document.getElementById('dashboard-skills').innerHTML = sk.length ? sk.map(s => `
+    <div class="flex items-center gap-4">
+      <div class="w-32 font-label-caps text-label-caps text-on-surface-variant text-right">${esc(s.skill_name)}</div>
+      <div class="flex-1 h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+        <div class="h-full bg-secondary transition-all duration-1000 ease-out" style="width:${s.avg_score}%"></div>
+      </div>
+      <div class="w-8 font-label-caps text-label-caps text-on-surface font-bold">${Math.round(s.avg_score)}</div>
+    </div>`).join('') : '<p class="text-on-surface-variant font-body-sm text-center py-4">No evaluation data yet.</p>';
+
+  // Recent evaluations
+  try {
+    if (!G.submissions) G.submissions = await apiGet('submissions.php');
+    G.evaluations = await apiGet('evaluations.php');
+    const recent = G.evaluations.slice(0, 5);
+    const mp = G.lookups.module_progress || [];
+    const cm = G.lookups.curriculum_module || [];
+    const ce = G.lookups.curriculum_enrollment || [];
+    const tbody = document.getElementById('dashboard-evals');
+    if (!recent.length) { tbody.innerHTML = '<tr><td colspan="5" class="px-6 py-8 text-center text-on-surface-variant font-body-sm">No evaluations yet.</td></tr>'; return; }
+    tbody.innerHTML = recent.map(ev => {
+      // find submission to get learner
+      const sub = (G.submissions||[]).find(s => s.submission_id == ev.submission_id);
+      const learnerName = sub ? sub.learner_name : 'Unknown';
+      const moduleName = sub ? sub.module_title : 'Unknown';
+      return `<tr class="hover:bg-surface-container-lowest transition-colors group">
+        <td class="px-6 py-4 flex items-center gap-3 align-middle">
+          ${avatar(learnerName, 'w-8 h-8')}
+          <span class="font-medium text-on-surface">${esc(learnerName)}</span>
+        </td>
+        <td class="px-6 py-4 text-on-surface-variant align-middle">${esc(moduleName)}</td>
+        <td class="px-6 py-4 align-middle">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium ${ev.evaluator_type==='AI'?'bg-primary-fixed text-on-primary-fixed':'bg-surface-container-high text-on-surface'}">
+            <span class="material-symbols-outlined text-[12px] mr-1">${ev.evaluator_type==='AI'?'smart_toy':'person'}</span>${ev.evaluator_type}
+          </span>
+        </td>
+        <td class="px-6 py-4 align-middle">
+          <div class="flex items-center gap-2">
+            <span class="font-semibold text-on-surface">${ev.overall_score}</span>
+            <div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary" style="width:${ev.overall_score}%"></div></div>
+          </div>
+        </td>
+        <td class="px-6 py-4 text-on-surface-variant text-xs align-middle">${fmtDate(ev.evaluated_at)}</td>
+      </tr>`;
+    }).join('');
+  } catch(e) { /* evaluations will load when submissions load */ }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// USERS
+// ═══════════════════════════════════════════════════════════════════════
+async function loadUsers() {
+  const tbody = document.getElementById('users-tbody');
+  try {
+    G.users = await apiGet('users.php');
+    renderUsers(G.users);
+  } catch(e) { showError(tbody, e.message); }
+}
+function renderUsers(users) {
+  const tbody = document.getElementById('users-tbody');
+  document.getElementById('users-count').textContent = users.length;
+  if (!users.length) { tbody.innerHTML = '<tr><td colspan="6" class="px-6 py-12 text-center text-on-surface-variant">No users found.</td></tr>'; return; }
+  tbody.innerHTML = users.map(u => {
+    const deact = u.account_status === 'Deactivated';
+    const roles = (u.roles||'').split(',').map(r=>r.trim()).filter(Boolean);
+    return `<tr class="group hover:bg-surface-container/30 transition-colors relative">
+      <td class="py-4 px-6 relative">
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r-full"></div>
+        <div class="flex items-center ${deact?'opacity-50':''}">
+          ${avatar(u.full_name)}
+          <span class="font-title-sm text-title-sm text-on-surface truncate ml-4 group-hover:text-primary transition-colors">${esc(u.full_name)}</span>
+        </div>
+      </td>
+      <td class="py-4 px-6 ${deact?'opacity-50':''}"><span class="font-body-sm text-on-surface-variant truncate block max-w-[200px]">${esc(u.email)}</span></td>
+      <td class="py-4 px-6">${statusBadge(u.account_status)}</td>
+      <td class="py-4 px-6 ${deact?'opacity-50':''}"><div class="flex flex-wrap gap-1.5">${roles.map(r=>`<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] tracking-wider">${esc(r)}</span>`).join('')}</div></td>
+      <td class="py-4 px-6 ${deact?'opacity-50':''}"><span class="font-body-sm text-on-surface-variant">${fmtDate(u.created_at)}</span></td>
+      <td class="py-4 px-6">
+        <div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          <button onclick="openUserModal(${u.user_id})" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+          <button onclick="deleteUser(${u.user_id},'${esc(u.full_name).replace(/'/g,"\\'")}')" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+document.getElementById('users-search').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  if (!G.users) return;
+  renderUsers(G.users.filter(u => u.full_name.toLowerCase().includes(q) || u.email.toLowerCase().includes(q)));
+});
+
+function openUserModal(userId) {
+  const u = userId ? G.users.find(x=>x.user_id==userId) : null;
+  const title = u ? 'Edit User' : 'Add New User';
+  const body = `<form id="user-form" class="space-y-stack-md">
+    ${fieldHTML('Full Name','full_name','text',u?.full_name||'','required placeholder="e.g., Tanvir Rahman"')}
+    ${fieldHTML('Email Address','email','email',u?.email||'','required placeholder="user@example.com"')}
+    ${u?'':fieldHTML('Password','password_hash','password','','required placeholder="Temporary password"')}
+    ${fieldHTML('Account Status','account_status','select',
+      ['Active','Suspended','Deactivated'].map(s=>`<option value="${s}" ${u?.account_status===s?'selected':''}>${s}</option>`).join(''))}
+    ${fieldHTML('Biography / Notes','bio','textarea',u?.bio||'','placeholder="Academic background or notes..."')}
+  </form>`;
+  openModal(title, u?'Update account details.':'Create an account.', body, async () => {
+    const f = document.getElementById('user-form');
+    const data = Object.fromEntries(new FormData(f));
+    if (!data.full_name || !data.email) { toast('Name and email are required.','error'); return; }
+    if (!u && !data.password_hash) { toast('Password is required.','error'); return; }
+    try {
+      if (u) { await apiPut(`users.php?id=${u.user_id}`, data); toast('User updated.'); }
+      else { await apiPost('users.php', data); toast('User created.'); }
+      closeModal(); await loadUsers();
+    } catch(e) { toast(e.message, 'error'); }
+  }, u?'Update':'Create User');
+}
+async function deleteUser(id, name) {
+  confirmDelete(name, async () => {
+    try { await apiDel(`users.php?id=${id}`); toast('User deleted.'); await loadUsers(); }
+    catch(e) { toast(e.message, 'error'); }
+  });
+}
+document.getElementById('btn-add-user').onclick = () => openUserModal();
+
+// ═══════════════════════════════════════════════════════════════════════
+// CURRICULA
+// ═══════════════════════════════════════════════════════════════════════
+async function loadCurricula() {
+  const list = document.getElementById('curricula-list');
+  try {
+    G.curricula = await apiGet('curricula.php');
+    renderCurriculaList();
+    if (selectedCurriculumId) {
+      const c = G.curricula.find(x=>x.curriculum_id==selectedCurriculumId);
+      if (c) showCurriculumDetail(c);
+    }
+  } catch(e) { showError(list, e.message); }
+}
+function renderCurriculaList() {
+  const list = document.getElementById('curricula-list');
+  if (!G.curricula.length) { showEmpty(list, 'No curricula yet.', 'menu_book'); return; }
+  list.innerHTML = G.curricula.map(c => {
+    const sel = c.curriculum_id == selectedCurriculumId;
+    const mods = c.modules || [];
+    return `<button onclick="selectCurriculum(${c.curriculum_id})" class="w-full text-left ${sel?'bg-surface-container shadow-sm':'bg-surface border border-border-subtle'} relative rounded-xl p-4 hover:shadow-md transition-shadow focus:outline-none group">
+      ${sel?'<div class="absolute left-0 top-0 bottom-0 w-1 bg-surface-tint rounded-l-xl"></div>':''}
+      <div class="flex justify-between items-start mb-2">
+        <span class="font-label-caps text-label-caps ${sel?'text-primary':'text-outline'} uppercase tracking-wider">${esc(c.curriculum_code)}</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full font-body-sm text-[12px] font-semibold ${DIFF_CLS[c.difficulty_level]||''}">${esc(c.difficulty_level)}</span>
+      </div>
+      <h3 class="font-title-sm text-title-sm text-on-surface mb-1">${esc(c.title)}</h3>
+      <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">${esc(c.description||'')}</p>
+      <div class="mt-4 flex items-center justify-between text-on-surface-variant">
+        <div class="flex items-center gap-1 font-body-sm text-[12px]"><span class="material-symbols-outlined text-[16px]">view_module</span>${mods.length} Modules</div>
+      </div>
+    </button>`;
+  }).join('');
+}
+function selectCurriculum(id) {
+  selectedCurriculumId = id;
+  renderCurriculaList();
+  const c = G.curricula.find(x=>x.curriculum_id==id);
+  if (c) showCurriculumDetail(c);
+}
+function showCurriculumDetail(c) {
+  const det = document.getElementById('curriculum-detail');
+  const mods = c.modules || [];
+  det.innerHTML = `
+    <div class="p-8 border-b border-border-subtle bg-surface-container-low relative overflow-hidden">
+      <div class="relative z-10">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="font-label-caps text-label-caps text-primary bg-primary-fixed/20 px-2 py-1 rounded">${esc(c.curriculum_code)}</span>
+          <span class="inline-flex items-center px-2 py-1 rounded-full font-body-sm text-[12px] font-semibold ${DIFF_CLS[c.difficulty_level]||''}">${esc(c.difficulty_level)}</span>
+          ${c.is_active==1?'':'<span class="inline-flex items-center px-2 py-1 rounded-full font-body-sm text-[12px] font-semibold bg-on-surface-variant/10 text-on-surface-variant">Inactive</span>'}
+        </div>
+        <h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">${esc(c.title)}</h1>
+        <p class="font-body-md text-on-surface-variant max-w-2xl">${esc(c.description||'')}</p>
+        <div class="flex items-center gap-6 mt-6">
+          <div class="flex flex-col"><span class="font-label-caps text-label-caps text-outline uppercase">Total Modules</span><span class="font-headline-md text-headline-md text-secondary">${mods.length}</span></div>
+        </div>
+        <div class="flex gap-2 mt-4">
+          <button onclick="openCurriculumModal(${c.curriculum_id})" class="bg-primary text-on-primary px-4 py-2 rounded-full font-label-caps text-label-caps hover:bg-primary/90 transition-all shadow-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">edit</span>Edit</button>
+          <button onclick="deleteCurriculum(${c.curriculum_id},'${esc(c.title).replace(/'/g,"\\'")}')" class="bg-surface border border-border-subtle text-on-surface-variant px-4 py-2 rounded-full font-label-caps text-label-caps hover:bg-error/10 hover:text-error hover:border-error transition-all flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">delete</span>Delete</button>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 overflow-y-auto p-8 bg-surface-bright">
+      <h3 class="font-title-sm text-title-sm text-on-surface mb-6">Curriculum Modules</h3>
+      <div class="flex flex-col gap-4">
+        ${mods.length ? mods.map(m => `
+          <div class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border-subtle hover:shadow-sm transition-all group relative overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-primary-fixed-dim transition-colors"></div>
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-title-sm text-title-sm text-on-surface-variant">${m.sequence_no}</div>
+            <div class="flex-1 min-w-0">
+              <h4 class="font-title-sm text-title-sm text-on-surface truncate">${esc(m.title)}</h4>
+              <div class="flex items-center gap-3 mt-1">
+                <span class="inline-flex items-center gap-1 font-body-sm text-[12px] text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">flag</span>Pass: ${m.passing_score}%</span>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-surface-container-highest/50 text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider border border-border-subtle">${esc(m.format_name||'')}</span>
+          </div>`).join('') : '<p class="text-on-surface-variant font-body-sm text-center py-8">No modules in this curriculum.</p>'}
+      </div>
+    </div>`;
+}
+function openCurriculumModal(curId) {
+  const c = curId ? G.curricula.find(x=>x.curriculum_id==curId) : null;
+  const title = c ? 'Edit Curriculum' : 'Add Curriculum';
+  const body = `<form id="cur-form" class="space-y-stack-md">
+    ${fieldHTML('Curriculum Code','curriculum_code','text',c?.curriculum_code||'','required placeholder="e.g., AUR-BEG-01"')}
+    ${fieldHTML('Title','title','text',c?.title||'','required placeholder="Curriculum title"')}
+    ${fieldHTML('Description','description','textarea',c?.description||'','placeholder="Brief description..."')}
+    ${fieldHTML('Difficulty Level','difficulty_level','select',
+      ['Beginner','Intermediate','Advanced'].map(d=>`<option value="${d}" ${c?.difficulty_level===d?'selected':''}>${d}</option>`).join(''))}
+    ${fieldHTML('Active','is_active','select',
+      `<option value="1" ${!c||c.is_active==1?'selected':''}>Yes</option><option value="0" ${c&&c.is_active==0?'selected':''}>No</option>`)}
+  </form>`;
+  openModal(title, c?'Update curriculum details.':'Create a new curriculum.', body, async () => {
+    const data = Object.fromEntries(new FormData(document.getElementById('cur-form')));
+    if (!data.curriculum_code || !data.title) { toast('Code and title are required.','error'); return; }
+    try {
+      if (c) { await apiPut(`curricula.php?id=${c.curriculum_id}`, data); toast('Curriculum updated.'); }
+      else { await apiPost('curricula.php', data); toast('Curriculum created.'); }
+      closeModal(); await loadCurricula();
+    } catch(e) { toast(e.message, 'error'); }
+  }, c?'Update':'Create');
+}
+async function deleteCurriculum(id, title) {
+  confirmDelete(title, async () => {
+    try { await apiDel(`curricula.php?id=${id}`); toast('Curriculum deleted.'); selectedCurriculumId=null; await loadCurricula(); document.getElementById('curriculum-detail').innerHTML='<div class="flex-1 flex items-center justify-center text-on-surface-variant font-body-md"><div class="text-center"><span class="material-symbols-outlined text-[48px] text-outline-variant mb-2 block">menu_book</span>Select a curriculum to view details</div></div>'; }
+    catch(e) { toast(e.message, 'error'); }
+  });
+}
+document.getElementById('btn-add-curriculum').onclick = () => openCurriculumModal();
+
+// ═══════════════════════════════════════════════════════════════════════
+// SUBMISSIONS
+// ═══════════════════════════════════════════════════════════════════════
+async function loadSubmissions() {
+  const tbody = document.getElementById('submissions-tbody');
+  try {
+    G.submissions = await apiGet('submissions.php');
+    G.evaluations = await apiGet('evaluations.php');
+    renderSubmissions(G.submissions);
+  } catch(e) { showError(tbody, e.message); }
+}
+function renderSubmissions(subs) {
+  const tbody = document.getElementById('submissions-tbody');
+  if (!subs.length) { tbody.innerHTML = '<tr><td colspan="7" class="px-6 py-12 text-center text-on-surface-variant">No submissions yet.</td></tr>'; return; }
+  tbody.innerHTML = subs.map(s => {
+    const evals = (G.evaluations||[]).filter(e=>e.submission_id==s.submission_id);
+    return `<tr class="group hover:bg-surface-container/30 transition-colors relative">
+      <td class="py-4 px-6 relative">
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-r-full"></div>
+        <div class="flex items-center">
+          ${avatar(s.learner_name)}
+          <span class="font-title-sm text-title-sm text-on-surface truncate ml-4">${esc(s.learner_name)}</span>
+        </div>
+      </td>
+      <td class="py-4 px-6"><span class="font-body-sm text-on-surface-variant">${esc(s.module_title)}</span><br><span class="text-[11px] text-outline">${esc(s.curriculum_title)}</span></td>
+      <td class="py-4 px-6 font-body-sm text-on-surface">#${s.attempt_no}</td>
+      <td class="py-4 px-6">${statusBadge(s.submission_status)}</td>
+      <td class="py-4 px-6">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium ${s.requested_evaluator_type==='AI'?'bg-primary-fixed text-on-primary-fixed':'bg-surface-container-high text-on-surface'}">
+          <span class="material-symbols-outlined text-[12px] mr-1">${s.requested_evaluator_type==='AI'?'smart_toy':'person'}</span>${s.requested_evaluator_type}
+        </span>
+        ${evals.length?`<span class="ml-1 text-[11px] text-on-surface-variant">(${evals.length} eval${evals.length>1?'s':''})</span>`:''}
+      </td>
+      <td class="py-4 px-6"><span class="font-body-sm text-on-surface-variant">${fmtDate(s.submitted_at)}</span></td>
+      <td class="py-4 px-6">
+        <div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          <button onclick="openEvalModal(${s.submission_id})" title="Add Evaluation" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-primary-fixed hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">rate_review</span></button>
+          <button onclick="openSubmissionModal(${s.submission_id})" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+          <button onclick="deleteSubmission(${s.submission_id})" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function openSubmissionModal(subId) {
+  const s = subId ? G.submissions.find(x=>x.submission_id==subId) : null;
+  const title = s ? 'Edit Submission' : 'Add Submission';
+  const mp = G.lookups.module_progress || [];
+  const ce = G.lookups.curriculum_enrollment || [];
+  const cm = G.lookups.curriculum_module || [];
+  // Build module_progress dropdown options
+  const mpOpts = mp.map(p => {
+    const enr = ce.find(e=>e.enrollment_id==p.enrollment_id);
+    const mod = cm.find(m=>m.module_id==p.module_id);
+    const usr = (G.users||[]).find(u=>u.user_id==enr?.learner_id);
+    const label = `${usr?.full_name||'User #'+enr?.learner_id} — ${mod?.title||'Module #'+p.module_id}`;
+    return `<option value="${p.module_progress_id}" ${s?.module_progress_id==p.module_progress_id?'selected':''}>${esc(label)}</option>`;
+  }).join('');
+  const now = new Date().toISOString().slice(0,16);
+  const body = `<form id="sub-form" class="space-y-stack-md">
+    ${fieldHTML('Module Progress','module_progress_id','select',`<option value="">Select...</option>${mpOpts}`,'required')}
+    ${fieldHTML('Attempt Number','attempt_no','number',s?.attempt_no||'1','required min="1"')}
+    ${fieldHTML('Video URI','video_uri','url',s?.video_uri||'','required placeholder="https://drive.google.com/..."')}
+    ${fieldHTML('Duration (seconds)','duration_seconds','number',s?.duration_seconds||'','placeholder="e.g., 300" min="1"')}
+    ${fieldHTML('Requested Evaluator','requested_evaluator_type','select',
+      ['AI','HUMAN'].map(t=>`<option value="${t}" ${s?.requested_evaluator_type===t?'selected':''}>${t}</option>`).join(''))}
+    ${s?fieldHTML('Status','submission_status','select',
+      ['Submitted','Under Review','Evaluated'].map(st=>`<option value="${st}" ${s?.submission_status===st?'selected':''}>${st}</option>`).join('')):''}
+    ${fieldHTML('Submitted At','submitted_at','datetime-local',s?toLocalInput(s.submitted_at):now,'required')}
+  </form>`;
+  openModal(title, s?'Update submission details.':'Record a new submission.', body, async () => {
+    const data = Object.fromEntries(new FormData(document.getElementById('sub-form')));
+    if (!data.module_progress_id || !data.video_uri) { toast('Module progress and video URI are required.','error'); return; }
+    data.submitted_at = toMySQL(data.submitted_at);
+    data.mime_type = 'video/mp4';
+    if (data.duration_seconds === '') delete data.duration_seconds;
+    try {
+      if (s) { await apiPut(`submissions.php?id=${s.submission_id}`, data); toast('Submission updated.'); }
+      else { await apiPost('submissions.php', data); toast('Submission created.'); }
+      closeModal(); await loadSubmissions();
+    } catch(e) { toast(e.message, 'error'); }
+  }, s?'Update':'Create');
+}
+async function deleteSubmission(id) {
+  const s = G.submissions.find(x=>x.submission_id==id);
+  confirmDelete(`Submission #${id} by ${s?.learner_name||'unknown'}`, async () => {
+    try { await apiDel(`submissions.php?id=${id}`); toast('Submission deleted.'); await loadSubmissions(); }
+    catch(e) { toast(e.message, 'error'); }
+  });
+}
+document.getElementById('btn-add-submission').onclick = () => { if(!G.users) apiGet('users.php').then(u=>{G.users=u;openSubmissionModal();}); else openSubmissionModal(); };
+
+// ── Evaluation Modal ────────────────────────────────────────────────
+function openEvalModal(submissionId) {
+  const sub = G.submissions.find(s=>s.submission_id==submissionId);
+  const agents = G.lookups.ai_specialist_agent || [];
+  const users = G.users || [];
+  const existingEvals = (G.evaluations||[]).filter(e=>e.submission_id==submissionId);
+  const nextNo = existingEvals.length ? Math.max(...existingEvals.map(e=>e.evaluation_no)) + 1 : 1;
+  const now = new Date().toISOString().slice(0,16);
+
+  const body = `<div>
+    <!-- Existing evaluations -->
+    ${existingEvals.length ? `<div class="mb-stack-lg">
+      <h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Existing Evaluations</h4>
+      <div class="space-y-2">${existingEvals.map(ev=>`
+        <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
+          <div class="flex items-center gap-2">
+            <span class="font-body-sm font-semibold">#${ev.evaluation_no}</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium ${ev.evaluator_type==='AI'?'bg-primary-fixed text-on-primary-fixed':'bg-surface-container-high text-on-surface'}"><span class="material-symbols-outlined text-[12px] mr-1">${ev.evaluator_type==='AI'?'smart_toy':'person'}</span>${ev.evaluator_type}</span>
+            <span class="text-on-surface-variant font-body-sm">${esc(ev.evaluator_name||'')}</span>
+          </div>
+          <span class="font-title-sm text-primary">${ev.overall_score}/100</span>
+        </div>`).join('')}
+      </div>
+    </div>` : ''}
+    <form id="eval-form" class="space-y-stack-md">
+      <!-- AI / Human Toggle -->
+      <div class="space-y-2">
+        <label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Evaluator Type</label>
+        <div class="bg-surface-container-low p-1 rounded-lg flex items-center gap-1 border border-border-subtle shadow-sm">
+          <button type="button" id="eval-toggle-ai" onclick="setEvalType('AI')" class="flex-1 py-3 text-center rounded-md font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 bg-surface-container-lowest shadow-sm text-primary">
+            <span class="material-symbols-outlined text-[20px]">smart_toy</span>AI Agent
+          </button>
+          <button type="button" id="eval-toggle-human" onclick="setEvalType('HUMAN')" class="flex-1 py-3 text-center rounded-md font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[20px]">person</span>Human Evaluator
+          </button>
+        </div>
+        <input type="hidden" name="evaluator_type" id="f-evaluator_type" value="AI">
+      </div>
+      <!-- Agent Dropdown (AI) -->
+      <div id="eval-agent-field">
+        ${fieldHTML('AI Agent','agent_id','select',`<option value="">Select agent...</option>${agents.map(a=>`<option value="${a.agent_id}">${esc(a.agent_name)} (${esc(a.model_version)})${a.is_active?'':' [inactive]'}</option>`).join('')}`,'required')}
+      </div>
+      <!-- Human Dropdown (HUMAN) - hidden by default -->
+      <div id="eval-human-field" class="hidden">
+        ${fieldHTML('Human Evaluator','human_evaluator_id','select',`<option value="">Select evaluator...</option>${users.map(u=>`<option value="${u.user_id}">${esc(u.full_name)}</option>`).join('')}`,'required')}
+      </div>
+      <input type="hidden" name="submission_id" value="${submissionId}">
+      ${fieldHTML('Evaluation Number','evaluation_no','number',String(nextNo),'required min="1"')}
+      ${fieldHTML('Overall Score (0-100)','overall_score','number','','required min="0" max="100" placeholder="0-100"')}
+      ${fieldHTML('Summary Feedback','summary_feedback','textarea','','placeholder="Strengths and areas for improvement..."')}
+      ${fieldHTML('Evaluated At','evaluated_at','datetime-local',now,'required')}
+    </form>
+  </div>`;
+
+  openModal('Add Evaluation', `For: ${sub?.learner_name||''} — ${sub?.module_title||''}`, body, async () => {
+    const data = Object.fromEntries(new FormData(document.getElementById('eval-form')));
+    if (!data.overall_score) { toast('Score is required.','error'); return; }
+    data.evaluated_at = toMySQL(data.evaluated_at);
+    // Enforce XOR: clear the unused field
+    if (data.evaluator_type === 'AI') { delete data.human_evaluator_id; if(!data.agent_id){toast('Select an AI agent.','error');return;} }
+    else { delete data.agent_id; if(!data.human_evaluator_id){toast('Select a human evaluator.','error');return;} }
+    try {
+      await apiPost('evaluations.php', data);
+      toast('Evaluation created.');
+      closeModal(); await loadSubmissions();
+    } catch(e) { toast(e.message, 'error'); }
+  }, 'Save Evaluation', true);
+}
+
+function setEvalType(type) {
+  document.getElementById('f-evaluator_type').value = type;
+  const aiBtn = document.getElementById('eval-toggle-ai');
+  const huBtn = document.getElementById('eval-toggle-human');
+  const aiF = document.getElementById('eval-agent-field');
+  const huF = document.getElementById('eval-human-field');
+  if (type === 'AI') {
+    aiBtn.className = 'flex-1 py-3 text-center rounded-md font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 bg-surface-container-lowest shadow-sm text-primary';
+    huBtn.className = 'flex-1 py-3 text-center rounded-md font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 text-on-surface-variant';
+    aiF.classList.remove('hidden'); huF.classList.add('hidden');
+  } else {
+    huBtn.className = 'flex-1 py-3 text-center rounded-md font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 bg-surface-container-lowest shadow-sm text-primary';
+    aiBtn.className = 'flex-1 py-3 text-center rounded-md font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 text-on-surface-variant';
+    huF.classList.remove('hidden'); aiF.classList.add('hidden');
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// COMMUNITY / EVENTS
+// ═══════════════════════════════════════════════════════════════════════
+async function loadEvents() {
+  const grid = document.getElementById('events-grid');
+  try {
+    G.events = await apiGet('events.php');
+    if (!G.users) G.users = await apiGet('users.php');
+    renderEvents();
+  } catch(e) { showError(grid, e.message); }
+}
+function renderEvents() {
+  const grid = document.getElementById('events-grid');
+  if (!G.events.length) { showEmpty(grid, 'No events yet.', 'event'); return; }
+  const modeIcons = {'In-Person':'location_on','Online':'link','Hybrid':'domain'};
+  const statusStyles = {Scheduled:'bg-primary text-on-primary',Ongoing:'bg-status-warning text-white',Completed:'bg-status-success text-white',Cancelled:'bg-surface-variant text-on-surface-variant'};
+  grid.innerHTML = G.events.map(ev => {
+    const cancelled = ev.event_status === 'Cancelled';
+    const pct = ev.capacity ? Math.round((ev.confirmed_count / ev.capacity) * 100) : 0;
+    return `<div class="${cancelled?'bg-surface-container opacity-60 grayscale hover:grayscale-0':'bg-surface-container-lowest'} rounded-2xl p-6 flex flex-col shadow-md relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+      <div class="flex justify-between items-start mb-3 relative z-10">
+        <span class="bg-surface-accent text-primary px-3 py-1.5 rounded-full font-label-caps text-label-caps shadow-sm">${esc(ev.event_mode)}</span>
+        <span class="${statusStyles[ev.event_status]||''} px-3 py-1.5 rounded-full font-label-caps text-label-caps shadow-sm">${esc(ev.event_status)}</span>
+      </div>
+      <h3 class="font-title-sm text-title-sm text-on-surface relative z-10 ${cancelled?'line-through':''}">${esc(ev.title)}</h3>
+      <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">${esc(ev.description||'')}</p>
+      <div class="flex flex-col gap-2 mt-3 mb-4 relative z-10">
+        <div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-outline">schedule</span>${fmtDateTime(ev.start_at)}</div>
+        ${ev.venue?`<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-outline">location_on</span>${esc(ev.venue)}</div>`:''}
+        ${ev.meeting_url?`<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-outline">link</span>Online meeting</div>`:''}
+        <div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-outline">person</span>Organizer: ${esc(ev.organizer_name)}</div>
+        <div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-outline">groups</span>Community: ${esc(ev.community_name)}</div>
+      </div>
+      ${ev.capacity ? `<div class="mt-auto flex flex-col gap-2 relative z-10 bg-surface-container-low p-3 rounded-xl">
+        <div class="flex justify-between font-label-caps text-label-caps text-on-surface-variant"><span>Capacity</span><span class="text-primary font-bold">${ev.confirmed_count} / ${ev.capacity}</span></div>
+        <div class="h-2 w-full bg-surface-dim rounded-full overflow-hidden shadow-inner"><div class="h-full bg-primary rounded-full transition-all duration-1000" style="width:${pct}%"></div></div>
+      </div>` : ''}
+      <div class="flex gap-2 mt-4 relative z-10">
+        <button onclick="viewRegistrations(${ev.event_id},'${esc(ev.title).replace(/'/g,"\\'")}')" class="flex-1 bg-surface border border-border-subtle text-on-surface px-3 py-2 rounded-full font-label-caps text-label-caps hover:bg-surface-container transition-colors flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">how_to_reg</span>Registrations</button>
+        <button onclick="openEventModal(${ev.event_id})" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+        <button onclick="deleteEvent(${ev.event_id},'${esc(ev.title).replace(/'/g,"\\'")}')" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-error/10 hover:text-error transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openEventModal(eventId) {
+  const ev = eventId ? G.events.find(x=>x.event_id==eventId) : null;
+  const title = ev ? 'Edit Event' : 'Add Event';
+  const communities = G.lookups.community || [];
+  const users = G.users || [];
+  const now = new Date().toISOString().slice(0,16);
+  const body = `<form id="event-form" class="space-y-stack-md" onchange="toggleEventFields()">
+    ${fieldHTML('Community','community_id','select',`<option value="">Select...</option>${communities.map(c=>`<option value="${c.community_id}" ${ev?.community_id==c.community_id?'selected':''}>${esc(c.name)}</option>`).join('')}`,'required')}
+    ${fieldHTML('Organizer','organizer_user_id','select',`<option value="">Select...</option>${users.map(u=>`<option value="${u.user_id}" ${ev?.organizer_user_id==u.user_id?'selected':''}>${esc(u.full_name)}</option>`).join('')}`,'required')}
+    ${fieldHTML('Title','title','text',ev?.title||'','required placeholder="Event title"')}
+    ${fieldHTML('Description','description','textarea',ev?.description||'','placeholder="Event description..."')}
+    ${fieldHTML('Event Mode','event_mode','select',
+      ['In-Person','Online','Hybrid'].map(m=>`<option value="${m}" ${ev?.event_mode===m?'selected':''}>${m}</option>`).join(''),'required')}
+    <div id="venue-field" ${ev?.event_mode==='Online'?'class="hidden"':''}>
+      ${fieldHTML('Venue','venue','text',ev?.venue||'','placeholder="e.g., NSU Auditorium, Bashundhara"')}
+    </div>
+    <div id="url-field" ${ev?.event_mode==='In-Person'?'class="hidden"':''}>
+      ${fieldHTML('Meeting URL','meeting_url','url',ev?.meeting_url||'','placeholder="https://meet.google.com/..."')}
+    </div>
+    ${fieldHTML('Start At','start_at','datetime-local',ev?toLocalInput(ev.start_at):now,'required')}
+    ${fieldHTML('End At','end_at','datetime-local',ev?toLocalInput(ev.end_at):'','required')}
+    ${fieldHTML('Capacity','capacity','number',ev?.capacity||'','placeholder="Leave empty for unlimited" min="1"')}
+    ${ev?fieldHTML('Status','event_status','select',
+      ['Scheduled','Ongoing','Completed','Cancelled'].map(s=>`<option value="${s}" ${ev?.event_status===s?'selected':''}>${s}</option>`).join('')):''}
+  </form>`;
+  openModal(title, ev?'Update event details.':'Create a new event.', body, async () => {
+    const data = Object.fromEntries(new FormData(document.getElementById('event-form')));
+    if (!data.community_id || !data.title || !data.start_at || !data.end_at) { toast('Fill in all required fields.','error'); return; }
+    data.start_at = toMySQL(data.start_at);
+    data.end_at = toMySQL(data.end_at);
+    if (data.capacity === '') data.capacity = null;
+    if (!data.venue) data.venue = null;
+    if (!data.meeting_url) data.meeting_url = null;
+    try {
+      if (ev) { await apiPut(`events.php?id=${ev.event_id}`, data); toast('Event updated.'); }
+      else { await apiPost('events.php', data); toast('Event created.'); }
+      closeModal(); await loadEvents();
+    } catch(e) { toast(e.message, 'error'); }
+  }, ev?'Update':'Create');
+}
+function toggleEventFields() {
+  const mode = document.getElementById('f-event_mode')?.value;
+  const vf = document.getElementById('venue-field');
+  const uf = document.getElementById('url-field');
+  if (vf) vf.classList.toggle('hidden', mode === 'Online');
+  if (uf) uf.classList.toggle('hidden', mode === 'In-Person');
+}
+async function deleteEvent(id, title) {
+  confirmDelete(title, async () => {
+    try { await apiDel(`events.php?id=${id}`); toast('Event deleted.'); await loadEvents(); }
+    catch(e) { toast(e.message, 'error'); }
+  });
+}
+document.getElementById('btn-add-event').onclick = () => { if(!G.users)apiGet('users.php').then(u=>{G.users=u;openEventModal();}); else openEventModal(); };
+
+// ── Registrations ──────────────────────────────────────────────────
+async function viewRegistrations(eventId, title) {
+  selectedEventId = eventId;
+  document.getElementById('reg-event-title').textContent = title;
+  document.getElementById('registrations-section').classList.remove('hidden');
+  const list = document.getElementById('registrations-list');
+  showLoading(list);
+  try {
+    const regs = await apiGet(`events.php?resource=registrations&event_id=${eventId}`);
+    if (!regs.length) { showEmpty(list, 'No registrations yet.', 'how_to_reg'); return; }
+    list.innerHTML = `
+      <div class="grid grid-cols-12 gap-4 px-4 py-3 bg-surface-container-low rounded-xl mb-1">
+        <div class="col-span-5 font-label-caps text-label-caps text-on-surface-variant">Attendee</div>
+        <div class="col-span-3 font-label-caps text-label-caps text-on-surface-variant">Status</div>
+        <div class="col-span-4 font-label-caps text-label-caps text-on-surface-variant">Registered At</div>
+      </div>
+      ${regs.map(r => `
+        <div class="grid grid-cols-12 gap-4 px-4 py-4 bg-surface-container-lowest rounded-xl items-center shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="col-span-5 flex items-center gap-3">
+            ${avatar(r.full_name)}
+            <div class="flex flex-col">
+              <span class="font-title-sm text-title-sm text-on-surface">${esc(r.full_name)}</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">${esc(r.email)}</span>
+            </div>
+          </div>
+          <div class="col-span-3 flex items-center">${statusBadge(r.registration_status)}</div>
+          <div class="col-span-4 font-body-sm text-body-sm text-on-surface-variant">${fmtDateTime(r.registered_at)}</div>
+        </div>`).join('')}`;
+  } catch(e) { showError(list, e.message); }
+}
+document.getElementById('btn-add-registration').onclick = () => {
+  const users = G.users || [];
+  const body = `<form id="reg-form" class="space-y-stack-md">
+    ${fieldHTML('User','user_id','select',`<option value="">Select user...</option>${users.map(u=>`<option value="${u.user_id}">${esc(u.full_name)} (${esc(u.email)})</option>`).join('')}`,'required')}
+    ${fieldHTML('Status','registration_status','select',
+      ['Confirmed','Waitlisted','Cancelled','Attended'].map(s=>`<option value="${s}">${s}</option>`).join(''))}
+  </form>`;
+  openModal('Register User', 'Add a registration for this event.', body, async () => {
+    const data = Object.fromEntries(new FormData(document.getElementById('reg-form')));
+    if (!data.user_id) { toast('Select a user.','error'); return; }
+    data.event_id = selectedEventId;
+    data.registered_at = new Date().toISOString().replace('T',' ').substring(0,19);
+    try {
+      await apiPost('events.php?resource=registrations', data);
+      toast('Registration created.');
+      closeModal();
+      await viewRegistrations(selectedEventId, document.getElementById('reg-event-title').textContent);
+      await loadEvents(); // refresh counts
+    } catch(e) { toast(e.message, 'error'); }
+  }, 'Register');
+};
+
+// ═══════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  if (DEMO_MODE) {
+    document.getElementById('demo-banner').classList.remove('hidden');
+    document.body.style.paddingTop = '32px';
+  }
+  const hash = location.hash.replace('#', '');
+  const validTabs = ['dashboard', 'users', 'curricula', 'submissions', 'community'];
+  switchTab(validTabs.includes(hash) ? hash : 'dashboard');
+});
+window.addEventListener('hashchange', () => {
+  const hash = location.hash.replace('#', '');
+  const validTabs = ['dashboard', 'users', 'curricula', 'submissions', 'community'];
+  if (validTabs.includes(hash) && hash !== currentTab) {
+    switchTab(hash);
+  }
+});
+</script>
+</body>
+</html>
