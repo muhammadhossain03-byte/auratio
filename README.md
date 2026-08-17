@@ -117,8 +117,8 @@ For production deployment on Hostinger or any cPanel/shared hosting provider:
 2. **Import Schema & Seed Data:**
    - Open **phpMyAdmin** from hPanel for the newly created database.
    - Select your database and click **Import**.
-   - Import [`database/schema-hosting.sql`](database/schema-hosting.sql) (contains all 22 tables and 29 foreign keys with `CREATE DATABASE` / `USE` statements removed for shared hosting compatibility).
-   - Then import [`database/seed.sql`](database/seed.sql) to populate initial seed records.
+   - Import [`database/schema-hosting.sql`](database/schema-hosting.sql) (contains all 22 tables and 29 foreign keys with `CREATE DATABASE`, `USE`, and `CHECK` constraints removed for shared hosting compatibility).
+   - Then import [`database/seed-hosting.sql`](database/seed-hosting.sql) to populate initial seed records (with `USE` statement removed).
 
 3. **Upload Files:**
    - Upload the project repository files to your website root directory (e.g. `public_html/` or a subfolder).
